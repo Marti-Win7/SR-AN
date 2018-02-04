@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="./favicon.ico">
+  <title>SerienRecorder Anleitung - Einleitung</title>
+  <!-- Bootstrap core CSS -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="./css/serienrecorder.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="#">SerienRecorder Anleitung</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <img src="images/plugin.png"> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        <div id="sidebar-menu" class=""></div>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h1 class="page-header">Einleitung</h1>
+        <div class="row">
+          <p class="lead"> Das SerienRecorder Plug-In erleichtert das Aufnehmen von Serien, indem für ausgewählte Serien automatisch Timer angelegt werden. Dabei überwacht das SerienRecorder Plug-In ob eine Folge bereits aufgenommen wurde oder nicht, sodass es zu keinen
+            Mehrfachaufnahmen kommt. </p>
+          <p> Der Benutzer kann sog. Serien-Marker für die Serien anlegen, die vom SerienRecorder überwacht werden sollen. Für jeden Serien-Marker kann konfiguriert werden welche Staffeln und Sender in die Überwachung einbezogen werden. </p>
+          <p> Der Serienrecorder funktioniert nur mit den Daten der Webseite <a href="http://www.wunschliste.de" target="_blank">http://www.wunschliste.de</a> daher ist eine Internetverbindung notwendig. Die Sendetermine werden nicht direkt von <a href="http://www.wunschliste.de" target="_blank">www.wunschliste.de</a> geladen, sondern von einem eigens dafür privat „gemieteten“ Server, da die Datenmengen die JEDER User benötigt bei einem AC, für die WL-Seite zu viel waren. Daher wäre es „schön“, wenn sich die User für den Unterhalt des Servers und natürlich hauptsächlich für den unermüdlichen Einsatz des jetzigen Programmierers <a href="https://www.vuplus-support.org/wbb4/index.php?thread/85765-serien-recorder-3-6-0-03-12-2017/&postID=1144875#post1144875" target="_blank"><strong>@MacDisein</strong></a> mit einer kleinen Spende (evtl. sogar jedes Jahr einmal) an ihn, daran beteiligen.</p>
+		  <p>Zusätzlich kann man in den Einstellungen aktivieren, das auch Cover der Serien angezeigt werden sollen. Die Cover und auch die Serien-Infos werden von
+            <a href="https://www.thetvdb.com/" target="_blank">The TVDB</a> abgerufen. Da TheTVDB nicht immer ALLES vorrätig hat, kann es bei manchen Serien auch schon mal zu "Fehlern" kommen. Dies dann bitte im Forum melden, ob es gefixt werden kann.
+			<br>Der Dienst www.wunschliste.de ( WL ) bietet auf seiner Webseite für so gut wie alle Serien die Ausstrahlungstermine im deutschen Fernsehen an. Diese Informationen bereitet das SerienRecorder Plug-In auf und stellt
+            eine Oberfläche zur Verfügung um die Lieblingsserien zu verwalten. WL hat auf seiner Webseite mittlerweile auch Filme im "Angebot", welche auch mit dem Serienrecorder ( SR ) getimert werden können. Filme lassen sich allerdings nur mit hilfe der TV-Planer-Mail-Funktion timern, was später noch näher erläutert wird. </p>
+          <p> Es werden genaue Folgen-Informationen abgerufen, so können diese in den Timer und damit in die Aufnahmeinformationen mit aufgenommen werden, also z. B. „S01E10 – Der Baum“. Als Ausnahme können mittlerweile aber auch Sonderfolgen/Specials mit z.B. S01 oder Folge 345 (ohne Staffel, wie z.B. Tatort) vom SerienRecorder verarbeitet werden, die Staffelbezeichnung ist dann S00.</p>
+		  <p>Serien, die eigentlich keine sind, weil sie tägl. oder wöchentl. ausgestrahlt werden und weder eine Staffel- noch Folgen-Bezeichnung haben, sind nur "schwer" mit dem SR zu timern. Aber auch dies geht mittlerweile mit einigen von diesen "Serien".  </p>
+          <div class="alert alert-info" role="alert"> Es gibt natürlich auch "Spezialfälle" von Serien, bei denen das hinzufügen zum SR schon mal Probleme bereitet. Manchmal liegt es an Sonderzeichen im Namen oder aber man muß den meist engl. Original-Titel der Serie in die Suche des SR eingeben. Bei Problemen dann bitte im Forum melden. </div>
+          <p> Der SerienRecorder ist ein nicht-kommerzielles Hobby Projekt, dass in keiner Beziehung zu den Betreibern der kommerziellen Webseite
+            <a href="http://www.wunschliste.de" target="_blank">www.wunschliste.de</a> steht. Wir weisen ausdrücklich darauf hin, dass Wunschliste.de mit Absicht keine Schnittstelle zum Abrufen der benötigten Informationen bereit stellt, weil den Betreibern dadurch Werbeeinnahmen verloren gehen. Es ist
+            also nicht ausgeschlossen, dass Wunschliste.de den Betrieb des SerienRecorders irgendwann unterbindet.
+            <br> Im Moment darf der SerienRecorder mit freundlicher Genehmigung von Wunschliste.de die Daten über einen von uns betriebenen Proxy Server abrufen um die Wunschliste Server so wenig wie möglich zu belasten. </p>
+          
+          <div class="thumbnail with-caption">
+			<p><h4><strong>Beispiel für eine Seite von wunschliste.de</strong></h4></p>
+            <img src="images/wunschliste.jpg" alt="Beispiel für eine Seite von Wunschliste.de" align="center" class="float-right">
+            <p> <small>Beispiel für eine Seite von wunschliste.de</small> </p>
+          </div>
+        </div> <span id="installation"><br></span>
+        <h2 class="sub-header">Installation</h2>
+        <div class="row">
+          <p> Download und Installation geschiet i.d.R. über den Feed. 
+		  <br>Es gibt auch die Möglichkeit sich eine Release- oder auch Beta-Version aus dem Github <a href="https://github.com/einfall/serienrecorder" target="_blank">		https://github.com/einfall/serienrecorder</a> zu laden. 
+			<br>Zu den Beta-Versionen sei gesagt, das diese auch immer Fehler beinhalten können. In den Beta-Versionen werden Bugs gefixt und/oder Features dem SR hinzugefügt. Diese neuen Features müssen natürlich erst getestet werden, wozu sich immer „löblicherweise“ User finden dies zu tun, bevor diese Features in eine Release-Version kommen.
+			Es muss an dieser Stelle allerdings darauf hingewiesen werden, dass eine Beta-Version eine Testversion ist und u.U. in manchen Situationen zu Abstürzen oder ungewünschtem Verhalten führen kann, sie wird also auf eigene Gefahr benutzt. Daher ist es Ratsam sich vorher ein Image-Backup anzulegen.
+			<br>Selten kommt es vor, das durch "äußere" Einflüsse der SerienRecorder nicht mehr funktionfähig ist, dann ist es meist zwingend notwendig, sich eine Beta-Version zu "installieren", womit der SR dann wieder lauffähig wird. Näheres findet man dann aber sicherlich im <a href="https://www.vuplus-support.org/wbb4/index.php?thread/85765-serien-recorder-3-6-0-03-12-2017/&postID=1144875#post1144875" target="_blank">VTI-Forum</a>.
+		  </p>
+          <div class="alert alert-info" role="alert"> Die aktuelle Release Version kann man jederzeit bei github herunterladen:
+            <a href="https://github.com/einfall/serienrecorder/releases/latest" target="_blank" class="alert-link">Aktuelle SerienRecorder Release Version</a>
+          </div>
+			<p>Für eine manuelle Installation liegen die Release-Versionen idR in den Formaten IPKG und DEB vor.
+		  <br>Für Nutzer des VTI Image gibt es im <a href="https://wiki.vuplus-support.org/index.php?title=Hauptseite" target="_blank">VU+ WIKI</a>  nützliche Infos zur Installation. Einmal für die Installation vom <a href="https://wiki.vuplus-support.org/index.php?title=Installieren_von_Erweiterungen" target="_blank">Feed</a> und einmal für eine <a href="https://wiki.vuplus-support.org/index.php?title=VTi_Panel#Manuelle_Installation_von_Paketen" target="_blank">manuelle Installation</a> .
+		  <br>Unter folgender Adresse findet man für DreamBoxen ein How-To wie man ein IPKG manuell installiert:
+          <a href="http://www.dream-multimedia-tv.de/download/HowTo-Plugins-installieren.pdf" target="_blank">http://www.dream-multimedia-tv.de/download/HowTo-Plugins-installieren.pdf</a>
+		  </p>
+          <p> Nach der Installation ist das SerienRecorder Plug-In unter „Erweiterungen“ zu finden.  
+			<br>Die Dateien des SR sind dann auf der Box unter dem Verzeichnis <h5><strong>„/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/“</strong></h5> zu finden.
+			<br>Auch die manchmal benötigten <strong>LOG-Dateien</strong> sind in diesem Verzeichnis.
+		  </p>
+		  <br>
+		  <p><h4><strong>Installation von Beta-Versionen </strong></h4></p>
+		  <p> Die benötigten Dateien sind unter <a href="https://github.com/einfall/serienrecorder" target="_blank">Github</a>  herunterzuladen.
+		  <br>Rechts findet man einen grünen Button mit der Aufschrift "Clone or download". Dort klickt man drauf und wählt "Download Zip".
+		  <div class="thumbnail with-caption">
+            <img src="images/github-beta-download.png" alt="Bild für den Beat-Version Download" align="center">
+            <p><small>Download der Beta-Version</small></p>
+          </div>
+		  <br>Über FTP (z.B. mit <a href="https://www.vuplus-support.org/wbb4/filebase/index.php?entry/202-dcc-dreambox-control-center-e2-v1-50/" target="_blank">DCC</a>, Filezilla,Totalcommander etc.) können dann die entsprechenden Dateien aus dem "src"-Verzeichnis der Zip-Datei mit den Dateien im SR Plug-In Verzeichnis auf der Box ausgetauscht bzw. überschrieben werden.
+			>br> D
+			</p>
+          
+          <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button> <strong>WICHTIG: </strong>Das Herzstück des Plug-In's ist eine SQLite3-Datenbank (siehe Kapitel A.1). Bei manchen Images ist SQLite3 nicht standardmäßig installiert, und muß deshalb nachinstalliert werden. Das funktioniert z.B.
+            via TelNet mit dem Befehl "opkg install python-sqlite3". </div> Für die vollständige Funktionalität des SerienRecorders sind außerdem folgende Plug-Ins nötig:
+          <ul>
+            <li>EPG-Translator von @Kashmir: zum Ansehen von YouTube-Trailern</li>
+            <li>Wikipedia von @Kashmir: sucht auf Wikipedia nach Informationen zur Serie</li>
+            <li>VPS: zur Berücksichtigung der VPS-Zeiten bei der Erstellung der Timer</li>
+            <li>Opera Webbrowser/DMM Webbrowser: zum Ansehen dieser Anleitung</li>
+          </ul>
+        </div> <span id="erste_schritte"><br></span>
+        <h2 class="sub-header">Erste Schritte</h2>
+        <div class="row"> Beim ersten Start wird zunächst die Datenbank des SerienRecorders angelegt, standardmäßig im Plugin Verzeichnis, der Pfad kann aber jederzeit in den globalen Einstellungen geändert werden:
+          <div class="well well-sm">/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/SerienRecorder.db</div> Danach werden die Daten von Wunschliste eingelesen, genauer gesagt die Kanal-Liste, was je nach Internetverbindung etwas dauern kann. Dies ist aber nur beim ersten
+          Start und leerer Datenbank nötig. Ist das Einlesen abgeschlossen, sollte folgende Ansicht sichtbar sein, der SerienRecorder hat bereits automatisch einige Sender zugeordnet:
+          <div class="thumbnail with-caption">
+            <img src="images/sender-zuordnen.jpg" alt="Kanalzuordnung nach dem ersten Start" align="center">
+            <p><small>Kanalzuordnung nach dem ersten Start</small></p>
+          </div>
+          <p>Wie die Senderzuordnung genau funktioniert lesen Sie bitte im Kapitel "Kanal-Zuordnung" nach.
+            <br> Beim nächsten Start bzw. nach dem Verlassen der Kanal-Zuordnung wird der Serien-Planer angezeigt. </p>
+          <div class="well well-sm"> Für den SerienRecorder sind inzwischen verschiedene Skins verfügbar, über die sich das Aussehen ändern lässt, diese Anleitung beschreibt und zeigt nur das Standardskin "SerienRecorder 1".
+            <br>Die Bedienung ist bis auf wenige Ausnahmen in jedem Skin identisch. </div>
+          <p> Das SerienRecorder Plug-In ist recht komplex und besteht aus mehreren Ansichten, diese werden im einzelnen in den nachfolgenden Kapiteln erklärt.
+            <br>Jede Ansicht hat einen festen Bereich, in der die für diese Ansicht aktiven Tasten aufgelistet werden, da es inzwischen sehr viele Funktionen pro Ansicht gibt, welchselt dieser Bereich alle paar Sekunden. Manchmal haben Tasten auch eine doppelte
+            Funktion kurz gedrückt oder lang gedrückt, wird dies durch einen Schrägstrich dargestellt (kurz/lang): </p>
+          <div class="thumbnail with-caption">
+            <img src="images/tasten.jpg" alt="Aktive Tasten in dieser Ansicht" align="center">
+            <p><small>Aktive Tasten in dieser Ansicht</small></p>
+          </div>
+          <div class="alert alert-info">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <p> Grundsätzlich lässt sich jede Ansicht über die <kbd>EXIT</kbd> Taste schließen und man gelangt zur vorherigen Ansicht. In einigen Fällen, in denen Änderungen gespeichert werden müssen, kann die betreffende Ansicht über <kbd class="red">Abbrechen</kbd>              bzw. <kbd class="green">Speichern</kbd> verlassen werden. </p>
+            <p>Über die Pfeiltasten des Steuerkreuzes <span class="label label-default"><span class="glyphicon glyphicon-arrow-up"></span></span>&nbsp;<span class="label label-default"><span class="glyphicon glyphicon-arrow-down"></span></span> kann die
+              Selektion zeilenweise geändert werden.
+              <br>Über die Pfeiltastes des Steuerkreuzes <span class="label label-default"><span class="glyphicon glyphicon-arrow-right"></span></span>&nbsp;<span class="label label-default"><span class="glyphicon glyphicon-arrow-left"></span></span> kann
+              die Selektion seitenweise geändert werden.
+              <br>Außer in den Einstellungen Ansichten, dort kann man über die <span class="label label-default">Bouquet <span class="glyphicon glyphicon-arrow-up"></span></span>&nbsp;<span class="label label-default">Bouquet <span class="glyphicon glyphicon-arrow-down"></span></span>
+              Tasten seitenweise geblättert werden. </p>
+          </div>
+        </div> <span id="einstellungen"><br></span>
+        <h2 class="sub-header">Globale Einstellungen <kbd>MENU</kbd></h2>
+        <div class="row">
+          <p>Über die <kbd>MENU</kbd> Taste lassen sich, aus so gut wie jeder Ansicht heraus, die globalen Einstellungen öffnen. Diese sind inzwischen sehr komplex geworden, denn der SerienRecorder lässt sich sehr weitreichend konfigurieren, deswegen sind
+            den Einstellungen ein eigenes Kapitel gewidmet. </p>
+        </div> <span id="auto-check"><br></span>
+        <h2 class="sub-header">Auto-Check (Suchlauf) <kbd>EPG</kbd></h2>
+        <div class="row">
+          <p>Über die <kbd>EPG</kbd> Taste kann der manuelle Suchlauf (Auto-Check) gestartet werden. Dabei werden für alle aktivierten Serien-Marker die Ausstrahlungstermine von Wunschliste.de abgerufen und ggf. für den eingestellten Zeitraum Timer angelegt.
+            <br> Je nach Einstellung (siehe xxx) wird dieser Suchlauf aber automatisch, einmal am Tag durchgeführt. </p>
+          <p> Das Protokoll eines automatischen bzw. manuellen Suchlauf wird in einer Logdatei abgespeichert und kann, aus so gut wie jeder Ansicht, über die Taste <kbd>0</kbd> aufgerufen werden. </p>
+        </div> <span id="hilfe"><br></span>
+        <h2 class="sub-header">Hilfe <kbd>HELP</kbd></h2>
+        <div class="row">
+          <p>Über die <kbd>HELP</kbd> Taste kann zu jeder Ansicht eine Hilfe eingeblendet werden. Dabei wird das Hilfesystem der Box aufgerufen und zeigt eine virtuelle Fernbedienung zusammen mit einer Liste der einzelnen Tasten die in dieser Ansicht mit
+            einer Funktion belegt sind und deren Erklärung. </p>
+          <p> Es hat sich inzwischen auch schon ein große Community gebildet, viele Nutzer sind gerne bereit bei Fragen zu helfen, und natürlich auch die Entwickler: </p>
+          <ul>
+            <li>
+              <a href="http://www.vuplus-support.org/wbb3/index.php?page=Thread&amp;threadID=60724&amp;s=3ecc7cd83591158ddcba9da4ac5db5cc02f9fccb" target="_blank">VU+ Support Forum</a>
+            </li>
+            <li>
+              <a href="http://www.i-have-a-dreambox.com/wbb2/thread.php?threadid=183385" target="_blank">IHAD - I have a dreambox - Forum</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+  <script src="./js/vendor/holder.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="./js/ie10-viewport-bug-workaround.js"></script>
+  <script src="./js/handlebars.runtime.js"></script>
+  <script src="./js/sidebar-nav-template.js"></script>
+  <script src="./js/sidebar-nav.js"></script>
+</body>
+</html>
