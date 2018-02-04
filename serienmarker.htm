@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./favicon.ico">
+
+    <title>SerienRecorder Anleitung - Serien-Marker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/serienrecorder.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SerienRecorder Anleitung</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><img src="images/plugin.png"></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <div id="sidebar-menu"></div>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">Serien-Marker</h1>
+
+            <div class="row">
+                <p class="lead">
+                    Die Serien-Marker Ansicht ist die wichtigste Ansicht im SerienRecorder - sie zeigt alle Serien die der SerienRecorder für die Timer-Erstellung berücksichtigt.<br/>
+                    Man kann sagen alle Serien die der Benutzer abonniert (vorgemerkt) hat.
+                </p>
+                <p>
+                    Wird der SerienRecorder zum ersten Mal gestartet ist die Ansicht leer. Wie viele Serien vorgemerkt sind zeigt die Titelzeile, im nachfolgenden Screenshot
+                    sind 94 Serien vorgemerkt, allerdings nur 47 aktiv (diese Einträge sind in <span class="yellowfont">gelber Schrift</span> dargestellt, während die
+                    deaktivierten Serien-Marker in <span class="redfont">roter Schrift</span> angezeigt werden).
+                </p>
+                <p>
+                    Die Serie <strong>24</strong> ist zwar vorgemerkt, also dem SerienRecorder bekannt, wird aber bei der Suche nach Ausstrahlungsterminen und bei der Erstellung
+                    von Timern ignoriert - weil sie deaktiviert wurde. Dies ist z.B. dann sinnvoll wenn man genau weiß, dass im Moment keine Folgen dieser Serie ausgestrahlt werden.<br/>
+                    Die Serie <strong>7 Tage</strong> hingegen ist aktiv und wird so bei jedem Suchlauf bei Wunschliste abgefragt und es werden ggf. Timer erstellt.
+                </p>
+                <p>
+                    Neben dem Namen des Serien-Markers lassen sich an jedem Eintrag in der Liste auch noch wichtige Einstellungen ablesen, so ist z.B. für die Serie <strong>Arrow</strong> eine Einschränkung der Staffel konfiguriert.
+                    Es sollen nur Episoden ab Staffel 2 und evtl. Specials aufgenommen werden.<br/>
+                    Für die Serie <strong>Beauty and the Beast</strong> ist ein abweichende Vorlaufzeit von 0 Minuten eingestellt.
+                    In der zweiten Spalte kann abgelesen werden ob eine Sender-Einschränkung vorgenommen oder ein individuelles Aufnahmeverzeichnis gewählt wurde.
+                </p>
+                <div class="alert alert-info" role="alert">
+                    Um für eine Serie einen Serien-Marker zu erstellen, die Serie also vorzumerken gibt es mehrere Möglichkeiten:<br/>
+                    <ul>
+                        <li><strong>Serie suchen <kbd>1</kbd></strong> in der Serien-Marker oder <a href="serienplaner.htm">Serien-Planer</a> Ansicht</li>
+                        <li><strong>Marker hinzufügen <kbd>OK</kbd></strong> in der <a href="serienplaner.htm">Serien-Planer</a>, Suchergebnisse oder Serien-/Staffelstart Ansicht</li>
+                    </ul>
+                </div>
+                <div class="thumbnail with-caption">
+                    <img src="images/serienmarker.jpg" alt="Serien-Marker Ansicht im SerienRecorder" align="center">
+                    <p>
+                        <small>Serien-Marker Ansicht im SerienRecorder</small>
+                    </p>
+                </div>
+            </div>
+            <span id="deaktivieren"><br/></span>
+            <h2 class="sub-header"><kbd class="red">(De)aktivieren/Löschen</kbd></h2>
+            <div class="row">
+                <ul>
+                    <li><strong>Serien-Marker aktivieren/deaktivieren</strong> (Taste kurz drücken)
+                    <p>Ein aktiver Serien-Marker (in <span class="yellowfont">gelber</span> Schrift dargestellt) wird deaktiviert
+                        und bei der Suche nach Ausstrahlungsterminen und der Erstellung von Timern nicht mehr berücksichtigt.<br/>
+                        Die Einstellungen des Serien-Markers bleiben aber erhalten - der Marker kann jederzeit durch erneutes drücken der Taste wieder aktiviert werden.
+                        <div class="bs-callout bs-callout-info">Falls mehrere Boxen auf die selbe Datenbank (z.B. auf einem Netzlaufwerk) zugreifen, gilt die Deaktivierung nur für die aktuelle Box.
+                        Dabei ist darauf zu achten, dass für jede Box in den <a href="einstellungen.htm#system">globalen Einstellungen</a> <kbd>MENU lang</kbd> eine andere Box-ID eingestellt ist.
+                        <p>Um <strong>alle</strong> Serien-Marker für die aktuelle Box-ID zu aktivieren/deaktivieren kann die Taste <kbd>9</kbd> gedrückt werden.</p>
+                        </div>
+                        Das Deaktivieren eines Serien-Markers kann z.B. dann sinnvoll sein, wenn man weiß, dass für die betreffende Serie im Moment keine Episoden ausgestrahlt werden.<br/>
+                        Ein deaktivierter Serien-Marker (in <span class="redfont">roter</span> Schrift dargestellt) wird wieder aktiviert.
+                    </p>
+                    </li>
+                    <li><strong>Serien-Marker löschen</strong> (Taste lange drücken)
+                        <p>Damit wird der Serien-Marker aus der Datenbank des SerienRecorders entfernt - wenn die Serien z.B. ausgelaufen ist oder nicht mehr interessant ist.
+                            Es erfolgt eine Abfrage, ob auch ALLE Einträge zu dieser Serie aus der Timer-Liste gelöscht werden sollen. Wird diese Frage mit „Ja“ beantwortet, wird also auch die Information gelöscht, welche Folgen bereits aufgenommen wurden.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <span id="sender-auswaehlen"><br/></span>
+            <h2 class="sub-header"><kbd class="green">Sender auswählen</kbd></h2>
+            <div class="row">
+                <p>Wird ein Serien-Marker angelegt, hat er zunächst keine Sender-Einschränkung, alle im SerienRecorder zugewiesenen Sender werden bei der Erstellung von Timern berücksichtigt.
+                Sollen für einen Serien-Marker nur Timer auf bestimmten Sendern angelegt werden (z.B. nur Pay-TV) lassen sich über <kbd class="green">Sender auswählen</kbd> Einschränkungen vornehmen.<br/>
+                Über die OK können die betreffenden Sender markiert/demarkiert werden - die Auswahl <strong>Alle</strong> beinhaltet alle Sender.
+                </p>
+                <div class="thumbnail with-caption">
+                    <img src="images/sender-auswaehlen.jpg" alt="Sender für einen Serien-Marker auswählen" align="center">
+                    <p>
+                        <small>Sender für einen Serien-Marker auswählen</small>
+                    </p>
+                </div>
+            </div>
+            <span id="staffel-auswaehlen"><br/></span>
+            <h2 class="sub-header">Staffel auswählen <kbd>OK</kbd></h2>
+            <div class="row">
+                <p>Über die <kbd>OK</kbd> Taste können für die ausgewählte Serie die Staffeln ausgewählt werden die bei der Timer-Erstellung berücksichtigt werden sollen.
+                    Mehrfachauswahl ist möglich, allerdings schließen einige der Auswahlmöglichkeiten alle anderen aus, z.B. <strong>Manuell</strong> (schließt alle anderen Einstellungen aus), oder <strong>Alle</strong> (beinhaltet alle anderen Einstellungen).
+                </p>
+                <ul>
+                    <li><strong>Manuell:</strong> Der Serien-Marker ist faktisch deaktiviert es können nur manuell Timer über die Sendetermine Ansicht angelegt werden.</li>
+                    <li><strong>Alle:</strong> Der SerienRecorder wird Timer für alle Staffeln erstellen</li>
+                    <li><strong>Specials:</strong> Nimmt spezielle Folgen auf, die nicht in das Schema SnnEmm passen. Das kann z.B. „F“ wie Folge sein (öfter bei ORF), oder auch S oder TÜ usw.</li>
+                    <li><strong>folgende:</strong> Gilt nur in Verbindung mit einer Staffelauswahl darunter. </li>
+                </ul>
+                <div class="thumbnail with-caption">
+                    <img src="images/staffel-auswaehlen.jpg" alt="Staffeln für einen Serien-Marker auswählen" align="center">
+                    <p>
+                        <small>Staffeln für einen Serien-Marker auswählen</small>
+                    </p>
+                </div>
+            </div>
+            <span id="serien-marker"><br/></span>
+            <h2 class="sub-header"><kbd class="yellow">Serien-Marker</kbd></h2>
+            <div class="row">
+                <p>Damit eine Serie beim automatischen Suchlauf (und damit bei der Erstellung von Timern) berücksichtigt wird, muss die Serie dem SerienRecorder zunächst bekannt gemacht werden.
+                Die Serien-Marker Ansicht zeigt die Serien an für die ein Serien-Marker angelegt wurde, zusätzlich lassen sich für jeden Marker auch individuelle Einstellungen (wie z.B. ein bestimmtes Aufnahmeverzeichnis) vornehmen.</p>
+                <p>Eine genaue Beschreibung der möglichen Optionen und wie die Funktionsweise der Serien-Marker ist unter "Serien-Marker" beschrieben.</p>
+            </div>
+            <span id="timer-liste"><br/></span>
+            <h2 class="sub-header"><kbd class="blue">Timer-Liste</kbd></h2>
+            <div class="row">
+                <p>Die Timer-Liste ist die SerienRecorder eigene Datenbank und erhält alle Episoden einer Serie, für die der SerienRecorder bereits einen Timer erstellt hat - und damit bei der Suche nicht mehr berücksichtigt.
+                In die Timer-Liste können auch manuell Einträge eingefügt werden um bestimmte Episoden von der Timererstellung aus zu schließen.</p>
+                <p>Eine genaue Beschreibung der Möglichkeiten ist unter "Timer-Liste" beschrieben.</p>
+                <div class="alert alert-info" role="alert">
+                    Die SerienRecorder Timer-Liste hat nichts mit der enigma2 Timer-Liste der Box zu tun.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="./js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./js/ie10-viewport-bug-workaround.js"></script>
+<script src="./js/handlebars.runtime.js"></script>
+<script src="./js/sidebar-nav-template.js"></script>
+<script src="./js/sidebar-nav.js"></script>
+</body>
+</html>

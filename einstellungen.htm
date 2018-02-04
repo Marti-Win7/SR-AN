@@ -1,0 +1,748 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./favicon.ico">
+
+    <title>SerienRecorder Anleitung - Einstellungen</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/serienrecorder.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SerienRecorder Anleitung</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><img src="images/plugin.png"></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <div id="sidebar-menu"></div>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">Globale Einstellungen <kbd>MENU</kbd></h1>
+
+            <div class="row">
+                <p class="lead">
+                    Der SerienRecorder lässt sich weitreichend konfigurieren, neben den globalen Einstellungen können auch noch
+                    in einigen Ansichten kontextbezogene Einstellungen vorgenommen werden.
+                </p>
+                <p>
+                    Um es dem Einsteiger einfacher zu machen, lässt sich der Umfang der Einstellungen über die Option <strong>Umfang der Einstellungen</strong> einschränken.
+                    Zu jeder Option in den Einstellungen wird ein Hilfetext angezeigt, der die jeweilige Option erklärt.
+                    Die Einstellungen werden erst dann dauerhaft gespeichert, wenn die Ansicht mit der Taste <kbd class="green">Speichern</kbd> verlassen wird.
+                </p>
+                <div class="alert alert-info">
+                	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    Grundsätzlich muss an den Standard-Einstellungen nichts geändert werden, um den SerienRecorder verwenden zu können.<br/>
+                    Damit der SerienRecorder automatisch (einmal täglich) Timer anlegt muss der <strong>automatische Suchlauf</strong> aktiviert werden und eine Suchzeit eingestellt werden.
+                </div>
+                <p>Hier eine Übersicht alle Einstellungen, im folgenden wird jede Option in den einzelnen Bereichen erklärt:</p>
+                <div class="thumbnail with-caption">
+                    <img src="images/einstellungen.jpg" alt="Die globalen Einstellungen im Überblick" align="center">
+                    <p><small>Die globalen Einstellungen im Überblick</small></p>
+                </div>
+            </div>
+            <span id="system"><br/></span>
+            <h2 class="sub-header">System</h2>
+            <div class="row">
+                <ul>
+                    <li>
+                        <strong>ID der Box:</strong>
+                        <p>
+                            Die SerienRecorder Datenbank kann von mehreren Boxen innerhalb eines Netzwerkes verwendet werden,
+                            damit für einzelne Marker nur auf bestimmten Boxen Timer angelegt werden, kann hier die ID der Box eingestellt werden.
+                            Wird in der Serien-Marker Ansicht ein Marker deaktiviert, werden für die Box mit der eingestellten ID keine Timer mehr für diesen Marker erstellt.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Neue Serien-Marker nur auf dieser Box aktivieren:</strong>
+                        <p>
+                            Ist diese Option gesetzt, werden alle Serien-Marker die neu angelegt werden, nur für diese Box aktiviert,
+                            normalerweise sind neue Serien-Marker immer für alle Boxen aktiviert.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Umfang der Einstellungen:</strong>
+                        <p>
+                            Ändert den Umfang der Einstellungen zwischen <strong>einfach</strong> und <strong>Experte</strong>,
+                            in der Experten Einstellung sind alle Optionen sichtbar, ansonsten nur die wichtigsten.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Speicherort der Aufnahmen:</strong>
+                        <p>Setzt den Speicherort für Aufnahmen, alle Aufnahmen die durch den SerienRecorder programmiert werden, landen in dem eingestellten Verzeichnis.</p>
+                        <div class="bs-callout bs-callout-info">Diese Option kann für jeden Serien-Marker überschrieben werden (siehe xxx)<br/>Allerdings greifen in diesem Fall die Einstellungen für Serien-/Staffelverzeichis nicht mehr.</div>
+                    </li>
+                    <li>
+                        <strong>Serien-Verzeichnis anlegen:</strong>
+                        <p>
+                            Ist diese Option gesetzt wird für jede Serie ein Unterverzeichnis mit dem Namen der Serie im Verzeichnis, das unter "Speicherort für Aufnahmen" eingestellt ist, angelegt.
+                            Das Verzeichnis wird erst dann angelegt, wenn für die betreffende Serie ein Timer erstellt wird.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Staffelverzeichnis anlegen:</strong>
+                        <p>
+                            Ist diese Option gesetzt, wird für jede Staffel einer Serie ein separates Unterverzeichnis angelegt. Diese Option ist nur dann sichtbar wenn die Option "Serien-Verzeichnis anlegen" gesetzt ist.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Mindestlänge der Staffelnummer im Verzeichnisnamen:</strong>
+                                <p>
+                                    Gibt die Mindestlänge der Staffelnummer im Verzeichnisnamen an, z.B. würde ein Wert von drei immer dreistellige Ordnernamen für die Staffel erstellen,
+                                    ist ein Staffelnummer kürzer wird mit dem unter "Füllzeichen für Staffelnummer im Verzeichnisnamen" eingestellten Füllzeichen aufgefüllt.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Füllzeichen für Staffelnummer im Verzeichnisnamen:</strong>
+                                <p>
+                                    Füllzeichen mit dem die Staffelnummer auf die unter "Mindestlänge der Staffelnummer im Verzeichnisnamen" angegebene Länge aufgefüllt wird.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Automatisches Plugin-Update:</strong>
+                        <p>
+                            Ist diese Option gesetzt, versucht der SerienRecorder beim Öffnen nach neuen Versionen zu suchen.
+                            Wurde eine neue Version gefunden kann der Benutzer entscheiden ob er sie herunterladen und installieren möchte.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Art der Updates:</strong>
+                                <p>Gibt die Art der Updates an, nach denen gesucht werden soll. Es kann zwischen "Beta" und "Release" Versionen unterschieden werden.</p>
+                                <div class="bs-callout bs-callout-danger">Im Moment werden nur Release Versionen über die Update Funktion ausgeliefert.</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Speicherort der Datenbank:</strong>
+                        <p>
+                            Der SerienRecoder speichert seine Daten in einer Datenbank. Mit dieser Option lässt sich der Speicherort für diese Datenbank definieren,
+                            in der Regel muss dies aber nicht geändert werden, es sei denn, mehrere Boxen sollen auf dieselbe Datenbank auf einem externen Netzwerkspeicher zugreifen.
+                        </p>
+                        <div class="bs-callout bs-callout-info">Wird der Speicherort geändert, kann der SerienRecorder die aktuelle Datenbank an den neuen Ort verschieben.</div>
+                    </li>
+                    <li>
+                        <strong>Erstelle Backup vor Suchlauf:</strong>
+                        <p>
+                            Ist die Option gesetzt, wird vor einem Suchlauf automatisch ein Backup der wichtigsten Dateien angelegt.
+                            Gesichert wird die SerienRecorder Datenbank, die SerienRecorder Einstellungen, die SerienRecorder Log-Datei sowie die enigma2 Timer
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Speicherort für Backup:</strong>
+                                <p>Gibt das Verzeichnis an in dem die Dateien beim Backup gespeichert werden sollen.
+                                <br/>Innerhalb dieses Ordners wird bei jedem Backup ein Unterordner mit dem aktuellen Datum und Uhrzeit erstellt <samp>(Beispiel: 201508012012)</samp>.</p>
+                                <div class="bs-callout bs-callout-danger">Im Moment werden die Backups nicht automatisch gelöscht, es sollte also von Zeit zu Zeit im Backup Ordner aufgeräumt werden.</div>
+                            </li>
+                            <li>
+                                <strong>Backup-Dateien löschen die älter als x Tage sind:</strong>
+                                <p>Gibt an wie lange die Backup-Dateien aufbewart werden sollen.
+                                    <br/>Ist hier ein Wert größer 0 Tage eingestellt werden alle Dateien die älter als der eingestellte Wert sind aus dem Speicherort für Backup gelöscht.</p>
+                                <div class="bs-callout bs-callout-danger">Es werden alle Dateien im Ordner gelöscht unabhängig davon ob es sich um Backup-Dateien handelt oder nicht!</div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <span id="auto-check"><br/></span>
+            <h2 class="sub-header">Auto-Check</h2>
+            <div class="row">
+                <ul>
+                    <li>
+                        <strong>Automatischen Suchlauf ausführen:</strong>
+                        <p>
+                            Legt fest wann der automatische Suchlauf (Auto-Check) durchgeführt werden soll.
+                            Als Auto-Check wird die Hauptfunktion des SerienRecorders bezeichnet.
+                            Es handelt sich dabei um das Suchen von Ausstrahlungsterminen, und das Anlegen von Timern für die einzelnen Folgen automatisch im Hintergrund.
+                            Zu diesem Zeitpunkt wird eine Internetverbindung benötigt um die Informationen von Wunschliste.de abrufen zu können.
+                        </p>
+                        <ol type="a">
+                            <li>
+                                <i><u>Manuell:</u></i>
+                                <p>Es wird kein automatischer Suchlauf durchgeführt, der Benutzer muss den Suchlauf manuell über die <kbd>EPG</kbd> Taste starten.</p>
+                            </li>
+                            <li>
+                                <i><u>zur gewählten Uhrzeit:</u></i>
+                                <p>Der automatische Suchlauf wird täglich zur eingestellten Uhrzeit durchgeführt.</p>
+                                <ul>
+                                    <li>
+                                        <strong>Uhrzeit für automatischen Suchlauf:</strong>
+                                        <p>Uhrzeit angeben zu der der Auto-Check durchgeführt werden soll.</p>
+                                        <div class="bs-callout bs-callout-danger">Es hat sich gezeigt, dass die Server von Wunschliste.de gegen 6:00 Uhr und 20:00 Uhr nicht zu erreichen sind.
+                                        <br/>Mal sollte also möglichst eine andere Uhrzeit einstellen um Verbindungsfehler zu vermeiden.
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <strong>maximale Verzögerung für den automatischen Suchlauf (Min.):</strong>
+                                        <p>Um die Belastung des Wunschliste.de Servers zu verringern, kann hier ein Zeitraum in Minuten angegeben werden,
+                                            in dem der SerienRecorder, ausgehend von der unter "Uhrzeit für automatischen Suchlauf" eingestellten Zeit, den Suchlauf durchführt.
+                                            <br/>D.h. der Suchlauf findet irgendwann zwischen der unter "Uhrzeit für automatischen Suchlauf" eingestellten Zeit + Verzögerung statt.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><i><u>nach EPGRefresh:</u></i>
+                                <p>Einige Benutzer verwenden das EPGRefresh Plugin um den EPG der Box aktuell zu halten.
+                                    Mit dieser Option hat man die Möglichkeit, im Anschluss an den EPGRefresh, den automatischen Suchlauf starten zu lassen.
+                                </p>
+                                <div class="bs-callout bs-callout-danger">Damit diese Funktion genutzt werden kann, muss zwingend das EPGRefresh Plugin ab Version 2.1.1 installiert sein.</div>
+                            </li>
+                        </ol>
+                        <div class="bs-callout bs-callout-info">Die Auswahl "nach EPGRefresh" ist nicht bei allen Boxen verfügbar.</div>
+                    </li>
+                    <li>
+                        <strong>Timer für X Tage erstellen:</strong>
+                        <p>
+                            Legt fest wie viele Tage im Voraus Timer erstellt werden, in der Regel hat sich hier ein Wert von 3 - 4 Tagen als optimal herausgestellt.
+                            Im oberen Teil des Log sieht man nach dem Auto-Check bis zu welchem Datum/Uhrzeit Timer erstellt wurden.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Früheste Zeit für Timer:</strong>
+                        <p>
+                            Diese Option legt die früheste Ausstrahlungszeit für einen Timer fest. Wenn man beispielsweise nur Timer für Sendungen nach 22:00 Uhr
+                            anlegen lassen möchte, kann man hier diese Uhrzeit festlegen. Die Option steht im Zusammenhang mit der nachfolgenden Option.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Späteste Zeit für Timer:</strong>
+                        <p>
+                            Diese Option legt die späteste Ausstrahlungszeit für einen Timer fest. Wenn man beispielsweise nur Timer für Sendungen vor 14:00 Uhr
+                            anlegen lassen möchte, kann man hier diese Uhrzeit festlegen. Die Option steht im Zusammenhang mit der vorherigen Option.<br/>
+                            Beide Optionen lassen sich für einen bestimmten Serien-Marker überschreiben um zum Beispiel zu erreichen, dass nur die ungekürzte
+                            Nachtwiederholung der Serie aufgenommen wird.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Versuche aus dem EPG zu aktualisieren:</strong>
+                        <p>
+                            Ist diese Option gesetzt, wird beim Anlegen eines Timers, bzw. bei jedem Suchlauf versucht die vom SerienRecorder angelegten Timer
+                            zu aktualisieren. Dabei wird die Sendung im EPG gesucht und die Start-/Endzeit wird aktualisiert. Zusätzlich werden die aktuellen
+                            Daten von Wunschliste.de verwendet den Timer zu korrigieren. Es wird z.B. der Titel und die Beschreibung geändert oder die Start-/Endzeit angepasst.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Immer aufnehmen wenn keine Wiederholung gefunden wird:</strong>
+                        <p>
+                            Verhindert, dass durch einen der oben gesetzten Filter eine Sendung nicht aufgenommen wird. Sollte für eine Sendung im angegebenen Zeitraum
+                            (siehe nachfolgende Option) keine Wiederholung gefunden werden, wird trotzdem ein Timer erstellt, auch wenn die Sendung außerhalb der in
+                            "Früheste Zeit/Späteste Zeit für Timer" angegeben Zeit ausgestrahlt wird.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>maximal X Tage auf Wiederholung warten:</strong>
+                                <p>
+                                    Legt fest wie viele Tage auf eine Wiederholung gewartet werden soll, bevor die Sendung zur regulären Zeit aufgenommen wird,
+                                    auch wenn dies durch andere Einstellung nicht erlaubt ist. In der Regel sind hier 7 Tage ein optimaler Wert.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Anzahl der Aufnahmen pro Episode:</strong>
+                        <p>
+                            Über diese Option lässt sich einstellen wie viele Aufnahmen für eine Episode einer Serie erlaubt sind. In manchen Fällen möchte man
+                            eine Folge mehrfach aufnehmen um sie beispielweise besser zu archivieren.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Anzahl der Tuner für Aufnahmen einschränken:</strong>
+                        <p>
+                            Aktiviert die Option zum Beschränken der Tuner für Aufnahmen.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>maximale Anzahl der zu benutzenden Tuner:</strong>
+                                <p>
+                                    Legt fest wie viele Tuner für Aufnahmen genutzt werden dürfen, darüber lässt sich erreichen, dass z.B. immer ein Tuner zum Fernsehen frei bleibt.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Aktion bei neuer Serie/Staffel:</strong>
+                        <p>
+                        Es kann eingestellt werden was passieren soll, wenn der SerienRecorder eine neue Serie (S01/E01) oder eine neue Staffel (E01) gefunden hat.
+                        </p>
+                        <ol type="a">
+                            <li>
+                                <i><u>keine:</u></i>
+                                <p>Es wird nicht nach neuen Serien bzw. Staffeln gesucht.</p>
+                            </li>
+                            <li>
+                                <i><u>nur Benachrichtigen:</u></i>
+                                <p>Es wird eine Benachrichtigung am Bildschirm ausgegeben, der Benutzer muss diese bestätigen.</p>
+                            </li>
+                            <li><i><u>nur Marker anlegen:</u></i>
+                                <p>Es werden für alle gefundenen neuen Serien automatisch Serien-Marker angelegt.</p>
+                                <div class="bs-callout bs-callout-danger"><strong>ACHTUNG: </strong>Diese Option führt zu sehr vielen Serien-Markern, Timern und Aufnahmen.</div>
+                            </li>
+                            <li><i><u>Benachrichtigung und Marker anlegen:</u></i>
+                                <p>Wie Auswahl "nur Marker anlegen" allerdings wird zusätzlich noch eine Benachrichtigung ausgegeben, die vom Benutzer bestätigt werden muss.</p>
+                                <div class="bs-callout bs-callout-danger"><strong>ACHTUNG: </strong>Diese Option führt zu sehr vielen Serien-Markern, Timern und Aufnahmen.</div>
+                            </li>
+                            <li><i><u>nur Suchen:</u></i>
+                                <p>Es wird nach neuen Serien bzw. Staffeln gesucht - die Ergebnisse können über Taste <kbd>3</kbd> angezeigt werden.</p>
+                            </li>
+                        </ol>
+                        <ul>
+                            <li>
+                                <strong>auch bei manuellem Suchlauf:</strong>
+                                <p>
+                                    Legt fest, ob auch bei manuellem Suchlauf über die <kbd>EPG</kbd> Taste nach neuen Serien/Staffeln gesucht werden soll.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Einträge löschen die älter sind als X Tage:</strong>
+                                <p>
+                                    Über diese Option kann eingestellt werden wie alt Einträge in der Liste der neuen Serien/Staffeln (Taste <kbd>3</kbd>) werden dürfen, bevor sie entfernt werden.
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="bs-callout bs-callout-info">Der in der Serien-Planer Ansicht eingestellte Anzeige-Modus legt fest welche Serien- bzw. Staffelstarts angezeigt bzw. gesucht werden.</div>
+                    </li>
+                    <li>
+                        <strong>Serien-Planer und Sendetermine beim automatischen Suchlauf speichern:</strong>
+                        <p>
+                            Für die Serien-Planer Ansicht (siehe xxx) und die Sendetermine (siehe xxx) müssen Daten von Wunschliste.de abgerufen werden.
+                            Über diese Option wird festgelegt ob die Daten zusammen mit dem automatischen Suchlauf einmal am Tag abgerufen und gespeichert werden soll.
+                            <br/>Ist die Option auf "Nein" gesetzt, werden die Daten immer dann abgerufen wenn sie benötigt werden.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>X Tage im Voraus speichern:</strong>
+                                <p>
+                                    Legt fest wie viele Tage im Voraus Daten für den Serien-Planer und die Sendetermine abgerufen werden sollen.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>nach Änderungen Suchlauf beim Beenden starten:</strong>
+                        <p>
+                            Ist die Option gesetzt, wird beim Verlassen des SerienRecorders ein Suchlauf gestartet, falls Änderungen vorgenommen wurden.<br/>
+                            Änderungen sind z.B. neue Serien-Marker oder geänderte Optionen die sich auf die Timererstellung auswirken.
+                        </p>
+                        <div class="bs-callout bs-callout-info">Diese Option ist derzeit nicht für Dreamboxen mit DreamOS verfügbar.</div>
+                    </li>
+                    <li>
+                        <strong>Aus Deep-StandBy aufwecken:</strong>
+                        <p>
+                            Legt fest, ob die Box für einen automatischen Suchlauf aus dem Deep-StandBy aufwachen darf.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Aktion nach dem automatischen Suchlauf:</strong>
+                        <p>
+                        Legt fest was nach dem automatischen Suchlauf passieren soll.
+                        </p>
+                        <ol type="a">
+                            <li>
+                                <i><u>keine:</u></i>
+                                <p>Die Box bleibt im aktuellen Zustand.</p>
+                            </li>
+                            <li>
+                                <i><u>in Standby gehen:</u></i>
+                                <p>Versetzt die Box in den Standby.</p>
+                            </li>
+                            <li><i><u>in Deep-Standby gehen:</u></i>
+                                <p>Fährt die Box herunter.</p>
+                            </li>
+                        </ol>
+                        <ul>
+                            <li>
+                                <strong>Time-out für (Deep-)StandBy-Abfrage (in Sek.):</strong>
+                                <p>
+                                    Falls die Box in den Standby oder Deep-Standby versetzt werden soll, legt diese Option fest wie lange ein Hinweisfenster eingeblendet wird,
+                                    um den Vorgang noch zu stoppen.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <span id="timer"><br/></span>
+            <h2 class="sub-header">Timer</h2>
+            <div class="row">
+                <ul>
+                    <li>
+                        <strong>Timer-Art:</strong>
+                        <p>
+                            Legt die Art der Timer fest die angelegt werden sollen, die Auswahl entspricht der Timer-Art für enigma2 Timer.
+                        </p>
+                        <ol type="a">
+                            <li>
+                                <i><u>umschalten:</u></i>
+                                <p>Es wird ein sog. Umschalttimer angelegt der zum Start der Sendung auf den entsprechenden Sender umschaltet, es erfolgt keine Aufnahme.</p>
+                            </li>
+                            <li>
+                                <i><u>aufnehmen:</u></i>
+                                <p>Ein klassischer Aufnahmetimer der die Sendung aufzeichnet.</p>
+                            </li>
+                            <li><i><u>umschalten und aufnehmen:</u></i>
+                                <p>Schaltet zum Start der Sendung auf den entsprechenden Sender um, und startet gleichzeitig die Aufnahme.</p>
+                            </li>
+                            <li><i><u>Erinnerung:</u></i>
+                                <p>Zum Start der Sendung wird ein Hinweisfenster angezeigt, es erfolgt keine weitere Aktion, also auch keine Aufnahme.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <strong>Nach dem Event:</strong>
+                        <p>
+                            Auch diese Auswahl ist von den enigma2 Timer bekannt und legt fest was nach dem Event (also der Timer abgearbeitet ist) passieren soll.
+                        </p>
+                        <ol type="a">
+                            <li>
+                                <i><u>nichts:</u></i>
+                                <p>Die Box bleibt im aktuellen Zustand.</p>
+                            </li>
+                            <li>
+                                <i><u>in Standby gehen:</u></i>
+                                <p>Die Box wird in den Standby versetzt.</p>
+                            </li>
+                            <li><i><u>in Deep-Standby gehen:</u></i>
+                                <p>Die Box wird heruntergefahren.</p>
+                            </li>
+                            <li><i><u>automatisch:</u></i>
+                                <p>Die Box entscheidet automatisch (Standardwert).</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <strong>Timervorlauf (in Min.):</strong>
+                        <p>
+                            Legt fest wie viele Minuten die Aufnahme vor der regulären Startzeit gestartet werden soll.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Timernachlauf (in Min.):</strong>
+                        <p>
+                            Legt fest wie viele Minuten die Aufnahme nach der regulären Endzeit weiter aufnehmen soll.
+                            <br/>Beide Optionen lassen sich für jeden Serien-Marker überschreiben.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Timername:</strong>
+                        <p>
+                            Es kann ausgewählt werden, wie der Timername gebildet werden soll, dieser Name bestimmt auch den Namen der Aufnahme. Die Beschreibung enthält immer die Staffel und Episoden Informationen.
+                        </p>
+                        <div class="bs-callout bs-callout-info">Falls das Plugin 'SerienFilm' verwendet wird, sollte man die Einstellung '&lt;Serienname&gt;' wählen, damit die Episoden korrekt in virtuellen Ordnern zusammengefasst werden.</div>
+                    </li>
+                    <li>
+                        <strong>Manuelle Timer immer erstellen:</strong>
+                        <p>
+                            Ist diese Option gesetzt, dann werden manuell angelegte Timer, aus der Sendetermine-Ansicht (siehe xxx) immer erstellt, unabhängig davon ob
+                            für die zu timende Folge bereits die maximale Anzahl von Timern und/oder Aufnahmen vorhanden sind, bzw. die max. Anzahl an Tunern überschritten wird.
+                            <br/>Bei Konflikten kann aber auch bei aktivierter Option kein Timer angelegt werden.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Event-Programmierungen behandeln:</strong>
+                        <p>
+                            Über diese Option lässt sich einstellen wie sog. Event-Programmierungen (also mehrere Episoden einer Serie als ein Event) behandelt werden soll.
+                        </p>
+                        <ol type="a">
+                            <li>
+                                <i><u>nein:</u></i>
+                                <p>Event-Programmierungen (S01E01/1x02/1x03) werden als eigenständige Sendungen behandelt.</p>
+                            </li>
+                            <li>
+                                <i><u>Timer anlegen:</u></i>
+                                <p>Es wird versucht die einzelnen Episoden einer Event-Programmierung zu erkennen, es wird zwar weiterhin nur ein Timer angelegt,
+                                    aber die Einzelepisoden werden in der Datenbank als 'bereits aufgenommen' markiert.
+                                    Sollten bereits alle Einzelepisoden vorhanden sein, wird für das Event kein Timer angelegt.
+                                </p>
+                            </li>
+                            <li><i><u>Einzelepisoden bevorzugen:</u></i>
+                                <p>Es wird versucht die einzelnen Episoden einer Event-Programmierung zu erkennen und versucht Timer für die Einzelepisoden anzulegen,
+                                    falls diese innerhalb der Wartezeit für Wiederholungen ausgestrahlt werden. Ist das nicht möglich, wird das Event aufgenommen.
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <strong>Bouquets auswählen:</strong>
+                        <p>
+                            Ermöglicht die Auswahl eines Standard- bzw. Alternativbouquet für die Sender-Zuordnung (siehe xxx). Steht die Option auf "nein" können nur Sender des erste
+                            Bouquets bei der Sender-Zuordnung ausgewählt werden und es lassen sich keine alternativen Sender zuordnen.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Standard Bouquet:</strong>
+                                <p>
+                                    Auswahl, welches Bouquet bei der Sender-Zuordnung als Standard verwendet werden soll.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Alternatives Bouquet:</strong>
+                                <p>
+                                    Auswahl, welches Bouquet bei der Sender-Zuordnung als Alternative verwendet werden soll.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Verwende alternative Channels bei Konflikten:</strong>
+                                <p>
+                                    Bei "ja" wird versucht den Timer für den alternativen Sender anzulegen, falls es zu einem Konflikt gekommen ist.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <span id="optimierungen"><br/></span>
+            <h2 class="sub-header">Optimierungen</h2>
+            <div class="row">
+                <div class="bs-callout bs-callout-info">Die nachfolgenden Optionen können auf langsamen Boxen (schwacher Prozessor) zu erheblichen Geschwindigkeitsverbesserungen führen.</div>
+                <ul>
+                    <li>
+                        <strong>Intensive Suche nach angelegten Timern:</strong>
+                        <p>
+                            In der Serien-Planer Ansicht werden die Episoden hervorgehoben für die bereits ein Timer existiert.<br/>
+                            Ist diese Option gesetzt, wird vor dem Anzeigen der Serien-Planer Ansicht, jede Episode im EPG gesucht.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Zeige ob die Episode als Aufnahme auf der HDD ist:</strong>
+                        <p>
+                            In einigen Ansichten werden die Episoden mit einem Festplatten Symbol gekennzeichnet, wenn sie sich bereits auf der Festplatte befinden.<br/>
+                            Ist diese Option gesetzt wird dieses Symbol nicht angezeigt und es wird auch nicht auf der Festplatte nach der Aufnahme gesucht.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Zeitspanne für Timersuche einschränken:</strong>
+                        <p>
+                            Wunschliste.de stellt für jede Serie die Ausstrahlungstermine der nächsten 6-8 Wochen bereit, in der Regel werden Timer aber nur für die nächsten
+                            paar Tage gesucht.<br/>Ist diese Option gesetzt, wird alle Ausstrahlungstermine die zu weit in der Zukunft liegen ignoriert, dies verkürzt den
+                            automatischen Suchlauf erheblich.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <span id="gui"><br/></span>
+            <h2 class="sub-header">GUI</h2>
+            <div class="row">
+                <ul>
+                    <li>
+                        <strong>Skin:</strong>
+                        <p>
+                            Das Aussehen des SerienRecorders kann über Skins angepasst werden, es stehen mehrere Skins zur Verfügung.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Wechselzeit der Tastenanzeige (Sek.):</strong>
+                                <p>
+                                    Legt die Anzahl der Sekunden in der die Anzeige der Options-Tasten wechselt.
+                                </p>
+                                <div class="bs-callout bs-callout-info">Diese Option ist nicht bei allen Skins verfügbar.</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Starte Plugin mit:</strong>
+                        <p>
+                            Gibt an welche Ansicht beim Start des SerienRecorder sichtbar ist.
+                        </p>
+                        <ol type="a">
+                            <li>
+                                <i><u>SerienPlaner:</u></i>
+                                <p>Die Serien-Planer Ansicht zeigt eine Übersicht von Episoden die an diesem Tag laufen (siehe xxx) - dies ist die Standard Ansicht.</p>
+                            </li>
+                            <li>
+                                <i><u>SerienMarker:</u></i>
+                                <p>Die Serien-Marker Ansicht zeigt die Liste der angelegten Serien-Marker (siehe xxx).</p>
+                                <div class="bs-callout bs-callout-info">Wird der SerienRecorder mit dieser Ansicht gestartet sind einige Tasten anders belegt.</div>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <strong>Zeige Picons:</strong>
+                        <p>
+                            Ist die Option gesetzt werden in der Serien-Planer Ansicht Sender Logos angezeigt.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Verwende folgende Picons:</strong>
+                                <p>
+                                    Auswahl, welche Sender-Logos angezeigt werden
+                                </p>
+                                <div class="bs-callout bs-callout-info">Es können eigene Picons in einem Unterordner des Ordners "images" abgelegt werden,
+                                diese werden vom SerienRecorder erkannt und zur Auswahl angeboten.</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Zeige Cover:</strong>
+                        <p>
+                            Ist die Option gesetzt werden die Cover der Serien bei IMDB heruntergeladen und angezeigt.
+                            Der SerienRecorder speichert die Cover im angegebenen Ordner ab und lädt sich deshalb nur einmal herunter.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Speicherort der Cover:</strong>
+                                <p>
+                                    Gibt den Ordner an an dem die Cover heruntergeladen werden.
+                                    Es sollte ein Ordner verwendet werden in dem die Dateien dauerhaft gespeichert werden.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Korrektur der Schriftgröße in Listen:</strong>
+                        <p>
+                            Bei einigen Skins ist es nötig die Schriftgröße in Listen anpassen zu können, dies ist über diese Option möglich.
+                            Der SerienRecorder muß neu gestartet werden damit die Änderung wirksam wird.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Anzahl der wählbaren Staffeln im Menü SerienMarker:</strong>
+                        <p>
+                            In der Serien-Marker Ansicht kann ausgewählt werden welche Staffeln bei der Timererstellung berücksichtigt werden sollen (siehe xxx).
+                            Mit dieser Option kann eingestellt werden wie viele Staffeln dort angezeigt werden.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Benachrichtigung beim Suchlauf:</strong>
+                        <p>
+                            Es kann ausgewählt werden ob und wie nach dem Suchlauf eine Benachrichtigung auf dem Bildschirm angezeigt werden soll.
+                        </p>
+                        <ol type="a">
+                            <li>
+                                <i><u>keine:</u></i>
+                                <p>Zeigt keine Benachrichtigung beim Suchlauf an.</p>
+                            </li>
+                            <li>
+                                <i><u>bei Suchlauf-Start:</u></i>
+                                <p>Zeigt an, dass der Suchlauf jetzt startet.</p>
+                            </li>
+                            <li><i><u>bei Suchlauf-Ende:</u></i>
+                                <p>Zeigt eine Zusammenfassung (Statistik) nach erfolgreichem Suchlauf an.</p>
+                            </li>
+                            <li><i><u>bei Suchlauf-Start und Ende:</u></i>
+                                <p>Zeigt sowohl beim Start wie auch beim Ende eine Benachrichtigung an.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <strong>Benachrichtigung bei Timerkonflikten:</strong>
+                        <p>
+                            Kommt es beim Anlegen von Timern zu Konflikten, wird eine Benachrichtung angezeigt, wenn diese Option gesetzt ist.<br/>
+                            Diese Nachricht bleibt so lange auf dem Bildschirm bis sie von Benutzer bestätigt wird.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Screens bei Änderungen sofort aktualisieren:</strong>
+                        <p>
+                            Ist die Option gesetzt, wird die Ansicht bei Änderungen von z.B. Serien-Markern sofort aktualisiert und nicht erst dann, wenn die Ansicht erneut geöffnet wird.<br/>
+                            Dies kann bei langsamen Boxen oder Internetverbindungen zu Problemen führen.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Staffelauswahl bei neuen Markern:</strong>
+                        <p>
+                            Es kann ausgewählt werden welche Staffeln beim Anlegen von neuen Serien-Markern (siehe xxx) automatisch ausgewählt sind.
+                        </p>
+                        <ol type="a">
+                            <li>
+                                <i><u>Alle:</u></i>
+                                <p>Setzt die Auswahl auf "Alle" (dies ist die Standardeinstellung).</p>
+                            </li>
+                            <li>
+                                <i><u>Manuell:</u></i>
+                                <p>Setzt die Auswahl auf "Manuell" - der Benutzer muss in diesem Fall im Anschluss festlegen welche Staffeln bei der Timererstellung für diesen Marker
+                                    berücksichtigt werden sollen, andernfalls werden keine Timer für diesen Marker angelegt.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <strong>Öffne Marker-Ansicht nach Hinzufügen neuer Marker:</strong>
+                        <p>
+                            Ist die Option gesetzt, wird die nach dem Hinzufügen eine neuen Markers (siehe xxx) automatisch die Serien-Marker Ansicht geöffnet und der neue Marker selektiert.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <span id="log"><br/></span>
+            <h2 class="sub-header">Log</h2>
+            <div class="row">
+                <div class="bs-callout bs-callout-info">Die nachfolgenden Optionen dienen zur Fehlersuche und eigenen Kontrolle.</div>
+                <ul>
+                    <li>
+                        <strong>Intensive Suche nach angelegten Timern:</strong>
+                        <p>
+                            In der Serien-Planer Ansicht werden die Episoden hervorgehoben für die bereits ein Timer existiert.<br/>
+                            Ist diese Option gesetzt, wird vor dem Anzeigen der Serien-Planer Ansicht, jede Episode im EPG gesucht.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Zeige ob die Episode als Aufnahme auf der HDD ist:</strong>
+                        <p>
+                            In einigen Ansichten werden die Episoden mit einem Festplatten Symbol gekennzeichnet, wenn sie sich bereits auf der Festplatte befinden.<br/>
+                            Ist diese Option gesetzt wird dieses Symbol nicht angezeigt und es wird auch nicht auf der Festplatte nach der Aufnahme gesucht.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Zeitspanne für Timersuche einschränken:</strong>
+                        <p>
+                            Wunschliste.de stellt für jede Serie die Ausstrahlungstermine der nächsten 6-8 Wochen bereit, in der Regel werden Timer aber nur für die nächsten
+                            paar Tage gesucht.<br/>Ist diese Option gesetzt, wird alle Ausstrahlungstermine die zu weit in der Zukunft liegen ignoriert, dies verkürzt den
+                            automatischen Suchlauf erheblich.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="./js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./js/ie10-viewport-bug-workaround.js"></script>
+<script src="./js/handlebars.runtime.js"></script>
+<script src="./js/sidebar-nav-template.js"></script>
+<script src="./js/sidebar-nav.js"></script>
+</body>
+</html>
