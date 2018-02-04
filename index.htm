@@ -46,14 +46,18 @@
           <p class="lead"> Das SerienRecorder Plug-In erleichtert das Aufnehmen von Serien, indem für ausgewählte Serien automatisch Timer angelegt werden. Dabei überwacht das SerienRecorder Plug-In ob eine Folge bereits aufgenommen wurde oder nicht, sodass es zu keinen
             Mehrfachaufnahmen kommt. </p>
           <p> Der Benutzer kann sog. Serien-Marker für die Serien anlegen, die vom SerienRecorder überwacht werden sollen. Für jeden Serien-Marker kann konfiguriert werden welche Staffeln und Sender in die Überwachung einbezogen werden. </p>
-          <p> Der Serienrecorder funktioniert nur mit den Daten der Webseite <a href="http://www.wunschliste.de" target="_blank">http://www.wunschliste.de</a> daher ist eine Internetverbindung notwendig. Die Sendetermine werden nicht direkt von <a href="http://www.wunschliste.de" target="_blank">www.wunschliste.de</a> geladen, sondern von einem eigens dafür privat „gemieteten“ Server, da die Datenmengen die JEDER User benötigt bei einem AC, für die WL-Seite zu viel waren. Daher wäre es „schön“, wenn sich die User für den Unterhalt des Servers und natürlich hauptsächlich für den unermüdlichen Einsatz des jetzigen Programmierers <a href="https://www.vuplus-support.org/wbb4/index.php?thread/85765-serien-recorder-3-6-0-03-12-2017/&postID=1144875#post1144875" target="_blank"><strong>@MacDisein</strong></a> mit einer kleinen Spende (evtl. sogar jedes Jahr einmal) an ihn, daran beteiligen.</p>
+          <p> Der Serienrecorder funktioniert nur mit den Daten der Webseite <a href="http://www.wunschliste.de" target="_blank">http://www.wunschliste.de</a> daher ist eine Internetverbindung notwendig. Die Sendetermine werden nicht mehr direkt von <a href="http://www.wunschliste.de" target="_blank">www.wunschliste.de</a> (Wunschliste,WL) geladen, sondern von einem eigens dafür privat „gemieteten“ Server, da die Datenmengen die JEDER User benötigt bei einem Suchlauf (Autocheck,AC), für die WL-Seite zu viel waren. Daher wäre es „schön“, wenn sich die User für den Unterhalt des Servers und natürlich hauptsächlich für den unermüdlichen Einsatz des jetzigen Programmierers <a href="https://www.vuplus-support.org/wbb4/index.php?thread/85765-serien-recorder-3-6-0-03-12-2017/&postID=1144875#post1144875" target="_blank"><strong>@MacDisein</strong></a> mit einer kleinen Spende (evtl. sogar jedes Jahr einmal) an ihn, daran beteiligen.</p>
+		  <p>Da die Wunschliste-Seite von angemeldeten Usern lebt und wir diese Daten kostenlos bekommen, ist es nur Fair, wenn sich JEDER Nutzer des SR einen Account bei WUnschliste anlegt, egal ob er später die TV-Planer-Mail-Funktion nutzt oder nicht.  </p>
 		  <p>Zusätzlich kann man in den Einstellungen aktivieren, das auch Cover der Serien angezeigt werden sollen. Die Cover und auch die Serien-Infos werden von
             <a href="https://www.thetvdb.com/" target="_blank">The TVDB</a> abgerufen. Da TheTVDB nicht immer ALLES vorrätig hat, kann es bei manchen Serien auch schon mal zu "Fehlern" kommen. Dies dann bitte im Forum melden, ob es gefixt werden kann.
 			<br>Der Dienst www.wunschliste.de ( WL ) bietet auf seiner Webseite für so gut wie alle Serien die Ausstrahlungstermine im deutschen Fernsehen an. Diese Informationen bereitet das SerienRecorder Plug-In auf und stellt
             eine Oberfläche zur Verfügung um die Lieblingsserien zu verwalten. WL hat auf seiner Webseite mittlerweile auch Filme im "Angebot", welche auch mit dem Serienrecorder ( SR ) getimert werden können. Filme lassen sich allerdings nur mit hilfe der TV-Planer-Mail-Funktion timern, was später noch näher erläutert wird. </p>
-          <p> Es werden genaue Folgen-Informationen abgerufen, so können diese in den Timer und damit in die Aufnahmeinformationen mit aufgenommen werden, also z. B. „S01E10 – Der Baum“. Als Ausnahme können mittlerweile aber auch Sonderfolgen/Specials mit z.B. S01 oder Folge 345 (ohne Staffel, wie z.B. Tatort) vom SerienRecorder verarbeitet werden, die Staffelbezeichnung ist dann S00.</p>
-		  <p>Serien, die eigentlich keine sind, weil sie tägl. oder wöchentl. ausgestrahlt werden und weder eine Staffel- noch Folgen-Bezeichnung haben, sind nur "schwer" mit dem SR zu timern. Aber auch dies geht mittlerweile mit einigen von diesen "Serien".  </p>
+          <p> Es werden genaue Folgen-Informationen abgerufen, so können diese in den Timer und damit in die Aufnahmeinformationen mit aufgenommen werden, also z. B. „S01E10 – Der Baum“. Als Ausnahme können mittlerweile aber auch Sonderfolgen/Specials mit z.B. S01 oder Serien ohne Staffelbezeichnung (Folge 345, wie z.B. Tatort) vom SerienRecorder verarbeitet werden, die Staffelbezeichnung ist dann S00.</p>
+		  <p>Serien, die eigentlich keine sind, weil sie tägl. oder wöchentl. ausgestrahlt werden und weder eine Staffel- noch Folgen-Bezeichnung haben, sind nur "schwer" mit dem SR zu timern. Aber auch dies geht mittlerweile mit einigen von diesen "Serien". Da diese Folgen nicht eindeutig zu identifizieren sind, würden diese einmal in die DB eingetragen und danach nicht mehr getimert. Daher sollte man die Option aktivieren, das diese spezielle Serie <strong>nicht</strong> in die DB eingetragen wird </p>
           <div class="alert alert-info" role="alert"> Es gibt natürlich auch "Spezialfälle" von Serien, bei denen das hinzufügen zum SR schon mal Probleme bereitet. Manchmal liegt es an Sonderzeichen im Namen oder aber man muß den meist engl. Original-Titel der Serie in die Suche des SR eingeben. Bei Problemen dann bitte im Forum melden. </div>
+		  <p>Der SR aktualisiert (wenn eingeschaltet) die von Ihm angelegten und noch ausstehenden Timer auf der Box mit den vorhandenen EPG-Daten, während des Autochecks (AC). Dabei werden die Zeiten der Timer abgeglichen und ggf geändert. Dieses funktioniert idR ganz gut, aber halt nicht immer. </p>
+		  <p>Der SR erstellt nur die Timer und gibt diese an die Box weiter. Sowohl für die Konflikterkennung als auch für die Aufnahmen ist <strong>ausschließlich</strong> die Box verantwortlich. Wenn etwas nicht aufgenommen wurde, obwohl der SR einen Timer erstellt hat, ist in den allermeisten Fällen die Box dafür verantwortlich bzw. evtl. falsche Einstellungen auf der Box oder im SR bei der Senderzuordnung. In einem solchen Problemfall ist immer das dazugehörige Log des SR, wo diese Aufnahme getimert wurde mit anzuhängen. Die Log-Dateien befinden sich idR im Pluginverzeichnis.</p>
+		  <br>
           <p> Der SerienRecorder ist ein nicht-kommerzielles Hobby Projekt, dass in keiner Beziehung zu den Betreibern der kommerziellen Webseite
             <a href="http://www.wunschliste.de" target="_blank">www.wunschliste.de</a> steht. Wir weisen ausdrücklich darauf hin, dass Wunschliste.de mit Absicht keine Schnittstelle zum Abrufen der benötigten Informationen bereit stellt, weil den Betreibern dadurch Werbeeinnahmen verloren gehen. Es ist
             also nicht ausgeschlossen, dass Wunschliste.de den Betrieb des SerienRecorders irgendwann unterbindet.
@@ -94,8 +98,8 @@
             <p><small>Download der Beta-Version</small></p>
           </div>
 		  <br>Über FTP (z.B. mit <a href="https://www.vuplus-support.org/wbb4/filebase/index.php?entry/202-dcc-dreambox-control-center-e2-v1-50/" target="_blank">DCC</a>, Filezilla,Totalcommander etc.) können dann die entsprechenden Dateien aus dem "src"-Verzeichnis der Zip-Datei mit den Dateien im SR Plug-In Verzeichnis auf der Box ausgetauscht bzw. überschrieben werden.
-			>br> D
 			</p>
+			<br>
           
           <div class="alert alert-danger">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button> <strong>WICHTIG: </strong>Das Herzstück des Plug-In's ist eine SQLite3-Datenbank . Bei manchen Images ist SQLite3 nicht standardmäßig installiert, und muß deshalb nachinstalliert werden. Das funktioniert z.B.
@@ -104,19 +108,20 @@
             <li>EPG-Translator von @Kashmir: zum Ansehen von YouTube-Trailern</li>
             <li>Wikipedia von @Kashmir: sucht auf Wikipedia nach Informationen zur Serie</li>
             <li>VPS: zur Berücksichtigung der VPS-Zeiten bei der Erstellung der Timer</li>
-            <li>Opera Webbrowser/DMM Webbrowser: zum Ansehen dieser Anleitung</li>
+            <li>Opera Webbrowser/DMM Webbrowser: zum Ansehen dieser Anleitung im SR</li>
+			<li>TAG Plugin : Wenn ein solches Plugin installiert ist, dann lassen sich am Serien-Marker in den Einstellungen die Tags für diese Serie setzen, dann wird auch automatisch immer der Name der Serie als Tag eingefügt. Diese können dann z.B. in der Movieliste zum Filtern genutzt werden.</li>
+			<li>EPGRefresh Plugin (v2.1.1 oder höher) : Eine solche Version gibt es derzeit nicht für VU+ Boxen, daher ist eine eventuelle "Fehlermeldung" im Log zu ignorieren. Bei den Dream-Boxen gibt es eine solche Version und dort kann man einstellen, das der Serienrecorder nach dem Durchlauf des EPGRefresh automatisch gestartet werden soll. Für alle anderen gilt dies dann selbst zu prüfen </li>
           </ul>
         </div> <span id="erste_schritte"><br></span>
         <h2 class="sub-header">Erste Schritte</h2>
-        <div class="row"> Beim ersten Start wird zunächst die Datenbank des SerienRecorders angelegt, standardmäßig im Verzeichnis "/etc/enigma2/", der Pfad kann aber jederzeit in den globalen Einstellungen geändert werden:
-          <div class="well well-sm">/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/SerienRecorder.db</div> Danach werden die Daten von Wunschliste eingelesen, genauer gesagt die Kanal-Liste, was je nach Internetverbindung etwas dauern kann. Dies ist aber nur beim ersten
-          Start und leerer Datenbank nötig. Ist das Einlesen abgeschlossen, sollte folgende Ansicht sichtbar sein, der SerienRecorder hat bereits automatisch einige Sender zugeordnet:
+        <div class="row"> Beim ersten Start wird zunächst die Datenbank des SerienRecorders angelegt, standardmäßig im Verzeichnis <strong>"/etc/enigma2/"</strong>, der Pfad kann aber jederzeit in den globalen Einstellungen geändert werden:
+          <div class="well well-sm"><strong>/etc/enigma2/SerienRecorder.db</strong></div> Danach werden die Daten von Wunschliste eingelesen, genauer gesagt die Sender-Liste, was je nach Internetverbindung etwas dauern kann. Dies ist aber nur beim ersten Start und leerer Datenbank nötig. Ist das Einlesen abgeschlossen, sollte folgende Ansicht sichtbar sein, der SerienRecorder hat bereits automatisch einige Sender zugeordnet:
           <div class="thumbnail with-caption">
-            <img src="images/sender-zuordnen.jpg" alt="Kanalzuordnung nach dem ersten Start" align="center">
+            <img src="images/sender-zuordnen.jpg" alt="Senderzuordnung nach dem ersten Start" align="center">
             <p><small>Kanalzuordnung nach dem ersten Start</small></p>
           </div>
-          <p>Wie die Senderzuordnung genau funktioniert lesen Sie bitte im Kapitel "Kanal-Zuordnung" nach.
-            <br> Beim nächsten Start bzw. nach dem Verlassen der Kanal-Zuordnung wird der Serien-Planer angezeigt. </p>
+          <p>Wie die Senderzuordnung genau funktioniert lesen Sie bitte im Kapitel "Sender zuordnen" nach.
+            <br> Beim nächsten Start bzw. nach dem Verlassen der Sender-Zuordnung wird der Serien-Planer angezeigt. </p>
           <div class="well well-sm"> Für den SerienRecorder sind inzwischen verschiedene Skins verfügbar, über die sich das Aussehen ändern lässt, diese Anleitung beschreibt und zeigt nur das Standardskin "SerienRecorder 1".
             <br>Die Bedienung ist bis auf wenige Ausnahmen in jedem Skin identisch. </div>
           <p> Das SerienRecorder Plug-In ist recht komplex und besteht aus mehreren Ansichten, diese werden im einzelnen in den nachfolgenden Kapiteln erklärt.
@@ -128,11 +133,11 @@
           </div>
           <div class="alert alert-info">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <p> Grundsätzlich lässt sich jede Ansicht über die <kbd>EXIT</kbd> Taste schließen und man gelangt zur vorherigen Ansicht. In einigen Fällen, in denen Änderungen gespeichert werden müssen, kann die betreffende Ansicht über <kbd class="red">Abbrechen</kbd>              bzw. <kbd class="green">Speichern</kbd> verlassen werden. </p>
+            <p> Grundsätzlich lässt sich jede Ansicht über die <kbd>EXIT</kbd> Taste schließen und es werden in Einstellungsfenstern, wo keine Tastenbelegung angezeigt wird, dadurch auch die gemachten Änderungen gespeichert. Danach gelangt man wieder zur vorherigen Ansicht. In einigen Fällen, in denen Änderungen verworfen oder gespeichert werden können, kann die betreffende Ansicht über <kbd class="red">Abbrechen</kbd>              bzw. <kbd class="green">Speichern</kbd> verlassen werden. </p>
             <p>Über die Pfeiltasten des Steuerkreuzes <span class="label label-default"><span class="glyphicon glyphicon-arrow-up"></span></span>&nbsp;<span class="label label-default"><span class="glyphicon glyphicon-arrow-down"></span></span> kann die
               Selektion zeilenweise geändert werden.
               <br>Über die Pfeiltastes des Steuerkreuzes <span class="label label-default"><span class="glyphicon glyphicon-arrow-right"></span></span>&nbsp;<span class="label label-default"><span class="glyphicon glyphicon-arrow-left"></span></span> kann
-              die Selektion seitenweise geändert werden.
+              die Selektion seitenweise geändert werden bzw. damit wird durch die Einstellungen der gerade angewählten Option "geblättert".
               <br>Außer in den Einstellungen Ansichten, dort kann man über die <span class="label label-default">Bouquet <span class="glyphicon glyphicon-arrow-up"></span></span>&nbsp;<span class="label label-default">Bouquet <span class="glyphicon glyphicon-arrow-down"></span></span>
               Tasten seitenweise geblättert werden. </p>
           </div>
