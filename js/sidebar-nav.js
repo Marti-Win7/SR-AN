@@ -12,7 +12,7 @@ var data =
         { href: "index.htm#installation", title: "Installation"},
         { href: "index.htm#erste_schritte", title: "Erste Schritte"},
         { href: "index.htm#einstellungen", title: "Globale Einstellungen"},
-        { href: "index.htm#suchlauf", title: "Suchlauf (Auto-Check)"},
+        { href: "index.htm#suchlauf", title: "Autocheck (AC, Suchlauf)"},
         { href: "index.htm#hilfe", title: "Hilfe"}
     ]},
     {href: "einstellungen.htm", title: "Einstellungen", submenus: [
@@ -37,6 +37,7 @@ var data =
         { href: "serienplaner.htm#timer-liste", title: "Timer-Liste"},
         { href: "serienplaner.htm#marker-hinzufuegen", title: "Marker hinzufügen"},
     ]},
+	{href: "faq.htm", title: "FAQ",},
 ]};
 var html = template(data);
 $('#sidebar-menu').html(html);
