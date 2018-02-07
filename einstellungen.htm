@@ -56,17 +56,17 @@
 
             <div class="row">
                 <p class="lead">
-                    Der SerienRecorder lässt sich weitreichend konfigurieren, neben den globalen Einstellungen können auch noch
-                    in einigen Ansichten kontextbezogene Einstellungen vorgenommen werden.
+                    Der SerienRecorder lässt sich weitreichend konfigurieren und dementsprechend an die eigenen "Bedürfnisse" anpassen. Man kann z.B. Serien-Verzeichnisse anlegen lassen oder die Serien extern auf ein NAS speichern lassen. Manche Optionen werden erst sichtbar, wenn die dazugehörige "Ober-Option" aktiviert wird.
                 </p>
                 <p>
-                    Um es dem Einsteiger einfacher zu machen, lässt sich der Umfang der Einstellungen über die Option <strong>Umfang der Einstellungen</strong> einschränken.
+                    Der Umfang der Einstellungen läßt sich über die Option <strong>Umfang der Einstellungen</strong> einschränken. Standardmäßig steht dies auf Experte, um am Anfang ALLE Einstellmöglichkeiten sichtbar zu machen. Wenn man möchte kann man später dann den Umfang der Einstellungen einschränken, falls man "Angst" hat beim öffnen der Einstellungen ausversehen "sensible" Optionen zu verstellen.
+					<br>
                     Zu jeder Option in den Einstellungen wird ein Hilfetext angezeigt, der die jeweilige Option erklärt.
                     Die Einstellungen werden erst dann dauerhaft gespeichert, wenn die Ansicht mit der Taste <kbd class="green">Speichern</kbd> verlassen wird.
                 </p>
                 <div class="alert alert-info">
                 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    Grundsätzlich muss an den Standard-Einstellungen nichts geändert werden, um den SerienRecorder verwenden zu können.<br/>
+                    Grundsätzlich muss an den Standard-Einstellungen kaum etwas geändert werden, um den SerienRecorder verwenden zu können.<br/>
                     Damit der SerienRecorder automatisch (einmal täglich) Timer anlegt muss der <strong>automatische Suchlauf</strong> aktiviert werden und eine Suchzeit eingestellt werden.
                 </div>
                 <p>Hier eine Übersicht alle Einstellungen, im folgenden wird jede Option in den einzelnen Bereichen erklärt:</p>
@@ -75,7 +75,11 @@
                     <p><small>Die globalen Einstellungen im Überblick</small></p>
                 </div>
             </div>
+			
+<!-- System -->			
+			
             <span id="system"><br/></span>
+			<br>
             <h2 class="sub-header">System</h2>
             <div class="row">
                 <ul>
@@ -85,6 +89,7 @@
                             Die SerienRecorder Datenbank kann von mehreren Boxen innerhalb eines Netzwerkes verwendet werden,
                             damit für einzelne Marker nur auf bestimmten Boxen Timer angelegt werden, kann hier die ID der Box eingestellt werden.
                             Wird in der Serien-Marker Ansicht ein Marker deaktiviert, werden für die Box mit der eingestellten ID keine Timer mehr für diesen Marker erstellt.
+							<br>Damit mehrere Boxen auf die Datenbank (DB) zugreifen können, läßt sich der Speicherort der DB auch auf ein Netzlaufwerk (z.B.NAS) auslagern.
                         </p>
                     </li>
                     <li>
@@ -103,8 +108,9 @@
                     </li>
                     <li>
                         <strong>Speicherort der Aufnahmen:</strong>
-                        <p>Setzt den Speicherort für Aufnahmen, alle Aufnahmen die durch den SerienRecorder programmiert werden, landen in dem eingestellten Verzeichnis.</p>
-                        <div class="bs-callout bs-callout-info">Diese Option kann für jeden Serien-Marker überschrieben werden (siehe xxx)<br/>Allerdings greifen in diesem Fall die Einstellungen für Serien-/Staffelverzeichis nicht mehr.</div>
+                        <p>Setzt den Speicherort für Aufnahmen. Alle Aufnahmen die durch den SerienRecorder programmiert werden, landen in dem eingestellten Verzeichnis.</p>
+                        <div class="bs-callout bs-callout-info">Diese Option kann für jeden Serien-Marker aber auch individuell geändert werden.
+						<br/>Allerdings greifen in diesem Fall die globalen Einstellungen für Serien-/Staffelverzeichis nicht mehr.</div>
                     </li>
                     <li>
                         <strong>Serien-Verzeichnis anlegen:</strong>
@@ -123,7 +129,7 @@
                                 <strong>Mindestlänge der Staffelnummer im Verzeichnisnamen:</strong>
                                 <p>
                                     Gibt die Mindestlänge der Staffelnummer im Verzeichnisnamen an, z.B. würde ein Wert von drei immer dreistellige Ordnernamen für die Staffel erstellen,
-                                    ist ein Staffelnummer kürzer wird mit dem unter "Füllzeichen für Staffelnummer im Verzeichnisnamen" eingestellten Füllzeichen aufgefüllt.
+                                    ist eine Staffelnummer kürzer wird mit dem unter "Füllzeichen für Staffelnummer im Verzeichnisnamen" eingestellten Füllzeichen aufgefüllt.
                                 </p>
                             </li>
                             <li>
@@ -144,7 +150,7 @@
                             <li>
                                 <strong>Art der Updates:</strong>
                                 <p>Gibt die Art der Updates an, nach denen gesucht werden soll. Es kann zwischen "Beta" und "Release" Versionen unterschieden werden.</p>
-                                <div class="bs-callout bs-callout-danger">Im Moment werden nur Release Versionen über die Update Funktion ausgeliefert.</div>
+                                <div class="bs-callout bs-callout-danger">Im Moment werden nur Release Versionen über die Update Funktion gemeldet.</div>
                             </li>
                         </ul>
                     </li>
@@ -179,14 +185,17 @@
                     </li>
                 </ul>
             </div>
-            <span id="auto-check"><br/></span>
-            <h2 class="sub-header">Auto-Check</h2>
+			
+<!-- Autocheck -->
+			<span id="auto-check"><br/></span>
+            <br>
+			<h2 class="sub-header">Autocheck</h2>
             <div class="row">
                 <ul>
                     <li>
                         <strong>Automatischen Suchlauf ausführen:</strong>
                         <p>
-                            Legt fest wann der automatische Suchlauf (Auto-Check) durchgeführt werden soll.
+                            Legt fest wann der automatische Suchlauf (Autocheck) durchgeführt werden soll.
                             Als Auto-Check wird die Hauptfunktion des SerienRecorders bezeichnet.
                             Es handelt sich dabei um das Suchen von Ausstrahlungsterminen, und das Anlegen von Timern für die einzelnen Folgen automatisch im Hintergrund.
                             Zu diesem Zeitpunkt wird eine Internetverbindung benötigt um die Informationen von Wunschliste.de abrufen zu können.
@@ -398,7 +407,11 @@
                     </li>
                 </ul>
             </div>
+			
+<!-- Timer -->
+			
             <span id="timer"><br/></span>
+			<br>
             <h2 class="sub-header">Timer</h2>
             <div class="row">
                 <ul>
@@ -527,7 +540,11 @@
                     </li>
                 </ul>
             </div>
+			
+<!-- Optimierungen -->			
+			
             <span id="optimierungen"><br/></span>
+			<br>
             <h2 class="sub-header">Optimierungen</h2>
             <div class="row">
                 <div class="bs-callout bs-callout-info">Die nachfolgenden Optionen können auf langsamen Boxen (schwacher Prozessor) zu erheblichen Geschwindigkeitsverbesserungen führen.</div>
@@ -556,7 +573,11 @@
                     </li>
                 </ul>
             </div>
+			
+<!-- GUI -->			
+			
             <span id="gui"><br/></span>
+			<br>
             <h2 class="sub-header">GUI</h2>
             <div class="row">
                 <ul>
@@ -699,7 +720,11 @@
                     </li>
                 </ul>
             </div>
+			
+<!-- Log -->			
+			
             <span id="log"><br/></span>
+			<br>
             <h2 class="sub-header">Log</h2>
             <div class="row">
                 <div class="bs-callout bs-callout-info">Die nachfolgenden Optionen dienen zur Fehlersuche und eigenen Kontrolle.</div>
