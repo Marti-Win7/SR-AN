@@ -65,8 +65,7 @@
                     Die Einstellungen werden erst dann dauerhaft gespeichert, wenn die Ansicht mit der Taste <kbd class="green">Speichern</kbd> verlassen wird.
                 </p>
                 <div class="alert alert-info">
-                	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    Grundsätzlich muss an den Standard-Einstellungen kaum etwas geändert werden, um den SerienRecorder verwenden zu können.<br/>
+                	Grundsätzlich muss an den Standard-Einstellungen kaum etwas geändert werden, um den SerienRecorder verwenden zu können.<br/>
                     Damit der SerienRecorder automatisch (einmal täglich) Timer anlegt muss der <strong>automatische Suchlauf</strong> aktiviert werden und eine Suchzeit eingestellt werden.
                 </div>
                 <p>Hier eine Übersicht alle Einstellungen, im folgenden wird jede Option in den einzelnen Bereichen erklärt:</p>
@@ -115,8 +114,8 @@
                     <li>
                         <strong>Serien-Verzeichnis anlegen:</strong>
                         <p>
-                            Ist diese Option gesetzt wird für jede Serie ein Unterverzeichnis mit dem Namen der Serie im Verzeichnis, das unter "Speicherort für Aufnahmen" eingestellt ist, angelegt.
-                            Das Verzeichnis wird erst dann angelegt, wenn für die betreffende Serie ein Timer erstellt wird.
+                            Ist diese Option gesetzt wird für jede Serie ein Unterverzeichnis mit dem Namen der Serie im Verzeichnis, das unter "Speicherort für Aufnahmen" eingestellt ist, angelegt. Das Verzeichnis wird erst dann angelegt, wenn für die betreffende Serie ein Timer erstellt wird.
+							<br>Sollte der Speicherort nicht erreichbar sein (z.B. NAS), wird die Aufnahmen auf das Hauptaufnahme-Verzeichnis umgelegt.
                         </p>
                     </li>
                     <li>
@@ -144,15 +143,9 @@
                         <strong>Automatisches Plugin-Update:</strong>
                         <p>
                             Ist diese Option gesetzt, versucht der SerienRecorder beim Öffnen nach neuen Versionen zu suchen.
-                            Wurde eine neue Version gefunden kann der Benutzer entscheiden ob er sie herunterladen und installieren möchte.
+                            Wurde eine neue Version gefunden kann der Benutzer entscheiden ob er sie herunterladen und installieren möchte. Ein vorheriges Backup des SR bzw. Systems ist eigentlich immer anzuraten.
                         </p>
-                        <ul>
-                            <li>
-                                <strong>Art der Updates:</strong>
-                                <p>Gibt die Art der Updates an, nach denen gesucht werden soll. Es kann zwischen "Beta" und "Release" Versionen unterschieden werden.</p>
-                                <div class="bs-callout bs-callout-danger">Im Moment werden nur Release Versionen über die Update Funktion gemeldet.</div>
-                            </li>
-                        </ul>
+                        
                     </li>
                     <li>
                         <strong>Speicherort der Datenbank:</strong>
@@ -163,23 +156,31 @@
                         <div class="bs-callout bs-callout-info">Wird der Speicherort geändert, kann der SerienRecorder die aktuelle Datenbank an den neuen Ort verschieben.</div>
                     </li>
                     <li>
-                        <strong>Erstelle Backup vor Suchlauf:</strong>
+                        <strong>Erstelle Backup :</strong>
                         <p>
-                            Ist die Option gesetzt, wird vor einem Suchlauf automatisch ein Backup der wichtigsten Dateien angelegt.
-                            Gesichert wird die SerienRecorder Datenbank, die SerienRecorder Einstellungen, die SerienRecorder Log-Datei sowie die enigma2 Timer
-                        </p>
+                            Mögliche Optionen: <strong>nein</strong> , <strong>vor dem Suchlauf</strong> , <strong>nach dem Suchlauf</strong> .
+							<br>
+							Ist die Option gesetzt, wird vor oder nach einem Suchlauf automatisch ein Backup der wichtigsten Dateien angelegt.
+                            Gesichert wird die SerienRecorder Datenbank, die SerienRecorder Einstellungen, die aktuelle SerienRecorder Log-Datei sowie die enigma2 Timer.
+                        <ul>
+							<strong>- vor dem Suchlauf:</strong> Hat den Vorteil, das man ein Backup hat, falls beim AC bzw. bei der Timererstellung etwas "schief" geht und die Box abstürtzt. War in den Anfängen des SR ab und zu mal der Fall, aber sollte mittlerweile nur noch äußerst selten vorkommen. Es sei denn man Testet immer "fleißig" die Beta-Versionen. 
+							<br><strong>- nach dem Suchlauf:</strong> Damit hat man den "Ist-Zustand" nach dem AC, falls das System mal Crasht, ohne das der SR daran schuld ist, was wohl mittlerweile eher der Fall ist.
+						</ul>
+						<br>
+						</p>
+						<div class="bs-callout bs-callout-info">So oder so, es immer von Vorteil das Backup im SR einzuschalten, damit auch im Falle eines Falles bei Fragen zur Timererstellung von Serien-Folgen immer das dazugehörige Log vorhanden ist. Vorausgesetzt, man hat die "Vorhaltezeit" hoch genug angesetzt.</div>
                         <ul>
                             <li>
                                 <strong>Speicherort für Backup:</strong>
                                 <p>Gibt das Verzeichnis an in dem die Dateien beim Backup gespeichert werden sollen.
                                 <br/>Innerhalb dieses Ordners wird bei jedem Backup ein Unterordner mit dem aktuellen Datum und Uhrzeit erstellt <samp>(Beispiel: 201508012012)</samp>.</p>
-                                <div class="bs-callout bs-callout-danger">Im Moment werden die Backups nicht automatisch gelöscht, es sollte also von Zeit zu Zeit im Backup Ordner aufgeräumt werden.</div>
+                                
                             </li>
                             <li>
                                 <strong>Backup-Dateien löschen die älter als x Tage sind:</strong>
                                 <p>Gibt an wie lange die Backup-Dateien aufbewart werden sollen.
-                                    <br/>Ist hier ein Wert größer 0 Tage eingestellt werden alle Dateien die älter als der eingestellte Wert sind aus dem Speicherort für Backup gelöscht.</p>
-                                <div class="bs-callout bs-callout-danger">Es werden alle Dateien im Ordner gelöscht unabhängig davon ob es sich um Backup-Dateien handelt oder nicht!</div>
+                                    <br/>Ist hier ein Wert größer 0 Tage eingestellt werden alle Dateien die älter als der eingestellte Wert sind aus dem Speicherort für Backup gelöscht. Der höchste Wert ist 099 Tage, was ausreichen sollte, um auch Probleme bei der Timererstellung zu finden, die schon etwas her sind.</p>
+                                
                             </li>
                         </ul>
                     </li>
@@ -196,14 +197,16 @@
                         <strong>Automatischen Suchlauf ausführen:</strong>
                         <p>
                             Legt fest wann der automatische Suchlauf (Autocheck) durchgeführt werden soll.
-                            Als Auto-Check wird die Hauptfunktion des SerienRecorders bezeichnet.
-                            Es handelt sich dabei um das Suchen von Ausstrahlungsterminen, und das Anlegen von Timern für die einzelnen Folgen automatisch im Hintergrund.
-                            Zu diesem Zeitpunkt wird eine Internetverbindung benötigt um die Informationen von Wunschliste.de abrufen zu können.
+                            Als Autocheck wird die Hauptfunktion des SerienRecorders bezeichnet.
+                            Es handelt sich dabei um das Suchen von Ausstrahlungsterminen, und das Anlegen von Timern für die einzelnen Serien-Folgen (bzw. auch Filme) automatisch im Hintergrund.
+                            Zu diesem Zeitpunkt wird eine Internetverbindung benötigt um die Informationen vom SerienServer abrufen zu können.
                         </p>
                         <ol type="a">
                             <li>
                                 <i><u>Manuell:</u></i>
-                                <p>Es wird kein automatischer Suchlauf durchgeführt, der Benutzer muss den Suchlauf manuell über die <kbd>EPG</kbd> Taste starten.</p>
+                                <p>Es wird kein automatischer Suchlauf durchgeführt, der Benutzer muss den Suchlauf manuell über die <kbd>EPG</kbd> Taste starten.
+								<br>Ist die "Wunschliste TV-Planer E-Mail" Funktion aktiviert, werden mit <kbd>EPG</kbd> nur die Serien aus der Wunschliste-Mail verarbeitet und mit <kbd>lang EPG</kbd> wird ein voller Suchlauf über alle aktiven Serien gemacht.
+								</p>
                             </li>
                             <li>
                                 <i><u>zur gewählten Uhrzeit:</u></i>
@@ -211,16 +214,16 @@
                                 <ul>
                                     <li>
                                         <strong>Uhrzeit für automatischen Suchlauf:</strong>
-                                        <p>Uhrzeit angeben zu der der Auto-Check durchgeführt werden soll.</p>
-                                        <div class="bs-callout bs-callout-danger">Es hat sich gezeigt, dass die Server von Wunschliste.de gegen 6:00 Uhr und 20:00 Uhr nicht zu erreichen sind.
-                                        <br/>Mal sollte also möglichst eine andere Uhrzeit einstellen um Verbindungsfehler zu vermeiden.
+                                        <p>Uhrzeit angeben zu der der Autocheck durchgeführt werden soll.</p>
+                                        <div class="bs-callout bs-callout-danger">Es hat sich gezeigt, das diese nicht zwischen 0:00-6:00 Uhr liegen sollte, da es in dieser Zeit durch Datenaktualisierungen der Server zu Problemen beim abrufen der Daten für die Timererstellung kommen kann.
+                                        <br/>Man sollte also möglichst eine andere Uhrzeit einstellen um Verbindungsfehler zu vermeiden.
                                         </div>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li>
                                         <strong>maximale Verzögerung für den automatischen Suchlauf (Min.):</strong>
-                                        <p>Um die Belastung des Wunschliste.de Servers zu verringern, kann hier ein Zeitraum in Minuten angegeben werden,
+                                        <p>Um die Belastung des SerienServers zu verringern, kann hier ein Zeitraum in Minuten angegeben werden,
                                             in dem der SerienRecorder, ausgehend von der unter "Uhrzeit für automatischen Suchlauf" eingestellten Zeit, den Suchlauf durchführt.
                                             <br/>D.h. der Suchlauf findet irgendwann zwischen der unter "Uhrzeit für automatischen Suchlauf" eingestellten Zeit + Verzögerung statt.
                                         </p>
@@ -228,19 +231,32 @@
                                 </ul>
                             </li>
                             <li><i><u>nach EPGRefresh:</u></i>
-                                <p>Einige Benutzer verwenden das EPGRefresh Plugin um den EPG der Box aktuell zu halten.
+								<div class="bs-callout bs-callout-info">Die Auswahl "nach EPGRefresh" ist nicht bei allen Boxen verfügbar/sichtbar. </div>
+                                <div class="bs-callout bs-callout-danger">Damit diese Funktion genutzt werden kann, muss zwingend das EPGRefresh Plugin ab Version 2.1.1 installiert sein. Z.B. für VU+ Receiver gibt es eine solche Version nicht, daher ist diese Option auf VU's nicht sichtbar.</div>
+								<p>Einige Benutzer verwenden das EPGRefresh Plugin um das EPG der Box aktuell zu halten.
                                     Mit dieser Option hat man die Möglichkeit, im Anschluss an den EPGRefresh, den automatischen Suchlauf starten zu lassen.
                                 </p>
-                                <div class="bs-callout bs-callout-danger">Damit diese Funktion genutzt werden kann, muss zwingend das EPGRefresh Plugin ab Version 2.1.1 installiert sein.</div>
+                                
                             </li>
                         </ol>
-                        <div class="bs-callout bs-callout-info">Die Auswahl "nach EPGRefresh" ist nicht bei allen Boxen verfügbar.</div>
+                        
                     </li>
                     <li>
+                        <strong>Wunschliste TV-Planer E-Mail nutzen:</strong>
+                        <p>Hierzu Bitte die PDF-Anleitung aus dem ersten Post im VTI-Forum runterladen. Da sind alle Informationen drin enthalten, die man benötigt, um dies einzurichten.</p>
+						<p>
+						<a href="https://www.vuplus-support.org/wbb4/index.php?thread/85765-serien-recorder-3-6-0-03-12-2017/&postID=1144875#post1144875" target="_blank">VTI-Forum</a>
+						<br>Download / Ansicht: <a href="https://www.vuplus-support.org/wbb4/index.php?attachment/172626-tv-planer-anleitung-v3-pdf/" target="_blank">TV-Planer Anleitung</a>
+						</p>
+						<div class="bs-callout bs-callout-info">Eins sei dazu noch gesagt, es ist sehr sinnvoll, die Option "Voller Suchlauf mindestens einmal im Erstellungszeitraum" zu aktivieren, denn damit ist sichergestellt, das mind einmal in x Tagen ein voller Suchlauf über alle aktiven Serien gemacht wird.</div>
+					</li>	
+					<li>
                         <strong>Timer für X Tage erstellen:</strong>
                         <p>
-                            Legt fest wie viele Tage im Voraus Timer erstellt werden, in der Regel hat sich hier ein Wert von 3 - 4 Tagen als optimal herausgestellt.
-                            Im oberen Teil des Log sieht man nach dem Auto-Check bis zu welchem Datum/Uhrzeit Timer erstellt wurden.
+                            Legt fest wie viele Tage im Voraus Timer erstellt werden, in der Regel hat sich hier ein Wert von mind. 8 Tagen als gut herausgestellt.
+							<br>Es gibt natürlich auch Ausnahmen, wo es „besser“ ist, den SR nur ca. 3 Tage im voraus Timern zu lassen, aber idR passt das gut mit den 8 Tagen. 
+							<br>Im oberen Teil des Log sieht man nach dem Autocheck bis zu welchem Datum/Uhrzeit Timer erstellt wurden.
+							<div class="bs-callout bs-callout-info">Im Gegensatz zur "Wunschliste TV-Planer E-Mail", wo nur die Serien für den einen Tag berücksichtigt werden, erstellt der SR seine Timer für den Bereich von x Tagen. Was aber nicht bedeutet, das über die Mail nur die Serienfolgen für einen Tag erstellt werden, denn der SR nutzt im normalfall nur die Info, welche Serien in der Mail stehen. Dann geht der SR "ganz normal" hin und erstellt Timer für diese Serien für die eingestellten x Tage. Nur wenn der SerienServer nicht erreichbar ist, um die Sendetermine abzurufen, werden für den AC auch die Ausstrahlungstermine für die Serien aus der Mail benutzt. </div>
                         </p>
                     </li>
                     <li>

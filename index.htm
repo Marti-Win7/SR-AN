@@ -43,7 +43,7 @@
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 	  
  <!-- Einleitung -->
-		<p>Wer Fehler in der Anleitung findet, Bitte eine PN (Konversation) an <a href="https://www.vuplus-support.org/wbb4/index.php?user/79460-marti-win7/" target="_blank"><strong>@Marti_win7</strong></a> im VTI-Forum.</p>
+		<p>(Wer Fehler in der Anleitung findet, Bitte eine PN (Konversation) an <a href="https://www.vuplus-support.org/wbb4/index.php?user/79460-marti-win7/" target="_blank"><strong>@Marti_win7</strong></a> im VTI-Forum.)</p>
         <br>
 		<br>
 		<h1 class="page-header">Einleitung</h1>
@@ -70,7 +70,7 @@
           
           <div class="thumbnail with-caption">
 			<p><h4><strong>Beispiel für eine Seite von wunschliste.de</strong></h4></p>
-            <img src="images/wunschliste.jpg" alt="Beispiel für eine Seite von Wunschliste.de" align="center" class="float-right">
+            <img src="images/wl-seite.png" alt="Beispiel für eine Seite von Wunschliste.de" align="center" class="float-right">
             <p> <small>Beispiel für eine Seite von wunschliste.de</small> </p>
           </div>
         </div> 
@@ -114,7 +114,6 @@
 			</p>
 			<p>Es gibt auch ein Plugin, mit dessen hilfe man sich die Beta-Versionen (ohne Hilfe eines PCs/Laptops) direkt auf der Box installieren lassen kann. Dieses Plugin heißt <a href="https://www.vuplus-support.org/wbb4/index.php?thread/117977-githubpluginupdater/" target="_blank">GithubPluginUpdater</a>. </p>
 			<div class="alert alert-danger">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                     <strong>WICHTIG: </strong>Die Benutzung des GithubPluginUpdater geschiet auf eigene Gefahr. Mit dem GithubPluginUpdater können auch andere Plugins mit Git-Updates versorgt werden. Was für den SR bei Git-Updates gilt, muß nicht für die anderen dort angezeigten Plugins gelten. Vor Benutzung des GithubPluginUpdater Bitte mind. den ersten Post des GithubPluginUpdater durchlesen.
                 </div>
 			<br>
@@ -138,16 +137,26 @@
         <br>
 		<h2 class="sub-header">Erste Schritte</h2>
         <div class="row"> Beim ersten Start wird zunächst die Datenbank des SerienRecorders angelegt, standardmäßig im Verzeichnis <strong>"/etc/enigma2/"</strong>, der Pfad kann aber jederzeit in den globalen Einstellungen geändert werden:
-          <div class="well well-sm"><strong>/etc/enigma2/SerienRecorder.db</strong></div> Danach werden die Daten von Wunschliste eingelesen, genauer gesagt die Sender-Liste (Web-Channels), was je nach Internetverbindung etwas dauern kann. Dies ist aber nur beim ersten Start und leerer Datenbank nötig. Ist das Einlesen abgeschlossen, sollte folgende Ansicht sichtbar sein, der SerienRecorder hat bereits automatisch einige Sender zugeordnet:
+          <div class="well well-sm"><strong>/etc/enigma2/SerienRecorder.db</strong></div> Danach werden die Daten von Wunschliste eingelesen, genauer gesagt die Sender-Liste (Web-Channels), was je nach Internetverbindung etwas dauern kann. Dies ist aber nur beim ersten Start und leerer Datenbank nötig. Ist das Einlesen abgeschlossen, sollte folgende Ansicht sichtbar sein, der SerienRecorder hat bereits automatisch einige Sender zugeordnet. Im folgenden Bild ist das SerienRecorder eigene Aussehen abgebildet.
+		  <br>
 		  <br>
           <div class="thumbnail with-caption">
             <img src="images/sender-zuordnen.jpg" alt="Senderzuordnung nach dem ersten Start" align="center">
-            <p><small>Kanalzuordnung nach dem ersten Start</small></p>
+            <p><small>Senderzuordnung nach dem ersten Start</small></p>
           </div>
+		  <p>Der SR ist mittlerweile in vielen Skin integriert bzw. es gibt zu vielen Skins eigene Skinparts. womit dass Aussehen des SR dem verwendeten Skin auf der Box angeglichen wird. Dabei haben die "Skin Erbauer" alle Freiheiten, wie sie die einzelnen "Objekte" im SR anordnen. Eine Möglichkeit sieht dann so aus.</p>
+		  <br>
+		  <br>		  
+		  <div class="thumbnail with-caption">
+            <img src="images/senderzuordnung.png" alt="Senderzuordnung nach dem Start" align="center">
+            <p><small>Senderzuordnung nach dem Start</small></p>
+          </div>
+		  <p>Dabei fällt auf, das die Farbtasten zwar auch unten angesiedelt sind, aber die anderen Tastenbelegungen auf die rechte Seite gesetzt wurden und zusätzlich das TV-Bild oben rechts eingeblendet wird. Dabei kann es dann aber geschehen, das die 3 Spalten der Sender nicht mehr ganz untereinander stehen. So wie die 2. Spalte (die Sender der Box) nicht ganz unter "STB-Sender" stehen. Aber ich denke es gibt "schlimmeres", denn die Senderzuordnung ruft man ja eigentlich nur selten auf.</p>
+		  <br>
           <p>Wie die Senderzuordnung genau funktioniert lesen Sie bitte im Kapitel "Sender zuordnen" nach.
             <br> Beim nächsten Start bzw. nach dem Verlassen der Sender-Zuordnung wird der Serien-Planer angezeigt. </p>
           <div class="well well-sm"> Für den SerienRecorder sind inzwischen verschiedene Skins bzw. Skinparts verfügbar, über die sich das Aussehen ändern läßt.
-            <br>Sollte der SR bei jemandem nicht (annähernd) Bildschirmfüllend sein, sollte man sich informieren, ob dazu ein Skinpart erforderlich bzw. überhaupt verfügbar ist. <br>Auch die Einstellungen im SR bezüglich "Skin"-Optionen sollten durchgetestet werden. </div>
+            <br>Sollte der SR bei jemandem nicht (annähernd) Bildschirmfüllend sein, sollte man sich informieren, ob dazu ein Skinpart erforderlich bzw. überhaupt verfügbar ist. <br>Auch die Einstellungen im SR bezüglich "Skin"-Optionen (z.B. Serienrecorder1, Serienrecorder2, Skinpart etc.) sollten durchgetestet werden. </div>
           <p> Das SerienRecorder Plugin ist recht komplex und besteht aus zwei Ansichten, die Serien-Planer-Ansicht und die Serien-Marker-Ansicht. Diese werden im einzelnen in den nachfolgenden Kapiteln erklärt.
             <br>Jede Ansicht hat einen festen Bereich, in der die für diese Ansicht aktiven Tasten aufgelistet werden. Da es inzwischen sehr viele Funktionen pro Ansicht gibt, welchselt dieser Bereich (einstellbar) alle paar Sekunden. Bei manchen Skins werden auch ALLE Tasten angezeigt. Manchmal haben Tasten auch eine doppelte
             Funktion, kurz gedrückt oder lang gedrückt. Dies wird durch einen Schrägstrich dargestellt (kurz/lang): </p>
@@ -156,7 +165,7 @@
             <p><small>Aktive Tasten in dieser Ansicht</small></p>
           </div>
           <div class="alert alert-info">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            
             <p> Grundsätzlich lässt sich jede Ansicht über die <kbd>EXIT</kbd> Taste schließen und es werden in Einstellungsfenstern, wo keine Tastenbelegung angezeigt wird, dadurch auch die gemachten Änderungen gespeichert. Danach gelangt man wieder zur vorherigen Ansicht. In einigen Fällen, in denen Änderungen verworfen oder gespeichert werden können, kann die betreffende Ansicht über <kbd class="red">Abbrechen</kbd>              bzw. <kbd class="green">Speichern</kbd> verlassen werden. </p>
             <p>Über die Pfeiltasten des Steuerkreuzes <span class="label label-default"><span class="glyphicon glyphicon-arrow-up"></span></span>&nbsp;<span class="label label-default"><span class="glyphicon glyphicon-arrow-down"></span></span> kann die
               Selektion zeilenweise geändert werden.
