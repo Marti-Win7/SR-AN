@@ -524,6 +524,10 @@
                             In einigen Ansichten werden die Episoden mit einem Festplatten Symbol gekennzeichnet, wenn sie sich bereits auf der Festplatte befinden.<br/>
                             Ist diese Option auf NEIN gesetzt, wird dieses Symbol nicht angezeigt und es wird auch nicht auf der Festplatte nach der Aufnahme gesucht.
                         </p>
+						<ul><div class="bs-callout bs-callout-danger">Diese Option muß gesetzt sein, wenn der SR keine Episoden timern soll, die er schon auf der Festplatte (HDD, NAS) findet. Dies kann allerdings den AC verlängern und evtl. die Leistung der Box beeinträchtigen, da der/die Ordner durchsucht werden müssen.
+						<br> Es werden folgende Dateiendungen verarbeitet:<strong> ts | mkv | avi | mp4 | divx | xvid | mpg | mov </strong>.
+                                        </div>
+						</ul>				
                     </li>
                 </ul>
             </div>
@@ -586,31 +590,29 @@
                     <li>
                         <strong>Zeige Picons:</strong>
                         <p>
-                            Ist die Option gesetzt werden in der Serien-Planer Ansicht Sender Logos angezeigt.
+                            Ist die Option gesetzt werden in der Serien-Planer Ansicht Sender Logos angezeigt. Hierzu muß dann das Verzeichnis angegeben werden.
                         </p>
                         <ul>
                             <li>
-                                <strong>Verwende folgende Picons:</strong>
+                                <strong>Verzeichnis mit Picons:</strong>
                                 <p>
-                                    Auswahl, welche Sender-Logos angezeigt werden
+                                    Hier dann das Verzeichnis zu den Picons angeben.
                                 </p>
-                                <div class="bs-callout bs-callout-info">Es können eigene Picons in einem Unterordner des Ordners "images" abgelegt werden,
-                                diese werden vom SerienRecorder erkannt und zur Auswahl angeboten.</div>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <strong>Zeige Cover:</strong>
                         <p>
-                            Ist die Option gesetzt werden die Cover der Serien bei IMDB heruntergeladen und angezeigt.
-                            Der SerienRecorder speichert die Cover im angegebenen Ordner ab und lädt sich deshalb nur einmal herunter.
+                            Ist die Option gesetzt werden die Cover der Serien bei <a href="https://www.thetvdb.com/" target="_blank">TheTVDB.com</a> heruntergeladen und angezeigt.
+                            Der SerienRecorder speichert die Cover im angegebenen Ordner ab.
                         </p>
                         <ul>
                             <li>
                                 <strong>Speicherort der Cover:</strong>
                                 <p>
-                                    Gibt den Ordner an an dem die Cover heruntergeladen werden.
-                                    Es sollte ein Ordner verwendet werden in dem die Dateien dauerhaft gespeichert werden.
+                                    Gibt den Ordner an, wo die Cover gespeichert werden.
+                                    Es sollte ein Ordner verwendet werden in dem die Dateien dauerhaft gespeichert werden, also nicht "/tmp/", denn der wird bei jedem (Neu-)Start der Box gelöscht.
                                 </p>
                             </li>
                         </ul>
@@ -621,12 +623,36 @@
                             Bei einigen Skins ist es nötig die Schriftgröße in Listen anpassen zu können, dies ist über diese Option möglich.
                             Der SerienRecorder muß neu gestartet werden damit die Änderung wirksam wird.
                         </p>
-                    </li>
+				    </li>						
+					<li>
+						<strong>Staffel-Filter in Sendetermine-Ansicht:</strong>
+						<p>Ist diese Option gesetzt, werden nur noch die Sendetermine angezeigt, die den eingestellten Staffeln im Serien-Marker entsprechen.
+						</p>
+					</li>
+					<li>
+						<strong>Timer-Filter in Sendetermine-Ansicht:</strong>
+						<p>Ist diese Option gesetzt, werden nur noch die Termine angezeigt, für die es noch keine Einträge in der SerienRecorder Datenbank gibt. Es werden also bei aktivem Timer-Filter nur noch nicht aufgenommen Folgen in den Sendeterminen angezeigt.
+						</p>
+					</li>
+					<li>
+						<strong>Sortierung der SerienMarker:</strong>
+						<p> Hier steht zur Auswahl
+						</p>
+						<ol type="a">
+                            <li>
+                                <i><u>Alphabetisch:</u></i>
+							</li>
+							<li>
+                                <i><u>Wunschliste:</u></i>
+							</li>
+						</ol>
+					</li>
+					<br>
                     <li>
                         <strong>Anzahl der wählbaren Staffeln im Menü SerienMarker:</strong>
                         <p>
-                            In der Serien-Marker Ansicht kann ausgewählt werden welche Staffeln bei der Timererstellung berücksichtigt werden sollen (siehe xxx).
-                            Mit dieser Option kann eingestellt werden wie viele Staffeln dort angezeigt werden.
+                            In der Serien-Marker Ansicht kann ausgewählt werden, welche Staffeln bei der Timererstellung berücksichtigt werden sollen.
+                            Mit dieser Option kann eingestellt werden, wie viele Staffeln dort angezeigt werden.
                         </p>
                     </li>
                     <li>
@@ -668,7 +694,7 @@
                     <li>
                         <strong>Staffelauswahl bei neuen Markern:</strong>
                         <p>
-                            Es kann ausgewählt werden welche Staffeln beim Anlegen von neuen Serien-Markern (siehe xxx) automatisch ausgewählt sind.
+                            Es kann ausgewählt werden welche Staffeln beim Anlegen von neuen Serien-Markern automatisch ausgewählt sind.
                         </p>
                         <ol type="a">
                             <li>
@@ -685,7 +711,7 @@
                     <li>
                         <strong>Öffne Marker-Ansicht nach Hinzufügen neuer Marker:</strong>
                         <p>
-                            Ist die Option gesetzt, wird die nach dem Hinzufügen eine neuen Markers (siehe xxx) automatisch die Serien-Marker Ansicht geöffnet und der neue Marker selektiert.
+                            Ist die Option gesetzt, wird nach dem Hinzufügen eines neuen Markers automatisch die Serien-Marker Ansicht geöffnet und der neue Marker selektiert.
                         </p>
                     </li>
                 </ul>
@@ -697,31 +723,70 @@
 			<br>
             <h2 class="sub-header">Log</h2>
             <div class="row">
-                <div class="bs-callout bs-callout-info">Die nachfolgenden Optionen dienen zur Fehlersuche und eigenen Kontrolle.</div>
+                <div class="bs-callout bs-callout-info">Die nachfolgenden Optionen dienen zur Fehlersuche und eigenen Kontrolle, falls es "Unstimmigkeiten" bei der Timererstellung gibt.</div>
                 <ul>
                     <li>
-                        <strong>Intensive Suche nach angelegten Timern:</strong>
-                        <p>
-                            In der Serien-Planer Ansicht werden die Episoden hervorgehoben für die bereits ein Timer existiert.<br/>
-                            Ist diese Option gesetzt, wird vor dem Anzeigen der Serien-Planer Ansicht, jede Episode im EPG gesucht.
+                        <strong>Speicherort für Log-Datei:</strong>
+                        <p>Standardmäßig stehen die Log-Dateien im SR-Plugin Ordner                          
                         </p>
                     </li>
                     <li>
-                        <strong>Zeige ob die Episode als Aufnahme auf der HDD ist:</strong>
-                        <p>
-                            In einigen Ansichten werden die Episoden mit einem Festplatten Symbol gekennzeichnet, wenn sie sich bereits auf der Festplatte befinden.<br/>
-                            Ist diese Option gesetzt wird dieses Symbol nicht angezeigt und es wird auch nicht auf der Festplatte nach der Aufnahme gesucht.
+                        <strong>Log-Dateiname mit Datum und Uhrzeit:</strong>
+                        <p>Steht dies auf <strong>Nein</strong>, wird die Log-Datei jeden Tag überschrieben. Dies hat den Nachteil, das man keine fortlaufenden Log-Dateien hat, für eine eventuelle Fehlersuche.
+                        </p>Steht dies auf <strong>Ja</strong>, wird im Log-Dateinamen Datum und Uhrzeit mit eingebracht. So hat man dann jeden Tag eine eigene Log-Datei. Damit die Anzahl dieser nicht ins "unendliche" anwächst, kann man in folgender Einstellung festlegen, wie lange diese Log-Dateien vorgehalten werden sollen.
+						<p>
+						<ul>
+						<li>
+							<strong>Log-Dateien löschen die älter asl x Tage sind:</strong
+						</li>
+                        </ul>    
                         </p>
+						<br>
                     </li>
                     <li>
-                        <strong>Zeitspanne für Timersuche einschränken:</strong>
-                        <p>
-                            Wunschliste.de stellt für jede Serie die Ausstrahlungstermine der nächsten 6-8 Wochen bereit, in der Regel werden Timer aber nur für die nächsten
-                            paar Tage gesucht.<br/>Ist diese Option gesetzt, wird alle Ausstrahlungstermine die zu weit in der Zukunft liegen ignoriert, dies verkürzt den
-                            automatischen Suchlauf erheblich.
+                        <strong>DEBUG LOG aktivieren:</strong>
+                        <p>Ist diese gesetzt, werden folgende <strong>DEBUG LOG</strong> Optionen, sofern diese dann auf JA gesetzt sind, im Log mit angegeben.
                         </p>
                     </li>
+					<ul>
+						<li>
+							<strong>DEBUG LOG - STB Informationen:</strong>
+						</li>
+						<li>
+							<strong>DEBUG LOG - :</strong>
+						</li>
+						<li>
+							<strong>DEBUG LOG - :</strong>
+						</li>
+						<li>
+							<strong>DEBUG LOG - :</strong>
+						</li>
+						<li>
+							<strong>DEBUG LOG - :</strong>
+						</li>
+						<li>
+							<strong>DEBUG LOG - :</strong>
+						</li>
+						<li>
+							<strong>DEBUG LOG - :</strong>
+						</li>
+					</ul>
+					<li>
+							<strong>DEBUG LOG - :</strong>
+					</li>
+					<li>
+							<strong>DEBUG LOG - :</strong>
+					</li>
+					<li>
+							<strong>DEBUG LOG - :</strong>
+					</li>	
                 </ul>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
             </div>
         </div>
     </div>
