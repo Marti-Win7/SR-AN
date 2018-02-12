@@ -15,7 +15,7 @@ var data =
         { href: "index.htm#suchlauf", title: "Autocheck (AC, Suchlauf)"},
         { href: "index.htm#hilfe", title: "Hilfe"}
     ]},
-    {href: "einstellungen.htm", title: "Einstellungen", submenus: [
+    {href: "einstellungen.htm", title: "Globale Einstellungen", submenus: [
         { href: "einstellungen.htm#system", title: "System"},
         { href: "einstellungen.htm#auto-check", title: "Auto-Check"},
         { href: "einstellungen.htm#timer", title: "Timer"},
@@ -24,7 +24,7 @@ var data =
         { href: "einstellungen.htm#log", title: "Log"},
     ]},
     {href: "serienplaner.htm", title: "Serien-Planer", submenus: [
-        { href: "serienplaner.htm#anzeigemodus", title: "Anzeige-Modus"},
+        { href: "serienplaner.htm#anzeigemodus", title: "Tagesübersicht / TOP30"},
         { href: "serienplaner.htm#sender-zuordnen", title: "Sender zuordnen"},
         { href: "serienplaner.htm#serien-marker", title: "Serien-Marker"},
         { href: "serienplaner.htm#timer-liste", title: "Timer-Liste"},
