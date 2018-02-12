@@ -52,27 +52,44 @@
             <div id="sidebar-menu"></div>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">Serien-Planer</h1>
+            <h1 class="page-header">Die Serien-Planer Ansicht</h1>
 
             <div class="row">
                 <p class="lead">
-                    Der Serien-Planer zeigt die Serien/Episoden an, die am heutigen Tag bzw. den folgenden Tagen ausgestrahlt werden.<br/>
-                    Diese Ansicht zeigt die Daten der Serien-Planer Seite von Wunschliste und dient der schnellen Übersicht über den
-                    heutigen Serientag.
+					Der Name "SerienPlaner Ansicht" hat "historische" wurzeln und stammt aus den Anfängen des SerienRecorders. "Damals" konnte man nur mithilfe des SerienPlaners eine Serie zum SR hinzufügen. Mittlerweile gibt es eine ganze Reihe mehr Möglichkeiten, eine Serie zum SR hinzuzufügen.
+					<br>
+                    Der Serien-Planer zeigt eine "Auswahl" an Serien/Episoden in der <strong>Tagesübersicht</strong> an, die an dem jeweiligen Tag ausgestrahlt werden. Diese Ansicht ist NIE vollständig, was bedeutet, das hier NIE die Sendetermine ALLER Serien an dem Tag aufgeführt werden.<br/>
+                    Diese Ansicht läßt sich mit <kbd class="red">ROT</kbd> umschalten in <strong>TOP30</strong>. Dies sind die Charts der SR-User, also welche Serie am häufigsten vom SerienServer abgerufen wurde, steht ganz oben.
                 </p>
                 <p>
-                    Je nach Einstellung kann der SerienRecorder entweder in dieser Ansicht gestartet werden oder in der Serien-Marker Ansicht.
-                    In diesem Fall gelangt man durch langes drücken von <span class="label label-default">Exit</span> in die Serien-Planer Ansicht.
+                    Je nach Einstellung kann der SerienRecorder entweder in dieser Ansicht oder mit der Serien-Marker Ansicht gestartet werden.
+                    Startet man mit der SerienMarker Ansicht, kommt man mit <kbd>lang Exit</kbd> in die Serien-Planer Ansicht.
                 </p>
                 <div class="alert alert-danger">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong>WICHTIG: </strong>Die angezeigten Serien/Episoden sind niemals vollständig, da Wunschliste nicht alle Serien
-                    in ihrem Serien-Planer anzeigt.
+                    <strong>WICHTIG: </strong>Die angezeigten Serien/Episoden sind niemals vollständig, daher muß man einen der anderen Wege nutzen um eine Serie hinzuzufügen, wenn die Serie nicht angezeigt wird.
                 </div>
-                <p>
-                    Über die <span class="label label-default">Bouquet <span class="glyphicon glyphicon-arrow-up"></span></span>&nbsp;<span class="label label-default">Bouquet <span class="glyphicon glyphicon-arrow-down"></span></span> Tasten
-                    kann man zum nächsten bzw. vorherigen Tag springen und sich die Serien/Episoden dieses Tages anzeigen lassen. So kann man tageweise blättern.
-                </p>
+				<ul>
+					<li>
+						<p><strong>Tagesübersicht</strong></p>
+				
+						<p>
+						Über die <kbd>Steuerkreuz</kbd> Tasten kann man durch die Serien/Episoden des jeweiligen Tages blättern.
+						<br>
+						Über die <kbd>Bouquet +-</kbd> bzw. <kbd>Channel +-</kbd> Tasten kann man in der Tagesübersicht zum nächsten bzw. vorherigen Tag springen. Die Tagesübersicht kann man Tageweise (insgesamt 4 Tage) durchblättern. Dies kann, je nach Leistung der Box und des Internets, schon mal ein paar Sekunden dauern, bis der nächste Tag angezeigt wird.
+						</p>
+					</li>
+					<li>
+						<p><strong>TOP30</strong></p>
+				
+						<p>
+						Über die <kbd>Steuerkreuz</kbd> Tasten kann man durch die tagesaktuellen Charts der TOP30 blättern.
+						</p>
+					</li>
+				</ul>
+				<br>
+				<p>Mit der <kbd>OK</kbd> Taste wird die gerade selektierte Serie als SerienMarker dem SR hinzugefügt, dabei ist es egal, in welcher der beiden Ansichten man sich befindet.
+				<br>Das hinzufügen von Serien wird weiter unten genauer beschrieben.
+				</p>
                 <p>
                     Ist für eine der anzeigten Serien bereits ein Serien-Marker vorhanden, wird der Eintrag in <span class="greenfont">grüner Schrift</span> dargestellt.<br/>
                     Ist noch kein Serien-Marker vorhanden und die Episode ist die erste Folge (Staffel- bzw. Serienstart) wird sie in <span class="redfont">roter Schrift</span> dargestellt.<br/>
@@ -82,68 +99,70 @@
                     <img src="images/neu.png"> Das <strong>Neu-Symbol</strong> zeigt an ob es sich um eine erstmalige Ausstrahlung handelt.
                 </p>
                 <div class="alert alert-info" role="alert">
-                    Die Option <kbd class="green">Sender zuordnen</kbd> kann nur aus der Serien-Planer Ansicht aufgerufen werden.
+                    Die Funktion <kbd class="green">Sender zuordnen</kbd> wird normalerweise aus der Serien-Planer Ansicht aufgerufen. Alternativ gibt es die Möglichkeit, die Senderzuordnung aus den Globalen Einstellungen mit der <kbd>MENÜ</kbd> Taste aufzurufen.
                 </div>
+				<br>
+				<br>
+				<p><h4><strong>Beispiel Screenshot der Tagesübersicht</strong></h4></p>
                 <div class="thumbnail with-caption">
-                    <img src="images/serien-planer.jpg" alt="Serien-Planer Ansicht im SerienRecorder" align="center">
+                    <img src="images/serienplaner-mw.png" alt="Serien-Planer Ansicht im SerienRecorder" align="center">
 
                     <p>
                         <small>Serien-Planer Ansicht im SerienRecorder</small>
                     </p>
                 </div>
             </div>
+<!-- Die Farbtasten -->			
+			
+			
             <span id="anzeigemodus"><br/></span>
-            <h2 class="sub-header"><kbd class="red">Anzeige-Modus</kbd></h2>
+			<br>
+			<br>
+			<h2 class="header">Die Farbtasten</h2>
+			<br>
+            <h4 class="sub-header"><kbd class="red">Tagesübersicht / TOP30</kbd></h4>
             <div class="row">
                 <p>
-                    Über den Anzeige-Modus lässt sich einstellen welche Serien im Serien-Planer angezeigt werden. Dabei entsprechen die Optionen denen auf der Wunschliste Serien-Planer Seite.<br/>
-                    Zusätzlich kann noch ein Filter für aktivierte Sender gesetzt werden - damit werden alle Episoden auf nicht zugeordneten Sendern ausgeblendet.<br/>
-                    Der ausgewählte Anzeige-Modus wird im Titel der Serien-Planer Ansicht angezeigt.
+                    Über die rote Farbtaste läßt sich die Anzeige des SerienPlaners zwischen den beiden Ansichten wechseln.
                 </p>
-                <div class="alert alert-info" role="alert">
-                    Der eingestellte Modus wirkt sich auch auf die Serien/Staffelstart Ansicht <kbd>3</kbd> aus. Wird beim Auto-Check nach Serien-/Staffelstarts gesucht,
-                    wird nur der im Serien-Planer eingestellte Anzeige-Modus bei der Suche berücksichtigt. Wenn also z.B. "Deutsche Serien" ausgewählt ist, werden auch nur
-                    Serien/Staffelstarts für deutsche Serien gesucht und angezeigt.
-                </div>
-                <div class="thumbnail with-caption">
-                    <img src="images/serienplaner-anzeige-modus.png" alt="Anzeige Modus des Serien-Planers ändern" align="center">
-
-                    <p>
-                        <small>Anzeige Modus des Serien-Planers ändern</small>
-                    </p>
-                </div>
             </div>
             <span id="sender-zuordnen"><br/></span>
-            <h2 class="sub-header"><kbd class="green">Sender zuordnen</kbd></h2>
+			<br>
+			<br>
+            <h4 class="sub-header"><kbd class="green">Sender zuordnen</kbd></h4>
             <div class="row">
-                <p>Beim "Sender zuordnen" werden die bei Wunschliste bekannten Sender (für die Wunschliste die Ausstrahlungstermine bereitstellt) und die vorhandenen Sender der Box (empfangbaren Sender) einander zugeordnet.
-                Zusätzlich lassen sich für jeden Sender noch individuelle Einstellungen (ob z.B. VPS verwendet werden soll oder nicht) vornehmen.</p>
-                <p>Eine genaue Beschreibung der möglichen Funktionen und wie die Sender-Zuordnung funktioniert ist unter "Sender-Zuordnung" beschrieben.</p>
+				<p>Beim ersten Start des SR wird sofort die Senderzuordnung aufgerufen, ansonsten mit <kbd class="green">GRÜN</kbd> ,um die eigenen Sender den Sendernamen von WL zuordnen. Dies ist notwendig, da manche Sender auf WL einen leicht anderen Namen tragen, als der auf Eurer Box. Die automatische Zuordnung <kbd class="blue">BLAU</kbd> kann zwar einige Sender schon vorab richtig zuordnen, aber trotzdem muß man selbst noch meist ein paar Sender zuordnen. Auf der WL-Seite wird idR nicht unterschieden zwischen SD und HD Sendern, also muß man selbst dafür sorge tragen, das den WL Sendern, falls gewünscht, Eure HD Sender zugeordnet werden. Man kann noch zusätzlich „alternative Sender“ angeben, die dann zur Timererstellung genutzt werden, falls es Konflikte gibt. Für die alternativen Sender ist es erforderlich, das man 2 Bouquets auf der Box angelegt hat. Eines für die "normalen" Sender und eines für die alternativen Sender. Dies muß dann auch in den globalen Einstellungen aktiviert sein.
+				</p>
             </div>
             <span id="serien-marker"><br/></span>
-            <h2 class="sub-header"><kbd class="yellow">Serien-Marker</kbd></h2>
+			<br>
+            <h4 class="sub-header"><kbd class="yellow">Serien-Marker</kbd></h4>
             <div class="row">
                 <p>Damit eine Serie beim automatischen Suchlauf (und damit bei der Erstellung von Timern) berücksichtigt wird, muss die Serie dem SerienRecorder zunächst bekannt gemacht werden.
                 Die Serien-Marker Ansicht zeigt die Serien an für die ein Serien-Marker angelegt wurde, zusätzlich lassen sich für jeden Marker auch individuelle Einstellungen (wie z.B. ein bestimmtes Aufnahmeverzeichnis) vornehmen.</p>
                 <p>Eine genaue Beschreibung der möglichen Optionen und wie die Funktionsweise der Serien-Marker ist unter "Serien-Marker" beschrieben.</p>
             </div>
             <span id="timer-liste"><br/></span>
-            <h2 class="sub-header"><kbd class="blue">Timer-Liste</kbd></h2>
+            <h4 class="sub-header"><kbd class="blue">Timer-Liste</kbd></h4>
             <div class="row">
-                <p>Die Timer-Liste ist die SerienRecorder eigene Datenbank und erhält alle Episoden einer Serie, für die der SerienRecorder bereits einen Timer erstellt hat - und damit bei der Suche nicht mehr berücksichtigt.
+                <p>Die Timer-Liste ist die SerienRecorder eigene Datenbank und erhält alle Episoden einer Serie, für die der SerienRecorder bereits einen Timer erstellt hat - und damit bei der Suche nicht mehr berücksichtigt werden.
                 In die Timer-Liste können auch manuell Einträge eingefügt werden um bestimmte Episoden von der Timererstellung aus zu schließen.</p>
                 <p>Eine genaue Beschreibung der Möglichkeiten ist unter "Timer-Liste" beschrieben.</p>
                 <div class="alert alert-info" role="alert">
-                    Die SerienRecorder Timer-Liste hat nichts mit der enigma2 Timer-Liste der Box zu tun.
+                    Die SerienRecorder Timer-Liste hat nichts mit dem enigma2 Timer-Editor der Box zu tun. Der SR übergibt nur die Daten für die Timererstellung an die Box und diese ist dann für die Konflikterkennung, Erstellung der Timer und auch für die Aufnahmen zuständig.
                 </div>
             </div>
+<!-- Marker hinzufügen -->			
             <span id="marker-hinzufuegen"><br/></span>
             <h2 class="sub-header">Marker hinzufügen <kbd>OK</kbd></h2>
             <div class="row">
                 <p>Über die <kbd>OK</kbd> Taste kann für die ausgewählte Serie ein Serien-Marker angelegt werden.
-                   Das ist ein einfache Möglichkeit einen Serien-Marker zu erstellen, aber nicht die einzige. Da die Serien-Planer Ansichtt nicht alle Serien des heutigen Tages anzeigt oder auch eine Serie hinzugefügt werden soll,
-                    die heute oder in den kommenden Tagen noch nicht ausgestrahlt wird, lässt sich jede bei Wunschliste verzeichnete Serie über die Suchfunktion Taste <kbd>1</kbd> finden.
+                   Das ist eine einfache Möglichkeit einen Serien-Marker zu erstellen, aber nicht die einzige. Da die Serien-Planer Ansichtt nicht alle Serien des heutigen Tages anzeigt oder auch eine Serie hinzugefügt werden soll, die heute oder in den kommenden Tagen noch nicht ausgestrahlt wird, lassen sich (fast) alle Serien, die bei Wunschliste verzeichnet sind über mehrere Wege hinzufügen.
+				   <br>Mehr dazu in einem gesonderten Artikel.
                 </p>
+				<br>
+				<br>
+				<br>
             </div>
         </div>
     </div>

@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="./favicon.ico">
 
-    <title>SerienRecorder Anleitung - Serien-Marker</title>
+    <title>SerienRecorder Anleitung - SerienMarker</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -52,108 +52,101 @@
             <div id="sidebar-menu"></div>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">Serien-Marker</h1>
+            <h1 class="page-header">Die SerienMarker Ansicht</h1>
 
             <div class="row">
                 <p class="lead">
-                    Die Serien-Marker Ansicht ist die wichtigste Ansicht im SerienRecorder - sie zeigt alle Serien die der SerienRecorder für die Timer-Erstellung berücksichtigt.<br/>
-                    Man kann sagen alle Serien die der Benutzer abonniert (vorgemerkt) hat.
+                    Die SerienMarker Ansicht ist die wichtigste Ansicht im SerienRecorder - sie zeigt alle Serien die der SerienRecorder für die Timer-Erstellung berücksichtigt.
+					<br/>
+                    
                 </p>
                 <p>
-                    Wird der SerienRecorder zum ersten Mal gestartet ist die Ansicht leer. Wie viele Serien vorgemerkt sind zeigt die Titelzeile, im nachfolgenden Screenshot
-                    sind 94 Serien vorgemerkt, allerdings nur 47 aktiv (diese Einträge sind in <span class="yellowfont">gelber Schrift</span> dargestellt, während die
-                    deaktivierten Serien-Marker in <span class="redfont">roter Schrift</span> angezeigt werden).
+                    Wird der SerienRecorder zum ersten Mal gestartet ist die Ansicht leer. Wie viele Serien vorgemerkt sind wird idR oben angezeigt, ist aber Skinabhängig evtl. woanders angeordnet. Angezeigt werden " aktive / alle " (105/108) SerienMarker. Die deaktivierten SerienMarker werden in <span class="redfont">roter Schrift</span> angezeigt.
                 </p>
+                
                 <p>
-                    Die Serie <strong>24</strong> ist zwar vorgemerkt, also dem SerienRecorder bekannt, wird aber bei der Suche nach Ausstrahlungsterminen und bei der Erstellung
-                    von Timern ignoriert - weil sie deaktiviert wurde. Dies ist z.B. dann sinnvoll wenn man genau weiß, dass im Moment keine Folgen dieser Serie ausgestrahlt werden.<br/>
-                    Die Serie <strong>7 Tage</strong> hingegen ist aktiv und wird so bei jedem Suchlauf bei Wunschliste abgefragt und es werden ggf. Timer erstellt.
+                    Neben dem Namen des SerienMarkers lassen sich an jedem Eintrag in der Liste auch noch wichtige Einstellungen ablesen. Hier kann man sehen, das für die angezeigten Serien alle zugeordneten Sender und auch alle Staffeln erlaubt sind. Zudem sieht man das jede Episode nur einmal aufgenommen werden soll (Wdh=0) und sowohl die Vorlaufzeit als auch die Nachlaufzeit auf 5min stehen. Auch das Aufnahmeverzeichnis ist zu sehen.
+					<br>Man kann für jeden SerienMarker individuell noch mehr einstellen, Dieses SerienMarker-Menü erreicht man hier über <kbd>MENÜ</kbd> . Dazu weiter unten mehr.
                 </p>
-                <p>
-                    Neben dem Namen des Serien-Markers lassen sich an jedem Eintrag in der Liste auch noch wichtige Einstellungen ablesen, so ist z.B. für die Serie <strong>Arrow</strong> eine Einschränkung der Staffel konfiguriert.
-                    Es sollen nur Episoden ab Staffel 2 und evtl. Specials aufgenommen werden.<br/>
-                    Für die Serie <strong>Beauty and the Beast</strong> ist ein abweichende Vorlaufzeit von 0 Minuten eingestellt.
-                    In der zweiten Spalte kann abgelesen werden ob eine Sender-Einschränkung vorgenommen oder ein individuelles Aufnahmeverzeichnis gewählt wurde.
-                </p>
-                <div class="alert alert-info" role="alert">
-                    Um für eine Serie einen Serien-Marker zu erstellen, die Serie also vorzumerken gibt es mehrere Möglichkeiten:<br/>
-                    <ul>
-                        <li><strong>Serie suchen <kbd>1</kbd></strong> in der Serien-Marker oder <a href="serienplaner.htm">Serien-Planer</a> Ansicht</li>
-                        <li><strong>Marker hinzufügen <kbd>OK</kbd></strong> in der <a href="serienplaner.htm">Serien-Planer</a>, Suchergebnisse oder Serien-/Staffelstart Ansicht</li>
-                    </ul>
-                </div>
+                <br>
+				<br>
                 <div class="thumbnail with-caption">
-                    <img src="images/serienmarker.jpg" alt="Serien-Marker Ansicht im SerienRecorder" align="center">
+                    <img src="images/serienmarker-south.jpg" alt="SerienMarker Ansicht im SerienRecorder" align="center">
                     <p>
-                        <small>Serien-Marker Ansicht im SerienRecorder</small>
+                        <small>SerienMarker Ansicht im SerienRecorder</small>
                     </p>
                 </div>
             </div>
+<!-- Die Farbtasten -->
+			
             <span id="deaktivieren"><br/></span>
-            <h2 class="sub-header"><kbd class="red">(De)aktivieren/Löschen</kbd></h2>
+			<br>
+			<br>
+			<h2 class="header">Die Farbtasten</h2>
+			<br>
+            <h4 class="sub-header"><kbd class="red">(De)aktivieren/Löschen</kbd></h4>
             <div class="row">
                 <ul>
-                    <li><strong>Serien-Marker aktivieren/deaktivieren</strong> (Taste kurz drücken)
-                    <p>Ein aktiver Serien-Marker (in <span class="yellowfont">gelber</span> Schrift dargestellt) wird deaktiviert
-                        und bei der Suche nach Ausstrahlungsterminen und der Erstellung von Timern nicht mehr berücksichtigt.<br/>
-                        Die Einstellungen des Serien-Markers bleiben aber erhalten - der Marker kann jederzeit durch erneutes drücken der Taste wieder aktiviert werden.
+                    <li><strong>SerienMarker aktivieren/deaktivieren</strong> (Taste <kbd class="red">ROT</kbd> kurz drücken)
+                    <p>Ein aktiver SerienMarker wird dadurch deaktiviert und bei der Suche nach Ausstrahlungsterminen und der Erstellung von Timern nicht mehr berücksichtigt. Dieser wird dann in <span class="redfont">roter Schrift</span> dargestellt.
+						<br/>
+                        Die Einstellungen des SerienMarkers bleiben aber erhalten - der Marker kann jederzeit durch erneutes drücken der Taste <kbd class="red">ROT</kbd> wieder aktiviert werden.
                         <div class="bs-callout bs-callout-info">Falls mehrere Boxen auf die selbe Datenbank (z.B. auf einem Netzlaufwerk) zugreifen, gilt die Deaktivierung nur für die aktuelle Box.
-                        Dabei ist darauf zu achten, dass für jede Box in den <a href="einstellungen.htm#system">globalen Einstellungen</a> <kbd>MENU lang</kbd> eine andere Box-ID eingestellt ist.
-                        <p>Um <strong>alle</strong> Serien-Marker für die aktuelle Box-ID zu aktivieren/deaktivieren kann die Taste <kbd>9</kbd> gedrückt werden.</p>
+                        Dabei ist darauf zu achten, dass für jede Box in den <a href="einstellungen.htm#system">globalen Einstellungen</a> <kbd>lang MENÜ</kbd> eine andere Box-ID eingestellt ist.
+                        <p>Um <strong>alle</strong> SerienMarker für die aktuelle Box-ID zu aktivieren/deaktivieren kann die Taste <kbd>9</kbd> gedrückt werden.</p>
                         </div>
-                        Das Deaktivieren eines Serien-Markers kann z.B. dann sinnvoll sein, wenn man weiß, dass für die betreffende Serie im Moment keine Episoden ausgestrahlt werden.<br/>
-                        Ein deaktivierter Serien-Marker (in <span class="redfont">roter</span> Schrift dargestellt) wird wieder aktiviert.
                     </p>
                     </li>
-                    <li><strong>Serien-Marker löschen</strong> (Taste lange drücken)
-                        <p>Damit wird der Serien-Marker aus der Datenbank des SerienRecorders entfernt - wenn die Serien z.B. ausgelaufen ist oder nicht mehr interessant ist.
-                            Es erfolgt eine Abfrage, ob auch ALLE Einträge zu dieser Serie aus der Timer-Liste gelöscht werden sollen. Wird diese Frage mit „Ja“ beantwortet, wird also auch die Information gelöscht, welche Folgen bereits aufgenommen wurden.
+                    <li><strong>SerienMarker löschen</strong> (Taste <kbd class="red">lang ROT</kbd> lange drücken)
+                        <p>Damit wird der SerienMarker aus der Datenbank des SerienRecorders entfernt - wenn die Serien z.B. ausgelaufen oder nicht mehr interessant ist.
+                            Es erfolgt eine Abfrage, ob auch ALLE Einträge zu dieser Serie aus der Datenbank/Timer-Liste gelöscht werden sollen. Wird diese Frage mit „Ja“ beantwortet, werden also auch die Informationen gelöscht, welche Folgen bereits aufgenommen wurden.
+							<br>Dies kann natürlich auch dazu genutzt werden, um eine Serie nochmal (komplett, je nach Staffelbegrenzung) aufzunehmen.
                         </p>
                     </li>
                 </ul>
             </div>
             <span id="sender-auswaehlen"><br/></span>
-            <h2 class="sub-header"><kbd class="green">Sender auswählen</kbd></h2>
+            <h4 class="sub-header"><kbd class="green">Sender auswählen</kbd></h4>
             <div class="row">
-                <p>Wird ein Serien-Marker angelegt, hat er zunächst keine Sender-Einschränkung, alle im SerienRecorder zugewiesenen Sender werden bei der Erstellung von Timern berücksichtigt.
-                Sollen für einen Serien-Marker nur Timer auf bestimmten Sendern angelegt werden (z.B. nur Pay-TV) lassen sich über <kbd class="green">Sender auswählen</kbd> Einschränkungen vornehmen.<br/>
-                Über die OK können die betreffenden Sender markiert/demarkiert werden - die Auswahl <strong>Alle</strong> beinhaltet alle Sender.
+                <p>Wird ein SerienMarker angelegt, hat er zunächst keine Sender-Einschränkung, alle im SerienRecorder zugeorneten Sender werden bei der Erstellung von Timern berücksichtigt.
+                Sollen für einen SerienMarker nur Timer auf bestimmten Sendern angelegt werden (z.B. nur Pay-TV) lassen sich über <kbd class="green">Sender auswählen</kbd> Einschränkungen vornehmen.<br/>
+                Über die <kbd>OK</kbd> Taste können die betreffenden Sender markiert/demarkiert werden - die Auswahl <strong>Alle</strong> beinhaltet alle Sender und <strong><u>muß</u></strong> deaktiviert sein, um die Sender einzuschränken. Dieses Fenster schließt man zum Speichern mit <kbd>EXIT</kbd>, ein verwerfen/abbrechen evtl. geändeter Einstellungen ist nicht vorgesehen.
                 </p>
                 <div class="thumbnail with-caption">
-                    <img src="images/sender-auswaehlen.jpg" alt="Sender für einen Serien-Marker auswählen" align="center">
+                    <img src="images/sender-auswaehlen.jpg" alt="Sender für einen SerienMarker auswählen" align="center">
                     <p>
-                        <small>Sender für einen Serien-Marker auswählen</small>
+                        <small>Sender für einen SerienMarker auswählen</small>
                     </p>
                 </div>
             </div>
             <span id="staffel-auswaehlen"><br/></span>
-            <h2 class="sub-header">Staffel auswählen <kbd>OK</kbd></h2>
+            <h4 class="sub-header">Staffel auswählen <kbd>OK</kbd></h4>
             <div class="row">
                 <p>Über die <kbd>OK</kbd> Taste können für die ausgewählte Serie die Staffeln ausgewählt werden die bei der Timer-Erstellung berücksichtigt werden sollen.
                     Mehrfachauswahl ist möglich, allerdings schließen einige der Auswahlmöglichkeiten alle anderen aus, z.B. <strong>Manuell</strong> (schließt alle anderen Einstellungen aus), oder <strong>Alle</strong> (beinhaltet alle anderen Einstellungen).
                 </p>
                 <ul>
-                    <li><strong>Manuell:</strong> Der Serien-Marker ist faktisch deaktiviert es können nur manuell Timer über die Sendetermine Ansicht angelegt werden.</li>
+                    <li><strong>Manuell:</strong> Der SerienMarker ist faktisch deaktiviert es können nur manuell Timer über die Sendetermine Ansicht angelegt werden.</li>
                     <li><strong>Alle:</strong> Der SerienRecorder wird Timer für alle Staffeln erstellen</li>
                     <li><strong>Specials:</strong> Nimmt spezielle Folgen auf, die nicht in das Schema SnnEmm passen. Das kann z.B. „F“ wie Folge sein (öfter bei ORF), oder auch S oder TÜ usw.</li>
                     <li><strong>folgende:</strong> Gilt nur in Verbindung mit einer Staffelauswahl darunter. </li>
                 </ul>
                 <div class="thumbnail with-caption">
-                    <img src="images/staffel-auswaehlen.jpg" alt="Staffeln für einen Serien-Marker auswählen" align="center">
+                    <img src="images/staffel-auswaehlen.jpg" alt="Staffeln für einen SerienMarker auswählen" align="center">
                     <p>
-                        <small>Staffeln für einen Serien-Marker auswählen</small>
+                        <small>Staffeln für einen SerienMarker auswählen</small>
                     </p>
                 </div>
             </div>
             <span id="serien-marker"><br/></span>
-            <h2 class="sub-header"><kbd class="yellow">Serien-Marker</kbd></h2>
+            <h4 class="sub-header"><kbd class="yellow">Sendetermine</kbd></h4>
             <div class="row">
                 <p>Damit eine Serie beim automatischen Suchlauf (und damit bei der Erstellung von Timern) berücksichtigt wird, muss die Serie dem SerienRecorder zunächst bekannt gemacht werden.
-                Die Serien-Marker Ansicht zeigt die Serien an für die ein Serien-Marker angelegt wurde, zusätzlich lassen sich für jeden Marker auch individuelle Einstellungen (wie z.B. ein bestimmtes Aufnahmeverzeichnis) vornehmen.</p>
-                <p>Eine genaue Beschreibung der möglichen Optionen und wie die Funktionsweise der Serien-Marker ist unter "Serien-Marker" beschrieben.</p>
+                Die SerienMarker Ansicht zeigt die Serien an für die ein SerienMarker angelegt wurde, zusätzlich lassen sich für jeden Marker auch individuelle Einstellungen (wie z.B. ein bestimmtes Aufnahmeverzeichnis) vornehmen.</p>
+                <p>Eine genaue Beschreibung der möglichen Optionen und wie die Funktionsweise der SerienMarker ist unter "SerienMarker" beschrieben.</p>
             </div>
             <span id="timer-liste"><br/></span>
-            <h2 class="sub-header"><kbd class="blue">Timer-Liste</kbd></h2>
+            <h4 class="sub-header"><kbd class="blue">Timer-Liste</kbd></h4>
             <div class="row">
                 <p>Die Timer-Liste ist die SerienRecorder eigene Datenbank und erhält alle Episoden einer Serie, für die der SerienRecorder bereits einen Timer erstellt hat - und damit bei der Suche nicht mehr berücksichtigt.
                 In die Timer-Liste können auch manuell Einträge eingefügt werden um bestimmte Episoden von der Timererstellung aus zu schließen.</p>
