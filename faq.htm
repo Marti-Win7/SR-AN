@@ -36,7 +36,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">SerienRecorder Anleitung</a>
+            <a class="navbar-brand" href="index.htm">SerienRecorder Anleitung</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -58,6 +58,19 @@
                     Die hier dargestellten Lösungen bzw. Lösungswege sind sicherlich nicht immer die einzigen um ans Ziel zu kommen, aber immerhin wird einem dadurch geholfen.
                 </p>
                 <br>
+				<p><h5><strong>Was tun, wenn ich mit dem SerienRecorder "umziehen" möchte.</strong></h5></p>
+				<ul><p>Es ist geplant ein neues Image auf die Box zu machen oder aber es kommt eine neue Box ins Haus. 
+					<br><strong>Welche Dateien müssen gesichert werden?</strong>
+					</p>
+					<li><u>Die Datenbank (DB)</u>.
+						<br>In der Datenbank sind die "wichtigsten" Daten des SR gespeichert, u.a. die SerienMarker, die schon getimerten Episoden und die Senderzuordnung.
+						<br>Die DB befindet sich idR im Verzeichnis <strong>"/etc/enigma2/"</strong> und kann einfach kopiert bzw. gesichert werden. Im neuen System wird sie einfach, nach der Installation des SR und am besten vor dem ersten Start des SR ins Standard-Verzeichnis <strong>"/etc/enigma2/"</strong> kopiert.
+					</li>
+					<li><u>Die Config des SR</u>
+						<p>Die Datei Config.backup befindet
+						</p>
+				</ul>
+				
 				<p><h5><strong>Was tun, wenn eine "falsche" Episode getimert wurde.</strong></h5></p>
 				<ul><p>Nehmen wir an, es wurde ein Timer für Episode E07 erstellt, obwohl an diesem Tag eigentlich E06 hätte getimert werden müssen. Der Grund dafür kann verschiedene Ursachen haben und ist für die Lösung auch unrelevant.
 				<br>Wenn man im Timer auf der Box einfach sowohl Episoden-Nummer als auch -Beschreibung richtig ändern würde und es dabei belassen würde, hätte man gleich 2 weitere "Probleme" damit geschaffen, die man später dem SR anlasten würde.
@@ -72,6 +85,7 @@
 				<p>Sind nur für diese eine Serie keine Sendetermine vorhanden, aber auf WL werden welche angezeigt, ist wahrscheinlich ein Datenübertragungsfehler von WL zum SerienServer daran schuld. Dies kann immer mal vorkommen, wird sich aber am nächsten Tag erledigt haben. Sollten auch am 2. Tag keine Sendetermine vorhanden sein, Bitte im Forum nachfragen.</p>
 				<p>Bitte nicht damit argumentieren "Das EPG zeigt aber Sendetermine dafür an" ,wenn auf WL keine angzeigt werden. Der SR orientiert sich nicht am EPG, wenn er versucht Sendetermine abzurufen. </p>
 				</ul>
+			<div class="center"><a href="faq.htm"><strong>[Seitenanfang]</strong></a>- - - - -<a href="index.htm"><strong>[Startseite]</strong></a></div>	
             </div>
         </div>
     </div>
@@ -82,12 +96,19 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="./js/vendor/holder.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="./js/ie10-viewport-bug-workaround.js"></script>
 <script src="./js/handlebars.runtime.js"></script>
 <script src="./js/sidebar-nav-template.js"></script>
 <script src="./js/sidebar-nav.js"></script>
+<!-- Die Sidebar scrollt auf das aktive Element -->
+<script>
+$(document).ready(function () {
+	var sidebar = $('.sidebar');
+	var offset = $('.active').offset().top;
+    sidebar.animate({
+        scrollTop: offset
+    }, 'slow');
+});
+</script>
+<!-- Die Sidebar scrollt auf das aktive Element -->
 </body>
 </html>

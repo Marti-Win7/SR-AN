@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="./favicon.ico">
 
-    <title>SerienRecorder Anleitung - Einstellungen</title>
+    <title>SerienRecorder Anleitung -Globale Einstellungen</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">SerienRecorder Anleitung</a>
+            <a class="navbar-brand" href="index.htm">SerienRecorder Anleitung</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -525,8 +525,8 @@
                             In einigen Ansichten werden die Episoden mit einem Festplatten Symbol gekennzeichnet, wenn sie sich bereits auf der Festplatte befinden.<br/>
                             Ist diese Option auf NEIN gesetzt, wird dieses Symbol nicht angezeigt und es wird auch nicht auf der Festplatte nach der Aufnahme gesucht.
                         </p>
-						<ul><div class="bs-callout bs-callout-danger">Diese Option muß gesetzt sein, wenn der SR keine Episoden timern soll, die er schon auf der Festplatte (HDD, NAS) findet. Dies kann allerdings den AC verlängern und evtl. die Leistung der Box beeinträchtigen, da der/die Ordner durchsucht werden müssen.
-						<br> Es werden folgende Dateiendungen verarbeitet:<strong> ts | mkv | avi | mp4 | divx | xvid | mpg | mov </strong>.
+						<ul><div class="bs-callout bs-callout-danger">Diese Option muß aktiviert sein, wenn der SR keine Episoden timern soll, die er schon auf der Festplatte (HDD, NAS) findet. Dies kann allerdings den AC verlängern und evtl. die Leistung der Box beeinträchtigen, da der/die Ordner durchsucht werden müssen.
+						<br> Es werden folgende Dateiendungen verarbeitet:<strong> ts | mkv | avi | mp4 | divx | xvid | mpg | mov </strong>. Natürlich ist auch eine "korrekte" und SR-Kompatible Schreibweise der zu durchsuchenden Aufnahmen dazu nötig.
                                         </div>
 						</ul>				
                     </li>
@@ -789,6 +789,7 @@
 						<strong>ERROR LOG aktivieren:</strong>
 					</li>
                 </ul>
+				<div class="center"><a href="einstellungen.htm"><strong>[Seitenanfang]</strong></a>- - - - -<a href="index.htm"><strong>[Startseite]</strong></a></div>
 				<br>
 				<br>
 				<br>
@@ -805,12 +806,19 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="./js/vendor/holder.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="./js/ie10-viewport-bug-workaround.js"></script>
 <script src="./js/handlebars.runtime.js"></script>
 <script src="./js/sidebar-nav-template.js"></script>
 <script src="./js/sidebar-nav.js"></script>
+<!-- Die Sidebar scrollt auf das aktive Element -->
+<script>
+$(document).ready(function () {
+	var sidebar = $('.sidebar');
+	var offset = $('.active').offset().top;
+    sidebar.animate({
+        scrollTop: offset
+    }, 'slow');
+});
+</script>
+<!-- Die Sidebar scrollt auf das aktive Element -->
 </body>
 </html>

@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="./favicon.ico">
 
-    <title>SerienRecorder Anleitung - Serien-Planer</title>
+    <title>SerienRecorder Anleitung - SerienPlaner</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">SerienRecorder Anleitung</a>
+            <a class="navbar-brand" href="index.htm">SerienRecorder Anleitung</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -94,12 +94,12 @@
                     Ist für eine der anzeigten Serien bereits ein Serien-Marker vorhanden, wird der Eintrag in <span class="greenfont">grüner Schrift</span> dargestellt.<br/>
                     Ist noch kein Serien-Marker vorhanden und die Episode ist die erste Folge (Staffel- bzw. Serienstart) wird sie in <span class="redfont">roter Schrift</span> dargestellt.<br/>
                     <br/>Zusätzlich gibt folgende Symbole an den Zeilen:<br/>
-                    <img src="images/hdd.png"> Das <strong>Festplatten-Symbol</strong> zeigt an ob eine Episode bereits auf der Festplatte ist.<br/>
-                    <img src="images/timer.png"> Das <strong>Timer-Symbol</strong> zeigt an ob für die Episode bereits ein Timer angelegt wurden.<br/>
-                    <img src="images/neu.png"> Das <strong>Neu-Symbol</strong> zeigt an ob es sich um eine erstmalige Ausstrahlung handelt.
+                    <img src="images/hdd.png"> Das <strong>Festplatten-Symbol</strong> zeigt an, ob eine Episode bereits auf der Festplatte ist. Dazu muß aber die dazugehörige Option in den <a href="einstellungen.htm#optimierungen">globalen Einstellungen</a> aktiviert sein.<br/>
+                    <img src="images/timer.png"> Das <strong>Timer-Symbol</strong> zeigt an, das für diese Episode ein noch ausstehender Timer existiert.<br/>
+                    <img src="images/neu.png"> Das <strong>Neu-Symbol</strong> zeigt an, das es sich bei dieser Episode um die Erste Folge der Ersten Staffel (S01E01) handelt. Dies muß allerdings nicht bedeuten, das es sich dabei immer um eine Erstausstrahlung handelt, da die meisten Serien ja auch wiederholt werden.
                 </p>
                 <div class="alert alert-info" role="alert">
-                    Die Funktion <kbd class="green">Sender zuordnen</kbd> wird normalerweise aus der Serien-Planer Ansicht aufgerufen. Alternativ gibt es die Möglichkeit, die Senderzuordnung aus den Globalen Einstellungen mit der <kbd>MENÜ</kbd> Taste aufzurufen.
+                    Die Funktion <kbd class="green">Sender zuordnen</kbd> wird normalerweise aus der Serien-Planer Ansicht aufgerufen. Alternativ gibt es die Möglichkeit, die Senderzuordnung aus den Globalen Einstellungen mit der <kbd>MENÜ</kbd> Taste aufzurufen. Mehr dazu weiter unten.
                 </div>
 				<br>
 				<br>
@@ -123,7 +123,7 @@
             <h4 class="sub-header"><kbd class="red">Tagesübersicht / TOP30</kbd></h4>
             <div class="row">
                 <p>
-                    Über die rote Farbtaste läßt sich die Anzeige des SerienPlaners zwischen den beiden Ansichten wechseln.
+                    Über die rote Farbtaste läßt sich die Anzeige des SerienPlaners zwischen den beiden Ansichten <strong>Tagesübersicht / TOP30</strong> wechseln. Je nachdem welche Ansicht man gerade sieht, ist die <kbd class="red">rote Farbtaste</kbd> mit der anderen Ansicht beschriftet. 
                 </p>
             </div>
             <span id="sender-zuordnen"><br/></span>
@@ -158,8 +158,10 @@
             <div class="row">
                 <p>Über die <kbd>OK</kbd> Taste kann für die ausgewählte Serie ein Serien-Marker angelegt werden.
                    Das ist eine einfache Möglichkeit einen Serien-Marker zu erstellen, aber nicht die einzige. Da die Serien-Planer Ansichtt nicht alle Serien des heutigen Tages anzeigt oder auch eine Serie hinzugefügt werden soll, die heute oder in den kommenden Tagen noch nicht ausgestrahlt wird, lassen sich (fast) alle Serien, die bei Wunschliste verzeichnet sind über mehrere Wege hinzufügen.
-				   <br>Mehr dazu in einem gesonderten Artikel.
+				   <br>Mehr dazu findet man unter <a href="serie-hinzufügen.htm"><strong>Serie/Marker hinzufügen</strong></a>.
                 </p>
+				
+			<div class="center"><a href="serienplaner.htm"><strong>[Seitenanfang]</strong></a>- - - - -<a href="index.htm"><strong>[Startseite]</strong></a></div>	
 				<br>
 				<br>
 				<br>
@@ -173,12 +175,19 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
-<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-<script src="./js/vendor/holder.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="./js/ie10-viewport-bug-workaround.js"></script>
 <script src="./js/handlebars.runtime.js"></script>
 <script src="./js/sidebar-nav-template.js"></script>
 <script src="./js/sidebar-nav.js"></script>
+<!-- Die Sidebar scrollt auf das aktive Element -->
+<script>
+$(document).ready(function () {
+	var sidebar = $('.sidebar');
+	var offset = $('.active').offset().top;
+    sidebar.animate({
+        scrollTop: offset
+    }, 'slow');
+});
+</script>
+<!-- Die Sidebar scrollt auf das aktive Element -->
 </body>
 </html>
