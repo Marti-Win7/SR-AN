@@ -57,19 +57,49 @@
                 <p class="lead">
                     Die hier dargestellten Lösungen bzw. Lösungswege sind sicherlich nicht immer die einzigen um ans Ziel zu kommen, aber immerhin wird einem dadurch geholfen.
                 </p>
+				<span id="umzug"><br></span>
                 <br>
+				<br>
 				<p><h5><strong>Was tun, wenn ich mit dem SerienRecorder "umziehen" möchte.</strong></h5></p>
 				<ul><p>Es ist geplant ein neues Image auf die Box zu machen oder aber es kommt eine neue Box ins Haus. 
-					<br><strong>Welche Dateien müssen gesichert werden?</strong>
+					<br>
+					<br>
+					<strong>Welche Dateien müssen gesichert werden?</strong>
 					</p>
+					<div class="alert alert-info" role="alert">Auch wenn es eine Backup-Funktion im SR gibt, die man auch ruhig nutzen sollte, denn damit werden alle wichtigen Dateien des SR (extern) gesichert, gibt es keine Funktion, dieses Backup automatisch in den SR wieder einzuladen.</div>
 					<li><u>Die Datenbank (DB)</u>.
 						<br>In der Datenbank sind die "wichtigsten" Daten des SR gespeichert, u.a. die SerienMarker, die schon getimerten Episoden und die Senderzuordnung.
 						<br>Die DB befindet sich idR im Verzeichnis <strong>"/etc/enigma2/"</strong> und kann einfach kopiert bzw. gesichert werden. Im neuen System wird sie einfach, nach der Installation des SR und am besten vor dem ersten Start des SR ins Standard-Verzeichnis <strong>"/etc/enigma2/"</strong> kopiert.
 					</li>
 					<li><u>Die Config des SR</u>
-						<p>Die Datei Config.backup befindet
+						<p>Die Datei <strong>Config.backup</strong> befindet sich im Plugin Verzeichnis was idR <strong>"/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/"</strong> lautet.
+						<br>Die Config des SR läßt sich in den globalen Einstellungen mit <kbd class="yellow">in Datei speichern</kbd> abspeichern, um sie dann zu sichern für den Umzug.
+						<br>Auf dem neuen System wird dann die <strong>Config.backup</strong> vor dem ersten Start des SR in dessen Plugin Verzeichnis kopiert und nach dem Start des SR in den globalen Einstellungen mit <kbd class="blue">aus Datei laden</kbd> wieder eingelesen. Damit werden nicht nur die Einstellungen des SR wiederhergestellt, sondern (falls verwendet) auch idR die Zugangsdaten für WL zum Empfang der TV Planer Mail.
 						</p>
+					</li>
+					<li>
+						<u>Die timers.xml</u>
+						<p>In dieser Datei sind die noch ausstehenden Timer der Box enthalten.
+						</p>
+						<div class="alert alert-info" role="alert">Falls jemand keine noch ausstehenden Timer auf seiner Box sichern muß/möchte, kann er diesen Punkt überspringen.</div>
+						<p>Diese Datei gehört zum System der Box und ist im laufenden Betrieb idR nicht änderbar oder überschreibbar. Sie kann zwar einfach kopiert werden, was das Backup des SR auch macht, aber zum Wiederherstellen auf einem anderen System, muß das neue System erst angehalten werden, dann die Datei ersetzen und danach das System wieder starten.
+						</p>
+						<div class="alert alert-danger"><strong>WICHTIG: </strong>Da dies ein direkter Eingrif ins laufende System ist, wird empfohlen äußerste Vorsicht walten zu lassen und VORHER ein Backup des Systems zu machen. 
+						</div>
+						<p>Per Telnet (z.B. mit dem <a href="https://www.vuplus-support.org/wbb4/filebase/index.php?entry/202-dcc-dreambox-control-center-e2-v1-50/" target="_blank">DCC</a>) wird das System mit dem Befehl " init 4 " angehalten. Jetzt kann man per FTP (geht auch mit dem DCC) die Datei ersetzen. Danach per Telnet den Befehl " init 3 " eingeben, um das System weiter laufen zu lassen. Um das Ergebnis zu sehen, ist idR kein Neustart der Box notwendig.
+						</p>
+					</li>
+					<li>
+						<u>Die Datei Serienrecorder.log</u>
+						<p>Diese Datei (bzw. auch die mit Datum und Uhrzeit im Namen) ist nicht für den Umzug nötig, auch wenn sie im Backup des SR mitgesichert wird. Sie sollte aber nicht "vernachlässigt" werden, da mit dessen Hilfe, Probleme/Fehler bei der Timererstellung des SR auch im nachhinein evtl. gelöst werden können, wenn man sie lange genug vorhält.
+						<br>Das SR Log steht idR im Plugin Verzeichnis.
+						</p>
+					</li>
+						
 				</ul>
+				<span id="falsche episode"><br></span>
+				<br>
+				<br>
 				
 				<p><h5><strong>Was tun, wenn eine "falsche" Episode getimert wurde.</strong></h5></p>
 				<ul><p>Nehmen wir an, es wurde ein Timer für Episode E07 erstellt, obwohl an diesem Tag eigentlich E06 hätte getimert werden müssen. Der Grund dafür kann verschiedene Ursachen haben und ist für die Lösung auch unrelevant.
@@ -79,13 +109,16 @@
 				<p><u><strong>Lösung:</strong></u>
 				<br>Man geht im SR mit BLAU in die Timer-Liste und löscht dort den noch ausstehenden Timer der Episode E07. Damit wird sowohl der Eintrag in der DB gelöscht als auch der Timer im Timer-Editor der Box, was aber danach noch überprüft werden sollte. Dann macht man mit lang EPG einen manuellen vollen Autocheck, um den Timer für E06 zu generieren.</p>
 				</ul>
+				
+				<span id="keine sendetermine"><br></span>
+				<br>
 				<br>
 				<p><h5><strong>Was tun, wenn keine Sendetermine für eine Serie angezeigt werden.</strong></h5></p>
 				<ul><p> Erstmal prüfen, ob für andere Serien welche angezeigt werden. Sollte dies nicht der Fall sein, Internetverbindung prüfen, ggf. einen manuellen AC anstoßen und im angezeigten Log prüfen, ob dieser erfolgreich war. Ist der AC erfolglos und die Internetverbindung der Box aber Okay, dann im Forum nachsehen bzw. dort um Hilfe bitten.</p>
 				<p>Sind nur für diese eine Serie keine Sendetermine vorhanden, aber auf WL werden welche angezeigt, ist wahrscheinlich ein Datenübertragungsfehler von WL zum SerienServer daran schuld. Dies kann immer mal vorkommen, wird sich aber am nächsten Tag erledigt haben. Sollten auch am 2. Tag keine Sendetermine vorhanden sein, Bitte im Forum nachfragen.</p>
 				<p>Bitte nicht damit argumentieren "Das EPG zeigt aber Sendetermine dafür an" ,wenn auf WL keine angzeigt werden. Der SR orientiert sich nicht am EPG, wenn er versucht Sendetermine abzurufen. </p>
 				</ul>
-			<div class="center"><a href="faq.htm"><strong>[Seitenanfang]</strong></a>- - - - -<a href="index.htm"><strong>[Startseite]</strong></a></div>	
+			<div class="center"><a href="faq.htm"><strong>[Seitenanfang]</strong></a>&nbsp; &nbsp; &nbsp; &nbsp;<a href="index.htm"><strong>[Startseite]</strong></a></div>	
             </div>
         </div>
     </div>
@@ -103,7 +136,7 @@
 <script>
 $(document).ready(function () {
 	var sidebar = $('.sidebar');
-	var offset = $('.active').offset().top;
+	var offset = $('.active').offset().top-70;
     sidebar.animate({
         scrollTop: offset
     }, 'slow');
