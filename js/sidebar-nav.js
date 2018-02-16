@@ -12,12 +12,12 @@ var data =
         { href: "index.htm#installation", title: "Installation"},
         { href: "index.htm#erste_schritte", title: "Erste Schritte"},
         { href: "index.htm#einstellungen", title: "Globale Einstellungen"},
-        { href: "index.htm#suchlauf", title: "Autocheck (AC, Suchlauf)"},
+        { href: "index.htm#autocheck", title: "Autocheck (AC, Suchlauf)"},
         { href: "index.htm#hilfe", title: "Hilfe"}
     ]},
     {href: "einstellungen.htm", title: "Globale Einstellungen", submenus: [
         { href: "einstellungen.htm#system", title: "System"},
-        { href: "einstellungen.htm#auto-check", title: "Auto-Check"},
+        { href: "einstellungen.htm#autocheck", title: "AutoCheck"},
         { href: "einstellungen.htm#timer", title: "Timer"},
         { href: "einstellungen.htm#optimierungen", title: "Optimierungen"},
         { href: "einstellungen.htm#gui", title: "GUI"},
