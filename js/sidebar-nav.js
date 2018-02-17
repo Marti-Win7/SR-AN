@@ -39,7 +39,7 @@ var data =
     ]},
 	{href: "serie-hinzufügen.htm", title: "Serie/Marker hinzufügen",},
 	{href: "timer-liste.htm", title: "Timer-Liste",},
-	{href: "faq.htm", title: "FAQ",submenus: [
+	{href: "faq.htm", title: "FAQ / HGF / WTW",submenus: [
         { href: "faq.htm#umzug", title: "Was muß gesichert werden bei Umzug"},
 		{ href: "faq.htm#falsche episode", title: "Falsche Episode getimert"},
 		{ href: "faq.htm#keine sendetermine", title: "Keine Sendetermine vorhanden"},
