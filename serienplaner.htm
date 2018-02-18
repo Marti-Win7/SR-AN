@@ -29,18 +29,12 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+            
             <a class="navbar-brand" href="index.htm">SerienRecorder Anleitung</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><img src="images/plugin.png"></li>
+                <li><img id="logo" src="images/plugin.png"></li>
             </ul>
         </div>
     </div>
@@ -115,9 +109,8 @@
 <!-- Die Farbtasten -->			
 			
 			
-            <span id="anzeigemodus"><br/></span>
-			<br>
-			<br>
+            <span id="anzeigemodus" class="anchor"></span>
+			
 			<h2 class="header">Die Farbtasten</h2>
 			<br>
             <h4 class="sub-header"><kbd class="red">Tagesübersicht / TOP30</kbd></h4>
@@ -126,23 +119,23 @@
                     Über die rote Farbtaste läßt sich die Anzeige des SerienPlaners zwischen den beiden Ansichten <strong>Tagesübersicht / TOP30</strong> wechseln. Je nachdem welche Ansicht man gerade sieht, ist die <kbd class="red">rote Farbtaste</kbd> mit der anderen Ansicht beschriftet. 
                 </p>
             </div>
-            <span id="sender-zuordnen"><br/></span>
-			<br>
-			<br>
+            <span id="sender-zuordnen" class="anchor"></span>
+			
             <h4 class="sub-header"><kbd class="green">Sender zuordnen</kbd></h4>
             <div class="row">
 				<p>Beim ersten Start des SR wird sofort die Senderzuordnung aufgerufen, ansonsten mit <kbd class="green">GRÜN</kbd> ,um die eigenen Sender den Sendernamen von WL zuordnen. Dies ist notwendig, da manche Sender auf WL einen leicht anderen Namen tragen, als der auf Eurer Box. Die automatische Zuordnung <kbd class="blue">BLAU</kbd> kann zwar einige Sender schon vorab richtig zuordnen, aber trotzdem muß man selbst noch meist ein paar Sender zuordnen. Auf der WL-Seite wird idR nicht unterschieden zwischen SD und HD Sendern, also muß man selbst dafür sorge tragen, das den WL Sendern, falls gewünscht, Eure HD Sender zugeordnet werden. Man kann noch zusätzlich „alternative Sender“ angeben, die dann zur Timererstellung genutzt werden, falls es Konflikte gibt. Für die alternativen Sender ist es erforderlich, das man 2 Bouquets auf der Box angelegt hat. Eines für die "normalen" Sender und eines für die alternativen Sender. Dies muß dann auch in den globalen Einstellungen aktiviert sein.
+				<br>In der Senderzuordnung läßt sich auch mit der Taste <kbd>MENÜ</kbd> für einzelne Sender ein individueller Vor- und Nachlauf einstellen. Dies ist von Vorteil, wenn ein Sender gerne mal Sendetermine um einige Minuten verschiebt, evtl. auch ohne es im EPG zu zeigen.
 				</p>
             </div>
-            <span id="serien-marker"><br/></span>
-			<br>
+            <span id="serien-marker" class="anchor"></span>
+		
             <h4 class="sub-header"><kbd class="yellow">Serien-Marker</kbd></h4>
             <div class="row">
                 <p>Damit eine Serie beim automatischen Suchlauf (und damit bei der Erstellung von Timern) berücksichtigt wird, muss die Serie dem SerienRecorder zunächst bekannt gemacht werden.
                 Die Serien-Marker Ansicht zeigt die Serien an für die ein Serien-Marker angelegt wurde, zusätzlich lassen sich für jeden Marker auch individuelle Einstellungen (wie z.B. ein bestimmtes Aufnahmeverzeichnis) vornehmen.</p>
                 <p>Eine genaue Beschreibung der möglichen Optionen und wie die Funktionsweise der Serien-Marker ist unter "Serien-Marker" beschrieben.</p>
             </div>
-            <span id="timer-liste"><br/></span>
+            <span id="timer-liste" class="anchor"></span>
             <h4 class="sub-header"><kbd class="blue">Timer-Liste</kbd></h4>
             <div class="row">
                 <p>Die Timer-Liste ist die SerienRecorder eigene Datenbank und erhält alle Episoden einer Serie, für die der SerienRecorder bereits einen Timer erstellt hat - und damit bei der Suche nicht mehr berücksichtigt werden.
@@ -153,7 +146,7 @@
                 </div>
             </div>
 <!-- Marker hinzufügen -->			
-            <span id="marker-hinzufuegen"><br/></span>
+            <span id="marker-hinzufuegen" class="anchor"></span>
             <h2 class="sub-header">Marker hinzufügen <kbd>OK</kbd></h2>
             <div class="row">
                 <p>Über die <kbd>OK</kbd> Taste kann für die ausgewählte Serie ein Serien-Marker angelegt werden.

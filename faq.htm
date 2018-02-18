@@ -29,18 +29,12 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+            
             <a class="navbar-brand" href="index.htm">SerienRecorder Anleitung</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><img src="images/plugin.png"></li>
+                <li><img id="logo" src="images/plugin.png"></li>
             </ul>
         </div>
     </div>
@@ -57,9 +51,8 @@
                 <p class="lead">
                     Die hier dargestellten Lösungen bzw. Lösungswege sind sicherlich nicht immer die einzigen um ans Ziel zu kommen, aber immerhin wird einem dadurch geholfen.
                 </p>
-				<span id="umzug"><br></span>
-                <br>
-				<br>
+				<span id="umzug" class="anchor"></span>
+               
 				<p><h5><strong>Was tun, wenn ich mit dem SerienRecorder "umziehen" möchte.</strong></h5></p>
 				<ul><p>Es ist geplant ein neues Image auf die Box zu machen oder aber es kommt eine neue Box ins Haus. 
 					<br>
@@ -104,9 +97,7 @@
 				</ol>
 				
 				</ul>
-				<span id="falsche episode"><br></span>
-				<br>
-				<br>
+				<span id="falsche episode" class="anchor"></span>
 				
 				<p><h5><strong>Was tun, wenn eine "falsche" Episode getimert wurde.</strong></h5></p>
 				<ul><p>Nehmen wir an, es wurde ein Timer für Episode E07 erstellt, obwohl an diesem Tag eigentlich E06 hätte getimert werden müssen. Der Grund dafür kann verschiedene Ursachen haben und ist für die Lösung auch unrelevant.
@@ -117,9 +108,8 @@
 				<br>Man geht im SR mit BLAU in die Timer-Liste und löscht dort den noch ausstehenden Timer der Episode E07. Damit wird sowohl der Eintrag in der DB gelöscht als auch der Timer im Timer-Editor der Box, was aber danach noch überprüft werden sollte. Dann macht man mit lang EPG einen manuellen vollen Autocheck, um den Timer für E06 zu generieren.</p>
 				</ul>
 				
-				<span id="keine sendetermine"><br></span>
-				<br>
-				<br>
+				<span id="keine sendetermine" class="anchor"></span>
+				
 				<p><h5><strong>Was tun, wenn keine Sendetermine für eine Serie angezeigt werden.</strong></h5></p>
 				<ul><p> Erstmal prüfen, ob für andere Serien welche angezeigt werden. Sollte dies nicht der Fall sein, Internetverbindung prüfen, ggf. einen manuellen AC anstoßen und im angezeigten Log prüfen, ob dieser erfolgreich war. Ist der AC erfolglos und die Internetverbindung der Box aber Okay, dann im Forum nachsehen bzw. dort um Hilfe bitten.</p>
 				<p>Sind nur für diese eine Serie keine Sendetermine vorhanden, aber auf WL werden welche angezeigt, ist wahrscheinlich ein Datenübertragungsfehler von WL zum SerienServer daran schuld. Dies kann immer mal vorkommen, wird sich aber am nächsten Tag erledigt haben. Sollten auch am 2. Tag keine Sendetermine vorhanden sein, Bitte im Forum nachfragen.</p>

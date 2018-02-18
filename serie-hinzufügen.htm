@@ -29,18 +29,12 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+            
             <a class="navbar-brand" href="index.htm">SerienRecorder Anleitung</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><img src="images/plugin.png"></li>
+                <li><img id="logo" src="images/plugin.png"></li>
             </ul>
         </div>
     </div>
@@ -55,9 +49,28 @@
             <h1 class="page-header">Serie / Marker hinzufügen</h1>
             <div class="row">
                 <p class="lead">
-                    In Arbeit
+                    Es gibt mittlerweile einige Wege, eine Serie dem SerienRecorder hinzuzufügen, damit diese dann "automatisch" immer wieder zu dessen Ausstrahlungsterminen getimert wird.
+					<br>Man muß sich also "theoretisch" nicht mehr um die Sendetermine der angelegten Serien kümmern, auch nicht bei Staffelpausen oder zu den Staffel-Neustarts. Auch nicht, wenn Serien über 1 oder 2 Jahre pausieren, solange WL die Sendetermine bereithält und der SR funktioniert.
                 </p>
-                
+				<div class="alert alert-info" role="alert"><strong>Natürlich kann und sollte man einem solchen Automatismus nicht "blind" vertrauen. Wenn einem auffällt, das Serie xy für den Abend keinen Timer hat, der aber eigentlich hätte da sein sollen, muß man natürlich nachsehen. Wird die Serie xy überhaupt Ausgestrahlt oder hat der SR einen "Fehler" gemacht. Das größte Problem sind natürlich unvorhergesehene Ereignisse, die zu einem Ausfall einer Episode führen, wie z.B. Sonderberichte im TV über ein "Weltereignis" wie eine Katastrophe.</strong></div>
+				<ul>
+				<li>Der schnellste und einfachste Weg geht über die SerienPlaner Ansicht. Dort, in einer der beiden Ansichten (Tagesübersicht oder TOP30), mir der <kbd>OK</kbd> Taste einfach die selektierte Serie dem SR hinzufügen. Im Normalfall wird dann sofort die SerienMarker Ansicht mit der gerade hinzugefügten Serie geöffnet. Hier lassen sich dann diverse Einstellungen für jede Serie einzeln vornehmen.
+				</li>
+				
+				<li>Über die <strong>Suche</strong> im SR, welche mit Taste <kbd>1</kbd> zu erreichen ist. Die <strong>Suche</strong> kann sowohl aus der Planer- als auch aus der Marker-Ansicht aufgerufen werden. 
+				
+				</li>
+				<br>
+				<li>Über die sogenannte „TV Planer Mail“ Funktion. Näheres dazu, vor allem die Einrichtung, findet man in einer gesonderten Anleitung. Hierüber lassen sich dann 	Serien auf der WLSeite hinzufügen, die dann beim Empfang der nächsten Mail von WL, wo diese Serie dann auftaucht, im SR beim AC verarbeitet und mit den Standardeinstellungen des SR als SerienMarker hinzugefügt werden. Diese sollte man auf jeden Fall nutzen, wenn der SR mal ein paar Tage läuft, denn erstens mindert es die Datenmengen auf dem SerienServer und zweitens dient es als „Absicherung“ falls der SerienServer mal nicht erreichbar ist. Dann werden die Timer nämlich aus der Mail erstellt. Zwar nur für den einen Tag, aber immerhin werden Timer erstellt. Die Mail wird manuell mit kurz EPG verarbeitet, falls notwendig oder der AC nicht läuft.
+				</li>
+				<br>
+				<li>Es gibt auch noch die Möglichkeit, eine Serie aus dem EPG heraus hinzuzufügen. Dazu drückt man lang EPG-Taste im Live TV, man darf sich nicht im EPG selbst befinden. Dabei wird der SerienName aus dem EPG an die SR interne SUCHE übergeben und versucht, diese Serie bei WL zu finden. Falls dies nicht erfolgreich verläuft, kann man dann den Suchbegriff manuell editieren, falls die Serie bei WL einen anderen bzw. einen leicht abweichenden Namen trägt. User, die ihre EPG-Taste „umbelegt“ haben, z.B. mit MQB, können evtl. Probleme haben, das Menü mit lang EPG aufzurufen.
+				
+				</li>
+				<br>
+				<li>Über das Menü der Aufnahmenliste. Hat man sich eine Serie einfach mal aufgenommen um zu sehen, ob die was für einen ist, kann man über das Menü (Menü-Taste) der Aufnahmenliste diese Serie „einfach“ zum SR hinzufügen. Danach gleiches vorgehen wie bei Punkt 3 in der Suche des SR.
+				
+				</li>
 				</ul>
             </div>
         </div>

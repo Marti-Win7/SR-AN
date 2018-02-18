@@ -29,18 +29,12 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+            
             <a class="navbar-brand" href="index.htm">SerienRecorder Anleitung</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><img src="images/plugin.png"></li>
+                <li><img id="logo" src="images/plugin.png"></li>
             </ul>
         </div>
     </div>
@@ -81,9 +75,8 @@
             </div>
 <!-- Die Farbtasten -->
 			
-            <span id="deaktivieren"><br/></span>
-			<br>
-			<br>
+            <span id="deaktivieren" class="anchor"></span>
+			
 			<h2 class="header">Die Farbtasten</h2>
 			<br>
             <h4 class="sub-header"><kbd class="red">(De)aktivieren/Löschen</kbd></h4>
@@ -107,9 +100,8 @@
                     </li>
                 </ul>
             </div>
-            <span id="sender-auswaehlen"><br/></span>
-			<br>
-			<br>
+            <span id="sender-auswaehlen" class="anchor"></span>
+			
             <h4 class="sub-header"><kbd class="green">Sender auswählen</kbd></h4>
             <div class="row">
                 <p>Wird ein SerienMarker angelegt, hat er zunächst keine Sender-Einschränkung, alle im SerienRecorder zugeorneten Sender werden bei der Erstellung von Timern berücksichtigt.
@@ -123,10 +115,9 @@
                     </p>
                 </div>
             </div>
-            <span id="staffel-auswaehlen"><br/></span>
-			<br>
-			<br>
-            <h4 class="sub-header">Staffel auswählen <kbd>OK</kbd></h4>
+            <span id="staffel-auswaehlen" class="anchor"></span>
+			
+            <h4 class="sub-header"><strong>Staffel auswählen</strong> <kbd>OK</kbd></h4>
             <div class="row">
                 <p>Über die <kbd>OK</kbd> Taste können für die ausgewählte Serie die Staffeln ausgewählt werden die bei der Timer-Erstellung berücksichtigt werden sollen.
                     Mehrfachauswahl ist möglich, allerdings schließen einige der Auswahlmöglichkeiten alle anderen aus, z.B. <strong>Manuell</strong> (schließt alle anderen Einstellungen aus), oder <strong>Alle</strong> (beinhaltet alle anderen Einstellungen, außer <strong>Specials</strong>).
@@ -144,9 +135,8 @@
                     </p>
                 </div>
             </div>
-            <span id="sendetermine"><br/></span>
-			<br>
-			<br>
+            <span id="sendetermine" class="anchor"></span>
+			
             <h4 class="sub-header"><kbd class="yellow">Sendetermine</kbd></h4>
             <div class="row">
                 <p>In dieser Ansicht sieht man, wie der Titel vermuten läßt, alle bei Wunschliste aufgeführten Sendetermine für die aktiv selektierte Serie.
@@ -166,7 +156,7 @@
 				<br>Mit der Taste <kbd class="blue">Timer-Liste</kbd> kann auch von hier die Timer-Liste geöffnet werden, um evtl. nachzuschauen, ob Episoden schon in der DB vorhanden sind.
 				</p>
             </div>
-            <span id="timer-liste"><br/></span>
+            <span id="timer-liste" class="anchor"></span>
             <h4 class="sub-header"><kbd class="blue">Timer-Liste</kbd></h4>
             <div class="row">
                 <p>Die Timer-Liste ist die SerienRecorder eigene Datenbank und enthält alle Episoden einer Serie, für die der SerienRecorder bereits einen Timer erstellt hat - und damit bei der Suche nicht mehr berücksichtigt wird.
@@ -176,7 +166,11 @@
                     Die SerienRecorder Timer-Liste hat nichts mit der enigma2 Timer-Liste der Box zu tun.
                 </div>
             </div>
-			
+			<span id="serien-menu" class="anchor"></span>
+			<h4 class="sub-header"><strong>Das SerienMarker Menü</strong></h4>
+            <div class="row">
+                <p>in Arbeit
+				</p>
 			<div class="center"><a href="serienmarker.htm"><strong>[Seitenanfang]</strong></a>&nbsp; &nbsp; &nbsp; &nbsp;<a href="index.htm"><strong>[Startseite]</strong></a></div>
 
         </div>
