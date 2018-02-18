@@ -36,6 +36,7 @@ var data =
         { href: "serienmarker.htm#staffel-auswaehlen", title: "Staffel auswählen"},
         { href: "serienmarker.htm#sendetermine", title: "Sendetermine"},
         { href: "serienmarker.htm#timer-liste", title: "Timer-Liste"},
+		{ href: "serienmarker.htm#serien-menu", title: "SerienMarker Menü"},
     ]},
 	{href: "serie-hinzufügen.htm", title: "Serie/Marker hinzufügen",},
 	{href: "timer-liste.htm", title: "Timer-Liste",},
