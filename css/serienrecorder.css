@@ -7,6 +7,10 @@ body {
   padding-top: 50px;
 }
 
+#logo {
+	padding-top: 5px;
+	padding-right: 5px;
+ }
 .anchor {
     display:block;
     padding-top:60px;
