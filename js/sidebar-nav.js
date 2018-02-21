@@ -28,6 +28,7 @@ var data =
         { href: "serienplaner.htm#sender-zuordnen", title: "Sender zuordnen"},
         { href: "serienplaner.htm#serien-marker", title: "Serien-Marker"},
         { href: "serienplaner.htm#timer-liste", title: "Timer-Liste"},
+		{ href: "serienplaner.htm#weitere-tasten", title: "Weitere Tasten"},
         { href: "serienplaner.htm#tastatur-sp", title: "Tastaturbelegung"},
     ]},
 	{href: "serienmarker.htm", title: "SerienMarker", submenus: [
