@@ -121,8 +121,10 @@
 			
             <h4 class="sub-header"><kbd class="green">Sender zuordnen</kbd></h4>
             <div class="row">
-				<p>Beim ersten Start des SR wird sofort die Senderzuordnung aufgerufen, ansonsten mit <kbd class="green">GRÜN</kbd> ,um die eigenen Sender den Sendernamen von WL zuordnen. Dies ist notwendig, da manche Sender auf WL einen leicht anderen Namen tragen, als der auf Eurer Box. Die automatische Zuordnung <kbd class="blue">BLAU</kbd> kann zwar einige Sender schon vorab richtig zuordnen, aber trotzdem muß man selbst noch meist ein paar Sender zuordnen. Auf der WL-Seite wird idR nicht unterschieden zwischen SD und HD Sendern, also muß man selbst dafür sorge tragen, das den WL Sendern, falls gewünscht, Eure HD Sender zugeordnet werden. Man kann noch zusätzlich „alternative Sender“ angeben, die dann zur Timererstellung genutzt werden, falls es Konflikte gibt. Für die alternativen Sender ist es erforderlich, das man 2 Bouquets auf der Box angelegt hat. Eines für die "normalen" Sender und eines für die alternativen Sender. Dies muß dann auch in den globalen Einstellungen aktiviert sein.
+				<p>Die Senderzuordnung wird idR mit <kbd class="green">GRÜN</kbd> aufgerufen, außer beim ersten Start des SR wird diese sofort gestartet, um die eigenen Sender den Sendernamen von WL zuordnen. Dies ist notwendig, da manche Sender auf WL einen leicht anderen Namen tragen, als der auf Eurer Box. Die automatische Zuordnung <kbd class="blue">BLAU</kbd> kann zwar einige Sender schon vorab richtig zuordnen, aber trotzdem muß man selbst noch meist ein paar Sender zuordnen, indem man auf einem selektierten Sender die <kbd>OK</kbd> Taste drückt. Auf der WL-Seite wird idR nicht unterschieden zwischen SD und HD Sendern, also muß man selbst dafür sorge tragen, das den WL Sendern, falls gewünscht, Eure HD Sender zugeordnet werden. Man kann noch zusätzlich „alternative Sender“ angeben, die dann zur Timererstellung genutzt werden, falls es Konflikte gibt. Für die alternativen Sender ist es erforderlich, das man 2 Bouquets auf der Box angelegt hat. Eines für die "normalen" Sender und eines für die alternativen Sender. Dies muß dann auch in den globalen Einstellungen aktiviert sein.
 				<br>In der Senderzuordnung läßt sich auch mit der Taste <kbd>MENÜ</kbd> für einzelne Sender ein individueller Vor- und Nachlauf einstellen. Dies ist von Vorteil, wenn ein Sender gerne mal Sendetermine um einige Minuten verschiebt, evtl. auch ohne es im EPG zu zeigen.
+				<br>Innerhalb der Senderzuordnung kann man mit <kbd class="green">Aktualisieren</kbd> die Senderliste der WL-Seite aktualisieren. Dies ist nötig, wenn sich der Name eines Senders auf der WL Webseite geändert hat, sei es, weil sich der Name wirklich geändert hat oder weil WL den Namen für sich intern geändert hat.
+				<br>Mit <kbd class="red">ROT</kbd> werden die Sender aktiviert oder deaktiviert - und mit <kbd class="red">lang ROT</kbd> können Sender gelöscht werden.
 				</p>
             </div>
 			<div class="alert alert-info" role="alert">
@@ -131,10 +133,10 @@
 			<br>		
             <span id="serien-marker" class="anchor"></span>
 		
-            <h4 class="sub-header"><kbd class="yellow">Serien-Marker</kbd></h4>
+            <h4 class="sub-header"><kbd class="yellow">SerienMarker</kbd></h4>
             <div class="row">
                 <p>Mit <kbd class="yellow">GELB</kbd> gelangt man in die SerienMarker Ansicht. Damit eine Serie beim automatischen Suchlauf (und damit bei der Erstellung von Timern) berücksichtigt wird, muss die Serie dem SerienRecorder zunächst hinzugefügt werden.
-                Die SerienMarker Ansicht zeigt die Serien an für die ein SerienMarker angelegt wurde.</p>
+                Die SerienMarker Ansicht zeigt die Serien an, für die ein SerienMarker angelegt wurde.</p>
                 <p>Eine genaue Beschreibung der SerienMarker Ansicht ist unter <a href="serienmarker.htm">SerienMarker</a> beschrieben.</p>
             </div>
 			<br>
@@ -148,10 +150,68 @@
                     Die SerienRecorder Timer-Liste hat nichts mit dem enigma2 Timer-Editor der Box zu tun. Der SR übergibt nur die Daten für die Timererstellung an die Box und diese ist dann für die Konflikterkennung, Erstellung der Timer und auch für die Aufnahmen zuständig.
                 </div>
             </div>
-			
+
+<!-- Die anderen Tasten -->
+		<span id="weitere-tasten" class="anchor"></span>
+		<h3 class="header">Desweiteren sind folgende Funktionen von hier erreichbar</h3>
+			<br>
+			<li>
+			<p>Mit <kbd>EPG/INFO</kbd> wird ein manueller Suchlauf (Autocheck) gestartet, also das Suchen nach Sendeterminen und das erstellen von Timern. Wenn man die <a href="einstellungen.htm#tv-planer-mail"><strong><u>TV Planer Mail Funktion</u></strong></a> nutzt, wird mit <kbd>EPG/INFO</kbd> die TV Planer Mail verarbeitet, während man mit <kbd>lang EPG/INFO</kbd> einen vollen Suchlauf über alle aktive Serien anstößt.
+			</p>
+			</li>
+			<li>
+			<p>Mit <kbd>Menü</kbd> wird das <a href="einstellungen.htm"><strong><u>Globale Menü </u></strong></a> aufgerufen, wo diverse Einstellungen vorgenommen werden können.
+			</p>
+			</li>
+			<li>
+			<p>Mit <kbd>Help</kbd> wird eine <a href="index.htm#hilfe"><strong><u>Hilfe</u></strong></a> zu der jeweiligen Seite eingeblendet.
+			</p>
+			</li>
+
+
+
+<!-- Tastaturbelegung -->			
 			<span id="tastatur-sp" class="anchor"></span>
             <h3 class="sub-header"><strong>Tastaturbelegung in der SerienPlaner Ansicht</strong></h3>
-
+				<li><kbd class="red">ROT</kbd>
+				</li>
+				<li><kbd class="green">GRÜN</kbd>
+				</li>
+				<li><kbd class="yellow">GELB</kbd>
+				</li>
+				<li><kbd class="blue">BLAU</kbd>
+				</li>
+				<li><kbd>OK</kbd>
+				</li>
+				<li><kbd>EXIT</kbd>
+				</li>
+				<li><kbd>TXT</kbd>
+				</li>
+				<li><kbd>EPG/INFO</kbd>
+				</li>
+				<li><kbd>HELP</kbd>
+				</li>
+				<li><kbd>MENÜ</kbd>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+				
 			<br><br>	
 			<div class="center"><a href="serienplaner.htm"><strong>[Seitenanfang]</strong></a>&nbsp; &nbsp; &nbsp; &nbsp;<a href="index.htm"><strong>[Startseite]</strong></a></div>	
 				<br>
