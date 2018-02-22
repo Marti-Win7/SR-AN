@@ -145,78 +145,136 @@
             <div class="row">
                 <p>Die Timer-Liste spiegelt quasi einen Teil des Inhalts der SR Datenbank wieder und enthält alle Episoden der Serien, für die der SerienRecorder bereits einen Timer erstellt hat - und damit bei der Suche nicht mehr berücksichtigt werden.
                 </p>
-                <p>Eine genaue Beschreibung der Möglichkeiten ist unter <a href="timer-liste.htm">Timer Liste</a> beschrieben.</p>
+                <p>Eine genaue Beschreibung der Möglichkeiten ist unter <a href="timer-liste.htm">Timer-Liste</a> beschrieben.</p>
                 <div class="alert alert-info" role="alert">
                     Die SerienRecorder Timer-Liste hat nichts mit dem enigma2 Timer-Editor der Box zu tun. Der SR übergibt nur die Daten für die Timererstellung an die Box und diese ist dann für die Konflikterkennung, Erstellung der Timer und auch für die Aufnahmen zuständig.
                 </div>
             </div>
 
-<!-- Die anderen Tasten -->
-		<span id="weitere-tasten" class="anchor"></span>
-		<h3 class="header">Desweiteren sind folgende Funktionen von hier erreichbar</h3>
-			<br>
-			<li>
-			<p>Mit <kbd>EPG/INFO</kbd> wird ein manueller Suchlauf (Autocheck) gestartet, also das Suchen nach Sendeterminen und das erstellen von Timern. Wenn man die <a href="einstellungen.htm#tv-planer-mail"><strong><u>TV Planer Mail Funktion</u></strong></a> nutzt, wird mit <kbd>EPG/INFO</kbd> die TV Planer Mail verarbeitet, während man mit <kbd>lang EPG/INFO</kbd> einen vollen Suchlauf über alle aktive Serien anstößt.
-			</p>
-			</li>
-			<li>
-			<p>Mit <kbd>Menü</kbd> wird das <a href="einstellungen.htm"><strong><u>Globale Menü </u></strong></a> aufgerufen, wo diverse Einstellungen vorgenommen werden können.
-			</p>
-			</li>
-			<li>
-			<p>Mit <kbd>Help</kbd> wird eine <a href="index.htm#hilfe"><strong><u>Hilfe</u></strong></a> zu der jeweiligen Seite eingeblendet.
-			</p>
-			</li>
-
-
-
 <!-- Tastaturbelegung -->			
-			<span id="tastatur-sp" class="anchor"></span>
+		<span id="tastatur-sp" class="anchor"></span>
             <h3 class="sub-header"><strong>Tastaturbelegung in der SerienPlaner Ansicht</strong></h3>
-				<li><kbd class="red">ROT</kbd>
-				</li>
-				<li><kbd class="green">GRÜN</kbd>
-				</li>
-				<li><kbd class="yellow">GELB</kbd>
-				</li>
-				<li><kbd class="blue">BLAU</kbd>
-				</li>
-				<li><kbd>OK</kbd>
-				</li>
-				<li><kbd>EXIT</kbd>
-				</li>
-				<li><kbd>TXT</kbd>
-				</li>
-				<li><kbd>EPG/INFO</kbd>
-				</li>
-				<li><kbd>HELP</kbd>
-				</li>
-				<li><kbd>MENÜ</kbd>
-				</li>
-				<li>
-				</li>
-				<li>
-				</li>
-				<li>
-				</li>
-				<li>
-				</li>
-				<li>
-				</li>
-				<li>
-				</li>
-				<li>
-				</li>
-				<li>
-				</li>
-				<li>
-				</li>
 				
-			<br><br>	
+			<table class="table table-bordered"> 
+			
+				<tr> 
+					<td><kbd class="red">ROT</kbd></td> 
+					<td>Tagesübersicht / TOP30</td> 
+					<td><a href="serienplaner.htm#anzeigemodus"><strong><u>Tagesübersicht / TOP30</u></strong></a></td> 
+				</tr>
+			
+				<tr class="active"> 
+					<td><kbd class="green">GRÜN</kbd></td> 
+					<td>Sender zuordnen</td> 
+					<td><a href="serienplaner.htm#sender-zuordnen"><strong><u>Senderzuordnung</u></strong></a></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd class="yellow">GELB</kbd></td> 
+					<td>SerienMarker</td> 
+					<td><a href="serienmarker.htm"><strong><u>SerienMarker</u></strong></a></td> 
+				</tr>
+				<tr> 
+					<td><kbd class="blue">BLAU</kbd></td> 
+					<td>Timer-Liste</td> 
+					<td><a href="timer-liste.htm"><strong><u>Timer-Liste</u></strong></a></td> 
+				</tr>
+				<tr class="active"> 
+					<td><kbd>OK</kbd></td> 
+					<td>Serie/Marker hinzufügen</td> 
+					<td><a href="serie-hinzufügen.htm"><strong><u>Serie/Marker hinzufügen</u></strong></a></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>EPG/INFO</kbd></td> 
+					<td>Autocheck starten / wenn WL-Mail aktiviert, dann AC nur mit Mail</td> 
+					<td><a href="index.htm#autocheck"><strong><u>Autocheck</u></strong></a></td> 
+				</tr>
+				<tr> 
+					<td><kbd>lang EPG/INFO</kbd></td> 
+					<td>Autocheck starten / wenn WL-Mail aktiviert, dann AC aktive Serien</td> 
+					<td><a href="index.htm#autocheck"><strong><u>Autocheck</u></strong></a></td> 
+				</tr>
+				<tr class="active"> 
+					<td><kbd>Menü</kbd></td> 
+					<td>Globale Einstellungen</td> 
+					<td><a href="einstellungen.htm"><strong><u>Globale Einstellungen</u></strong></a></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>Help</kbd></td> 
+					<td>Hilfe</td> 
+					<td><a href="index.htm#hilfe"><strong><u>Hilfe</u></strong></a></td> 
+				</tr>
+				<tr> 
+					<td><kbd>0</kbd></td> 
+					<td>Log anzeigen</td> 
+					<td><a href="einstellungen.htm#log"><strong><u>Log</u></strong></a></td> 
+				</tr>
+				<tr class="active"> 
+					<td><kbd>1</kbd></td> 
+					<td>SUCHE öffnen</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>2</kbd></td> 
+					<td>Neu laden</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>3</kbd></td> 
+					<td>Neue Serienstarts</td> 
+					<td></td> 
+				</tr>
+				<tr class="active"> 
+					<td><kbd>4</kbd></td> 
+					<td>Serien Beschreibung</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>5</kbd></td> 
+					<td>IMAP Test für die TV-Planer-Mail Funktion</td> 
+					<td><a href="einstellungen.htm#tv-planer-mail"><strong><u>Tv-Planer-Mail</u></strong></a></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>6</kbd></td> 
+					<td>Konflikt Liste</td> 
+					<td></td> 
+				</tr>
+				<tr class="active"> 
+					<td><kbd>7</kbd></td> 
+					<td>Merkzettel</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>8</kbd></td> 
+					<td>---</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>9</kbd></td> 
+					<td>---</td> 
+					<td></td> 
+				</tr>
+				<tr class="active"> 
+					<td><kbd>TEXT</kbd></td> 
+					<td>Youtube Trailer</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>lang Text</kbd></td> 
+					<td>Wikipedia Infos</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>EXIT</kbd></td> 
+					<td>Abbrechen / Fenster schließen</td> 
+					<td></td> 
+				</tr>
+	
+			</table>	
+				
+				
+			<br><br><br><br>	
 			<div class="center"><a href="serienplaner.htm"><strong>[Seitenanfang]</strong></a>&nbsp; &nbsp; &nbsp; &nbsp;<a href="index.htm"><strong>[Startseite]</strong></a></div>	
-				<br>
-				<br>
-				<br>
+			<br><br><br>
             </div>
         </div>
     </div>
