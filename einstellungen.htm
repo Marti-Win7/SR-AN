@@ -63,15 +63,56 @@
                     Damit der SerienRecorder automatisch (einmal täglich) Timer anlegt muss der <strong>automatische Suchlauf</strong> aktiviert werden und eine Suchzeit eingestellt werden.
                 </div>
 				<br>
-                <p>Hier ein Beispiel-Screenshot der Globalen Einstellungen. Im folgenden wird jede Option in den einzelnen Bereichen erklärt:</p>
+                <p><strong>Hier ein Beispiel-Screenshot der Globalen Einstellungen. Im folgenden wird jede Option in den einzelnen Bereichen erklärt:</strong></p>
                 <div class="thumbnail with-caption">
                     <img src="images/globale-einstellungen.png" alt="Die globalen Einstellungen im Überblick" align="center">
                     <p><small>Die globalen Einstellungen </small></p>
                 </div>
             </div>
 			
-<!-- System -->			
+<!-- Die Farbtasten -->			
 			
+			<h2 class="header">Die Farbtasten</h2>
+			<br>
+            <h4 class="sub-header"><kbd class="red">Defaulwerte</kbd></h4>
+            <div class="row">
+                <p>Mit der roten Farbtaste werden die Einstellungen auf die Anfangs/Standard Werte zurückgesetzt.
+ 				</p>
+			</div>	
+			<h4 class="sub-header"><kbd class="green">Speichern</kbd></h4>
+            <div class="row">
+                <p>Mit der grünen Farbtaste werden die Einstellungen gespeichert und das Fenster wird geschlossen. Sollte man dieses Fenster mit <span class="label label-default">EXIT</span> verlassen, werden die gemachten Änderungen verworfen und nicht gespeichert.
+ 				</p>
+			</div>
+			<h4 class="sub-header"><kbd class="yellow">in Datei speichern</kbd></h4>
+            <div class="row">
+                <p>Mit der gelben Farbtaste werden die Einstellungen in eine Datei Exportiert, um sie z.B. für ein Wiederherstellen der Einstellungen auf einem neuen System bzw. auf einer anderen Box zu nutzen. Diese Datei heißt <strong>Config.backup</strong> und wird idR im Plugin Verzeichnis gespeichert.
+ 				</p>
+			</div>
+			<h4 class="sub-header"><kbd class="blue">aus Datei laden</kbd></h4>
+            <div class="row">
+                <p>Mit der blauen Farbtaste werden die Einstellungen aus der Datei <strong>Config.backup</strong> geladen, welche sich im Plugin Verzeichnis befinden muß.
+ 				</p>
+			</div>
+			<br>
+			<h2 class="header">Hier noch die anderen Tasten</h2>
+			<br>
+            <h4 class="sub-header">Navigieren und Einstellungen ändern</h4>
+            <ul>
+			<div class="row">
+                <p>Das Navigieren in den Einstellungen geschiet Zeilenweise mittels <span class="label label-default">Steuerkreuz <span class="glyphicon glyphicon-arrow-up">&nbsp;<span class="glyphicon glyphicon-arrow-down"></span></span></span> und das Seitenweise blättern mit <span class="label label-default">Channel <span class="glyphicon glyphicon-arrow-up">&nbsp;<span class="glyphicon glyphicon-arrow-down"></span></span></span> bzw. <span class="label label-default">Bouquet <span class="glyphicon glyphicon-arrow-up">&nbsp;<span class="glyphicon glyphicon-arrow-down"></span></span></span> .
+ 				</p>
+				<p>Das Ändern der Optionen wird mit <span class="label label-default">Steuerkreuz <span class="glyphicon glyphicon-arrow-left">&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></span></span> oder auch der <span class="label label-default">OK</span> Taste vorgenommen. Die vorgenomenen Änderungen werden dann mit <kbd class="green">Speichern</kbd> dauerhaft gespeichert und das Fenster geschlossen.
+				<br>Möchte man die gemachten Änderungen nicht behalten, kann man das Fenster mit <span class="label label-default">EXIT</span> verlassen und die gemachten Änderungen werden verworfen.
+				</p>
+			</div>	
+			</ul>
+			<p>Über die <span class="label label-default">Menü</span> Taste kann die Senderzuordnung aufgerufen werden, die "normalerweise" über die SerienPlaner Ansicht geöffnet wird.
+			</p>
+			<br><br><br>
+			
+<!-- System -->			
+			<h2 class="sub-header"><u>Nun zu den Einstellungen im Menü selbst</u></h2>
             <span id="system" class="anchor"></span>
 			
             <h2 class="sub-header">System</h2>
@@ -497,7 +538,7 @@
                                 </p>
                             </li>
                             <li>
-                                <strong>Verwende alternative Channels bei Konflikten:</strong>
+                                <strong>Verwende alternative Sender bei Konflikten:</strong>
                                 <p>
                                     Bei "ja" wird versucht den Timer für den alternativen Sender anzulegen, falls es zu einem Konflikt gekommen ist.
                                 </p>
@@ -798,11 +839,74 @@
 						<strong>ERROR LOG aktivieren:</strong>
 					</li>
                 </ul>
+				
+				<br>
+				<br>
+
+<!-- Tastaturbelegung -->	
+						
+				<span id="tastatur-ge" class="anchor"></span>
+            <h3 class="sub-header"><strong>Tastaturbelegung in den globalen Einstellungen</strong></h3>
+				
+			<table class="table table-bordered"> 
+			
+				<tr> 
+					<td><kbd class="red">Defaultwerte</kbd></td> 
+					<td>Reset der Einstellungen auf Standardwerte</td> 
+					<td></strong></a></td> 
+				</tr>
+			
+				<tr class="active"> 
+					<td><kbd class="green">Speichern</kbd></td> 
+					<td>Speichert die gemachten Änderungen</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd class="yellow">in Datei speichern</kbd></td> 
+					<td>Speichert die EInstellungen in eine Datei</td> 
+					<td></td> 
+				</tr>
+				<tr> 
+					<td><kbd class="blue">aus Datei laden</kbd></td> 
+					<td>Lädt die EInstellungen aus einer Datei</td> 
+					<td></td> 
+				</tr>
+				<tr class="active"> 
+					<td><span class="label label-default">OK</span></td> 
+					<td>Werte ändern, ansonsten das <span class="label label-default">Steuerkreuz <span class="glyphicon glyphicon-arrow-left">&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></span></span> nutzen</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><span class="label label-default">Steuerkreuz <span class="glyphicon glyphicon-arrow-left">&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></span></span></td> 
+					<td>Werte ändern, ansonsten <span class="label label-default">OK</span> nutzen</td> 
+					<td></td> 
+				</tr>
+				<tr> 
+					<td><span class="label label-default">Steuerkreuz <span class="glyphicon glyphicon-arrow-up">&nbsp;<span class="glyphicon glyphicon-arrow-down"></span></span></span></td> 
+					<td>Zeilenweise hoch und runter</td> 
+					<td></td> 
+				</tr>
+				<tr class="active"> 
+					<td><span class="label label-default">Channel <span class="glyphicon glyphicon-arrow-up">&nbsp;<span class="glyphicon glyphicon-arrow-down"></span></span></span> bzw. <span class="label label-default">Bouquet <span class="glyphicon glyphicon-arrow-up">&nbsp;<span class="glyphicon glyphicon-arrow-down"></span></span></span></td> 
+					<td>Seitenweise blättern</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><span class="label label-default">EXIT</span></td> 
+					<td>Abbrechen, ohne zu speichern</td> 
+					<td></td> 
+				</tr>
+				<tr> 
+					<td><span class="label label-default">Menü</span></td> 
+					<td>Senderzuordnung</td> 
+					<td><a href="serienplaner.htm#sender-zuordnen"><strong><u>Senderzuordnung</u></strong></a></td> 
+				</tr>
+			</table>	
+				<br>
+				<br>
+				<br>
+				<br>
 				<div class="center"><a href="einstellungen.htm"><strong>[Seitenanfang]</strong></a>&nbsp; &nbsp; &nbsp; &nbsp;<a href="index.htm"><strong>[Startseite]</strong></a></div>
-				<br>
-				<br>
-				<br>
-				<br>
 				<br>
 				<br>
             </div>
