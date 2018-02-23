@@ -22,6 +22,7 @@ var data =
         { href: "einstellungen.htm#optimierungen", title: "Optimierungen"},
         { href: "einstellungen.htm#gui", title: "GUI"},
         { href: "einstellungen.htm#log", title: "Log"},
+		{ href: "einstellungen.htm#tastatur-ge", title: "Tastaturbelegung"},
     ]},
     {href: "serienplaner.htm", title: "SerienPlaner", submenus: [
         { href: "serienplaner.htm#anzeigemodus", title: "Tagesübersicht / TOP30"},
