@@ -166,11 +166,254 @@
                     Die SerienRecorder Timer-Liste hat nichts mit der enigma2 Timer-Liste der Box zu tun.
                 </div>
             </div>
+			
+<!-- Das SerienMarker Menü -->			
+			
 			<span id="serien-menu" class="anchor"></span>
-			<h4 class="sub-header"><strong>Das SerienMarker Menü</strong></h4>
+			
+			<h2 class="header">Das SerienMarker Menü</h2>
+			<br>
             <div class="row">
-                <p>in Arbeit
-				</p>
+				<p>Hier können für jede Serie individuelle EInstellungen getroffen werden, die nur für diese Serie abweichend von den globalen Einstellungen sind.</p>
+				<br>
+                <ul>
+                    <li>
+                        <strong>vom globalen Setup abweichender Speicherort der Aufnahmen:</strong>
+					
+                        <p>Durch drücken von <span class="label label-default">OK</span> wird ein neues Fenster geöffnet, wo man dann das gewünschte Verzeichnis auswählen bzw. auch anlegen kann. Dadurch greifen in diesem Fall die globalen Einstellungen für Serien-/Staffelverzeichis nicht mehr.
+						</p>
+					</li>
+					<li>
+                        <strong>vom globalen Setup abweichenden Timervorlauf aktivieren:</strong>
+					
+                        <p>Durch drücken von <span class="label label-default">Steuerkreuz <span class="glyphicon glyphicon-arrow-left">&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></span></span> wird auf "Ja" gewechselt und man kann darunter dann die Zeit in Minuten angeben.
+						</p>
+						<ul>
+                            <li>
+                                <strong>Timervorlauf (in Min.):</strong>
+                            </li>
+						</ul>
+					</li>
+					<br>
+					<li>
+                        <strong>vom globalen Setup abweichenden Timernachlauf aktivieren:</strong>
+					
+                        <p>Durch drücken von <span class="label label-default">Steuerkreuz <span class="glyphicon glyphicon-arrow-left">&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></span></span> wird auf "Ja" gewechselt und man kann darunter dann die Zeit in Minuten angeben.
+						</p>
+						<ul>
+                            <li>
+                                <strong>Timervorlauf (in Min.):</strong>
+                            </li>
+						</ul>
+					</li>
+					<br>
+					<li>
+                        <strong>vom globalen Setup abweichende Anzahl der Aufnahmen:</strong>
+					
+                        <p>Der SR nimmt Standardmäßig jede Episode nur einmal auf. Falls jemand von einer Serie jede Episode mehrmals aufnehmen möchte, um z.B. die Abend- und die Nacht-Folge aufzunehmen, kann man das hier einstellen.
+						</p>
+						<ul>
+                            <li>
+                                <strong>Anzahl der Aufnahmen:</strong>
+                            </li>
+						</ul>
+					</li>
+					<br>
+					<li>
+                        <strong>vom globalen Setup abweichende Früheste Zeit für Timer aktivieren:</strong>
+					
+                        <p>Hier kann, abweichend von den globalen Einstellungen, eine andere Zeit für diese Serie eingegeben werden.
+						</p>
+						<ul>
+                            <li>
+                                <strong>Früheste Zeit für Timer:</strong>
+                            </li>
+						</ul>
+					</li>
+					<br>
+					<li>
+                        <strong>vom globalen Setup abweichende Späteste Zeit für Timer aktivieren:</strong>
+					
+                        <p>Hier kann, abweichend von den globalen Einstellungen, eine andere Zeit für diese Serie eingegeben werden.
+						</p>
+						<ul>
+                            <li>
+                                <strong>Späteste Zeit für Timer:</strong>
+                            </li>
+						</ul>
+					</li>
+					<br>
+					<li>
+                        <strong>Timer in Timer-Liste speichern</strong>
+					
+                        <p>Wird dieses auf "NEIN" gestellt, wird der SR für diese Serie keinen Eintrag mehr in die DB machen, was bedeutet, das man von dieser Serie beliebig viele Timer erstellen lassen kann. Damit können dann auch Serien getimert werden, die weder Staffel noch Episoden Bezeichnungen haben. Damit könnte man z.B. jeden Abend die Tagesschau um 20:00 Uhr timern. Vorausgesetzt man begrenzt auf die Früheste und Späteste Zeit für die Timer.
+						</p>
+					</li>
+					<br>
+					<li>
+                        <strong>Bevorzugte Senderliste</strong>
+					
+                        <p>Hier kann man zwischen <strong>Standard</strong> und <strong>Alternativ</strong> wählen. Mehr dazu findet man unter <a href="einstellungen.htm#sender-zuordnen">Senderzuordnung</a>
+						</p>
+					</li>
+					<br>
+					<li>
+                        <strong>verwende alternative Sender bei Konflikten:</strong>
+					
+                        <p>Hierüber läßt sich die Verwendung der alternativen Sender gegenüber den globalen Einstellungen ändern. Mehr dazu findet man unter <a href="einstellungen.htm#sender-zuordnen">Senderzuordnung</a>
+						</p>
+						<ul>
+                            <li>
+                                <strong>gemäß Setup (dzt. nein)</strong>
+                            </li>
+							<li>
+                                <strong>nein</strong>
+                            </li>
+							<li>
+                                <strong>ja</strong>
+                            </li>
+						</ul>
+					</li>
+					<br>
+					<li>
+                        <strong>Wochentage von der Timererstellung ausschließen:</strong>
+					
+                        <p>Wird hier "ja" gewählt, können hierrunter die einzelnen Wochentage von der Timererstellung für diese eine Serie ausgeschlossen werden.
+						</p>
+					</li>
+					<br>
+					<li>
+                        <strong>Tags:</strong>
+					
+                        <p>Verwaltet die Tags für die Timer dieser Serie. Hierfür ist ein Tageditor Plugin nötig. 
+						</p>
+					</li>
+					<br>
+				</ul>
+			</div>
+<!-- Tastaturbelegung -->	
+		
+		<span id="tastatur-sm" class="anchor"></span>
+            <h3 class="sub-header"><strong>Tastaturbelegung in der SerienMarker Ansicht</strong></h3>
+				
+			<table class="table table-bordered"> 
+			
+				<tr> 
+					<td><kbd class="red">ROT/lang ROT</kbd></td> 
+					<td>(De)aktivieren/löschen von SerienMarkern </td> 
+					<td><a href="serienmarker.htm#deaktivieren"><strong><u>(De)aktivieren/löschen</u></strong></a></td> 
+				</tr>
+			
+				<tr class="active"> 
+					<td><kbd class="green">GRÜN</kbd></td> 
+					<td>Sender für die Timererstellung auswählen</td> 
+					<td><a href="serienmarker.htm#sender-auswaehlen"><strong><u>Sender auswählen</u></strong></a></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd class="yellow">GELB</kbd></td> 
+					<td>Anzeige der Sendetermine für die Serie</td> 
+					<td><a href="serienmarker.htm#sendetermine"><strong><u>Sendetermine</u></strong></a></td> 
+				</tr>
+				<tr> 
+					<td><kbd class="blue">BLAU</kbd></td> 
+					<td>Timer-Liste</td> 
+					<td><a href="timer-liste.htm"><strong><u>Timer-Liste</u></strong></a></td> 
+				</tr>
+				<tr class="active"> 
+					<td><kbd>OK</kbd></td> 
+					<td>Staffel auswaehlen</td> 
+					<td><a href="serienmarker.htm#staffel-auswaehlen"><strong><u>Staffel auswaehlen</u></strong></a></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>EPG-INFO</kbd></td> 
+					<td>Autocheck starten / wenn WL-Mail aktiviert, dann AC nur mit Mail</td> 
+					<td><a href="index.htm#autocheck"><strong><u>Autocheck</u></strong></a></td> 
+				</tr>
+				<tr> 
+					<td><kbd>lang EPG-INFO</kbd></td> 
+					<td>Autocheck starten / wenn WL-Mail aktiviert, dann AC aktive Serien</td> 
+					<td><a href="index.htm#autocheck"><strong><u>Autocheck</u></strong></a></td> 
+				</tr>
+				<tr class="active"> 
+					<td><kbd>Menü/lang Menü</kbd></td> 
+					<td>SerienMarker Menü / Globale Einstellungen</td> 
+					<td><a href="serienmarker.htm#serien-menu"><strong><u>SerienMarker Menü /</u></strong></a><a href="einstellungen.htm"><strong><u>/ Globale Einstellungen</u></strong></a></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>Help</kbd></td> 
+					<td>Hilfe</td> 
+					<td><a href="index.htm#hilfe"><strong><u>Hilfe</u></strong></a></td> 
+				</tr>
+				<tr> 
+					<td><kbd>0</kbd></td> 
+					<td>Log anzeigen</td> 
+					<td><a href="einstellungen.htm#log"><strong><u>Log</u></strong></a></td> 
+				</tr>
+				<tr class="active"> 
+					<td><kbd>1</kbd></td> 
+					<td>SUCHE öffnen</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>2</kbd></td> 
+					<td>---</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>3</kbd></td> 
+					<td>Neue Serienstarts</td> 
+					<td></td> 
+				</tr>
+				<tr class="active"> 
+					<td><kbd>4</kbd></td> 
+					<td>Serien Beschreibung</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>5</kbd></td> 
+					<td>Episodenliste</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>6</kbd></td> 
+					<td>Konflikt Liste</td> 
+					<td></td> 
+				</tr>
+				<tr class="active"> 
+					<td><kbd>7</kbd></td> 
+					<td>Merkzettel</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>8</kbd></td> 
+					<td>---</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>9</kbd></td> 
+					<td>Alle (De)aktivieren</td> 
+					<td></td> 
+				</tr>
+				<tr class="active"> 
+					<td><kbd>TEXT</kbd></td> 
+					<td>Youtube Trailer</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>lang Text</kbd></td> 
+					<td>Wikipedia Infos</td> 
+					<td></td> 
+				</tr>
+				<tr class="success"> 
+					<td><kbd>EXIT</kbd></td> 
+					<td>Abbrechen / Fenster schließen</td> 
+					<td></td> 
+				</tr>
+	
+			</table>	
+				
+	
+			<br><br><br><br><br>	
 			<div class="center"><a href="serienmarker.htm"><strong>[Seitenanfang]</strong></a>&nbsp; &nbsp; &nbsp; &nbsp;<a href="index.htm"><strong>[Startseite]</strong></a></div>
 
         </div>
