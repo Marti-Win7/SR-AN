@@ -55,14 +55,14 @@
                     
                 </p>
                 <p>
-                    Wird der SerienRecorder zum ersten Mal gestartet ist die Ansicht leer. Wie viele Serien vorgemerkt sind wird idR oben angezeigt, ist aber Skinabhängig evtl. woanders angeordnet. Angezeigt werden " aktive / alle " (105/108) SerienMarker. Die deaktivierten SerienMarker werden in <span class="redfont">roter Schrift</span> angezeigt.
+                    Wird der SerienRecorder zum ersten Mal gestartet ist die Ansicht leer. Wie viele Serien vorgemerkt sind wird idR oben angezeigt, ist aber Skinabhängig evtl. woanders angeordnet. Angezeigt werden " aktive / alle " (105/108) SerienMarker. 
                 </p>
 				<p>Wie man Serien bzw. SerienMarker zum SR hinzufügt wird im Abschnitt <a href="serie-hinzufügen.htm"><strong>Serie/Marker hinzufügen</strong></a> gezeigt
 				</p>
                 
                 <p>
-                    Neben dem Namen des SerienMarkers lassen sich an jedem Eintrag in der Liste auch noch wichtige Einstellungen ablesen. Im unteren Bild kann man sehen, das für die angezeigten Serien alle zugeordneten Sender und auch alle Staffeln erlaubt sind. Zudem sieht man das jede Episode nur einmal aufgenommen werden soll (Wdh=0) und sowohl die Vorlaufzeit als auch die Nachlaufzeit auf 5min stehen. Auch das Aufnahmeverzeichnis ist zu sehen.
-					<br>Man kann für jeden SerienMarker individuell noch mehr einstellen, Dieses SerienMarker-Menü erreicht man hier über <kbd>MENÜ</kbd> . Dazu weiter unten mehr.
+                    Neben dem Namen des SerienMarkers lassen sich an jedem Eintrag in der Liste auch noch ( Skinabhängig ) wichtige Einstellungen ablesen. Im unteren Bild kann man sehen, das für die angezeigten Serien alle zugeordneten Sender und auch alle Staffeln erlaubt sind. Zudem sieht man das jede Episode nur einmal aufgenommen werden soll (Wdh=0) und sowohl die Vorlaufzeit als auch die Nachlaufzeit auf 5min stehen. Auch das Aufnahmeverzeichnis ist zu sehen.
+					<br>Auch werden in vielen Skins die Cover zu den gerade selektierten Serien und auch die (manchmal komplette) Tastaturbelegung angezeigt.
                 </p>
                 <br>
 				<br>
@@ -123,8 +123,8 @@
                     Mehrfachauswahl ist möglich, allerdings schließen einige der Auswahlmöglichkeiten alle anderen aus, z.B. <strong>Manuell</strong> (schließt alle anderen Einstellungen aus), oder <strong>Alle</strong> (beinhaltet alle anderen Einstellungen, außer <strong>Specials</strong>).
                 </p>
                 <ul>
-                    <li><strong>Manuell:</strong> Der SerienMarker ist faktisch deaktiviert es können nur manuell Timer über die Sendetermine Ansicht angelegt werden.</li>
-                    <li><strong>Alle:</strong> Der SerienRecorder wird Timer für alle Staffeln erstellen</li>
+                    <li><strong>Manuell:</strong> Der SerienMarker ist von dem automatischen Suchlauf ausgeschlossen, es können nur manuell Timer über die Sendetermine Ansicht angelegt werden.</li>
+                    <li><strong>Alle:</strong> Der SerienRecorder wird Timer für alle Staffeln erstellen, <u>ohne</u> Specials.</li>
                     <li><strong>Specials:</strong> Nimmt spezielle Folgen auf, die nicht in das Schema SnnEmm passen. Das kann z.B. „F“ wie Folge sein (öfter bei ORF), oder auch S oder TÜ usw.</li>
                     <li><strong>folgende:</strong> Gilt nur in Verbindung mit einer Staffelauswahl darunter und bewirkt das ab der ausgewählten Staffel auch alle folgenden getimert werden. </li>
                 </ul>
@@ -139,7 +139,7 @@
 			
             <h4 class="sub-header"><kbd class="yellow">Sendetermine</kbd></h4>
             <div class="row">
-                <p>In dieser Ansicht sieht man, wie der Titel vermuten läßt, alle bei Wunschliste aufgeführten Sendetermine für die aktiv selektierte Serie.
+                <p>In dieser Ansicht sieht man, wie der Titel vermuten läßt, alle bei Wunschliste aufgeführten Sendetermine für die selektierte Serie.
 				</p>
                 <p>Diese Sendetermine lassen sich in 3 verschiedenen varianten filtern, und zwar mit der Taste <kbd class="yellow">GELB</kbd> .
 				<ul>
@@ -150,7 +150,7 @@
 					<li><strong>alle Sender:</strong>
 					</li>
                 </ul>
-				<div class="alert alert-info" role="alert">Zusätzlich können die Sendetermine auch noch weiter eingeschränkt werden mit den beiden Optionen in den <a href="einstellungen.htm#filter-sendetermine"><strong><u>Globalen Einstellungen</u></strong></a> .</div>
+				<div class="alert alert-info" role="alert">Zusätzlich können die Sendetermine auch noch weiter eingeschränkt werden mit den beiden Optionen <u>Staffel-Filter</u> und <u>Timer-Filter</u> in den <a href="einstellungen.htm#filter-sendetermine"><strong><u>Globalen Einstellungen</u></strong></a> .</div>
 				</p>
 				<p>Auch in dieser Ansicht können Timer erstellt werden. Mit <kbd>OK</kbd> wird der selektierte Sendetermin markiert (aus dem roten Minus <span class="redfont">-</span> wird ein grünes Plus <span class="greenfont">+</span> ) und damit für die Timer-Erstellung vorbereitet. Wenn alle gewünschten Sendetermine markiert sind, drückt man nur noch <kbd class="green">Timer erstellen</kbd> .Jetzt wird versucht, unter Berücksichtigung der Einstellungen im SR, für die gewünschten Sendetermine Timer zu erstellen. Sollte diese Episode schon in der Datenbank des SR vorhanden sein, wird nur ein Timer versucht zu erstellen, wenn in den Optionen aktiv ist "manuelle Timer immer erstellen".
 				<br>Mit der Taste <kbd class="blue">Timer-Liste</kbd> kann auch von hier die Timer-Liste geöffnet werden, um evtl. nachzuschauen, ob Episoden schon in der DB vorhanden sind.
@@ -159,7 +159,7 @@
             <span id="timer-liste" class="anchor"></span>
             <h4 class="sub-header"><kbd class="blue">Timer-Liste</kbd></h4>
             <div class="row">
-                <p>Die Timer-Liste ist die SerienRecorder eigene Datenbank und enthält alle Episoden einer Serie, für die der SerienRecorder bereits einen Timer erstellt hat - und damit bei der Suche nicht mehr berücksichtigt wird.
+                <p>Die Timer-Liste ist quasi die SerienRecorder eigene Datenbank und enthält alle Episoden einer Serie, für die der SerienRecorder bereits einen Timer erstellt hat - und damit bei der Suche nicht mehr berücksichtigt wird.
                 In die Timer-Liste können auch manuell Einträge eingefügt werden um bestimmte Episoden von der Timererstellung auszuschließen.</p>
                 <p>Eine genaue Beschreibung der Möglichkeiten ist unter dem Abschnitt <a href="timer-liste.htm"><strong>Timer-Liste</strong></a> beschrieben.</p>
                 <div class="alert alert-info" role="alert">
