@@ -38,14 +38,11 @@ var data =
         { href: "serienmarker.htm#sendetermine", title: "Sendetermine"},
         { href: "serienmarker.htm#timer-liste", title: "Timer-Liste"},
 		{ href: "serienmarker.htm#serien-menu", title: "SerienMarker Menü"},
+		{ href: "serienmarker.htm#tastatur-sm", title: "Tastaturbelegung"},
     ]},
 	{href: "serie-hinzufügen.htm", title: "Serie/Marker hinzufügen",},
 	{href: "timer-liste.htm", title: "Timer-Liste",},
-	{href: "faq.htm", title: "FAQ / HGF / WTW",submenus: [
-        { href: "faq.htm#umzug", title: "Was muß gesichert werden bei Umzug"},
-		{ href: "faq.htm#falsche episode", title: "Falsche Episode getimert"},
-		{ href: "faq.htm#keine sendetermine", title: "Keine Sendetermine vorhanden"},
-	]},	
+	{href: "faq.htm", title: "FAQ / HGF / WTW",},	
 ]};
 var html = template(data);
 $('#sidebar-menu').html(html);
