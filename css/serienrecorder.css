@@ -11,6 +11,11 @@ body {
 	padding-top: 5px;
 	padding-right: 5px;
  }
+ 
+.keys {
+	width: auto;
+}
+ 
 .anchor {
     display:block;
     padding-top:60px;
