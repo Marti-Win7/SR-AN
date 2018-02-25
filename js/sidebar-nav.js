@@ -41,6 +41,7 @@ var data =
 		{ href: "serienmarker.htm#tastatur-sm", title: "Tastaturbelegung"},
     ]},
 	{href: "serie-hinzufügen.htm", title: "Serie/Marker hinzufügen",},
+	{href: "suche.htm", title: "Die Suche",},
 	{href: "timer-liste.htm", title: "Timer-Liste",},
 	{href: "faq.htm", title: "FAQ / HGF / WTW",},	
 ]};
