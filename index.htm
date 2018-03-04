@@ -84,7 +84,7 @@
 			<p>Es werden genaue Folgen-Informationen abgerufen, so können diese in den Timer und damit in die Aufnahmeinformationen mit aufgenommen werden, also z.B. "S01E10 – Der Baum". Als Ausnahme können mittlerweile aber auch Sonderfolgen/Specials mit z.B. S01 oder Serien ohne Staffelbezeichnung (Folge 345, wie z.B. Tatort) vom SerienRecorder verarbeitet werden, die Staffelbezeichnung ist dann S00.</p>
 			<p>Serien, die eigentlich keine sind, weil sie tägl. oder wöchentl. ausgestrahlt werden und weder eine Staffel- noch Folgen-Bezeichnung haben, sind nur "schwer" mit dem SR zu timern. Aber auch dies geht mittlerweile mit einigen von diesen "Serien". Da diese Folgen nicht eindeutig zu identifizieren sind, würden diese einmal in die DB eingetragen und danach nicht mehr getimert. Daher sollte man die Option aktivieren, das diese spezielle Serie <strong>nicht</strong> in die DB eingetragen wird </p>
 			<div class="alert alert-info" role="alert"> Es gibt natürlich auch "Spezialfälle" von Serien, bei denen das hinzufügen zum SR schon mal Probleme bereitet. Manchmal liegt es an Sonderzeichen im Namen oder aber man muss den meist engl. Original-Titel der Serie in die Suche des SR eingeben. Bei Problemen dann bitte im Forum melden. </div>
-			<p>Die Sendetermine werden nicht mehr direkt von <a href="http://www.wunschliste.de" target="_blank">www.wunschliste.de</a> (Wunschliste, WL) geladen, sondern von einem eigens dafür privat "gemieteten" Server (<a href="http://www.serienserver.de" target="_blank">Serien-Server</a>), da die Datenmengen die jeder User bei einem Suchlauf (Autocheck, AC) benötigte, für die WL-Seite zu viel waren. Daher wäre es "schön", wenn sich die User für den Unterhalt des Servers und natürlich hauptsächlich für den unermüdlichen Einsatz des jetzigen Programmierers <a href="https://www.vuplus-support.org/wbb4/index.php?thread/85765&postID=1144875#post1144875" target="_blank"><strong>@MacDisein</strong></a> mit einer kleinen Spende (evtl. sogar jedes Jahr einmal) an ihn, daran beteiligen.
+			<p>Die Sendetermine werden nicht mehr direkt von <a href="http://www.wunschliste.de" target="_blank">www.wunschliste.de</a> (Wunschliste, WL) geladen, sondern von einem eigens dafür privat "gemieteten" Server (<a href="http://www.serienserver.de" target="_blank">Serien-Server</a>), da die Datenmengen die jeder User bei einem Suchlauf (Auto-Check, AC) benötigte, für die WL-Seite zu viel waren. Daher wäre es "schön", wenn sich die User für den Unterhalt des Servers und natürlich hauptsächlich für den unermüdlichen Einsatz des jetzigen Programmierers <a href="https://www.vuplus-support.org/wbb4/index.php?thread/85765&postID=1144875#post1144875" target="_blank"><strong>@MacDisein</strong></a> mit einer kleinen Spende (evtl. sogar jedes Jahr einmal) an ihn, daran beteiligen.
 			<br>Selbst das <a href="https://www.vuplus-support.org/wbb4/" target="_blank">VU+ Support Forum</a> ist ein Hobby Projekt. Da sollte man dran denken, falls einem mal nicht sofort geholfen wird bzw. werden kann.</p>
 			<p>Zusätzlich kann man in den Einstellungen aktivieren, das auch Cover der Serien angezeigt werden sollen. Die Cover und auch die Serien-Infos werden von
             <a href="https://www.thetvdb.com/" target="_blank">The TVDB</a> abgerufen. Da TheTVDB nicht immer ALLES vorrätig hat, kann es bei manchen Serien auch schon mal zu "Fehlern" bzw. zu fehlenden Inhalten kommen. Dies dann bitte im <a href="https://www.vuplus-support.org/wbb4/index.php?thread/85765" target="_blank">Forum</a> melden, ob es behoben werden kann.
@@ -201,18 +201,18 @@
           <p>Diese lassen sich sowohl aus der Serien-Planer-Ansicht mit <kbd>MENU</kbd> Taste als auch aus der Serien-Marker-Ansicht mit <kbd>lang MENU</kbd> aufrufen. Die Einstellungen sind inzwischen sehr komplex geworden, denn der SerienRecorder lässt sich sehr weitreichend konfigurieren, deswegen sind den Einstellungen ein eigenes Kapitel gewidmet. </p>
         </div> 
 		
-<!-- Autocheck -->		
+<!-- Auto-Check -->		
 		
 		<span id="autocheck"/>
-        <h2 class="sub-header">Autocheck (AC, Suchlauf) <kbd>EPG/Info</kbd></h2>
+        <h2 class="sub-header">Auto-Check (AC, Suchlauf) <kbd>EPG/Info</kbd></h2>
         <div class="row">
-          <p>Der Autocheck wird idR automatisch, einmal am Tag, zu einer eingestellten Uhrzeit durchgeführt. Diese Uhrzeit sollte nicht zwischen 0:00 -6:00 Uhr liegen, da es dann wegen Aktualisierung der Server zu Fehlern beim abrufen der Daten kommen kann.
-		  <br>Über die <kbd>EPG</kbd> Taste (auf manchen Fernbedienungen auch <kbd>EPG/Info</kbd>) kann ein manueller Suchlauf (Autocheck) über alle aktiven Serien sowohl aus der PlanerAnsicht als auch aus der MarkerAnsicht heraus gestartet werden.
+          <p>Der Auto-Check wird idR automatisch, einmal am Tag, zu einer eingestellten Uhrzeit durchgeführt. Diese Uhrzeit sollte nicht zwischen 0:00 -6:00 Uhr liegen, da es dann wegen Aktualisierung der Server zu Fehlern beim abrufen der Daten kommen kann.
+		  <br>Über die <kbd>EPG</kbd> Taste (auf manchen Fernbedienungen auch <kbd>EPG/Info</kbd>) kann ein manueller Suchlauf (Auto-Check) über alle aktiven Serien sowohl aus der PlanerAnsicht als auch aus der MarkerAnsicht heraus gestartet werden.
 		  <br>Ist die TV-Planer-Mail-Funktion aktiviert, dann wird mit <kbd>EPG</kbd> im AC nur die WL-Mail verarbeitet und mit <kbd>lang EPG</kbd> wird ein voller AC über alle aktiven Serien im SR gemacht.
-		  <br>Dabei werden für alle aktivierten SerienMarker die Ausstrahlungstermine von Wunschliste.de (bzw. dem SerienServer) abgerufen und ggf. für den eingestellten Zeitraum Timer angelegt.
+		  <br>Dabei werden für alle aktivierten Serien-Marker die Ausstrahlungstermine von Wunschliste.de (bzw. dem SerienServer) abgerufen und ggf. für den eingestellten Zeitraum Timer angelegt.
           </p>
           <p> Das Protokoll eines automatischen bzw. manuellen Suchlauf wird in einer Log-Datei abgespeichert und kann, aus so gut wie jeder Ansicht heraus, über die Taste <kbd>0</kbd> aufgerufen werden. </p>
-		  <a href="einstellungen.htm#autocheck"><strong><u>Einstellungen zum Autocheck</u></strong></a>
+		  <a href="einstellungen.htm#autocheck"><strong><u>Einstellungen zum Auto-Check</u></strong></a>
 		  <br><br>
 		  
         </div> 

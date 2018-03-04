@@ -58,6 +58,7 @@
 					<a href="faq.htm#falsche episode"><h4><strong>Was tun, wenn eine "falsche" Episode getimert wurde?</strong></h4></a>
 					<a href="faq.htm#keine sendetermine"><h4><strong>Was tun, wenn keine Sendetermine für eine Serie angezeigt werden?</strong></h4></a>
 					<a href="faq.htm#lade"><h4><strong>Nach dem Start des SR sieht man nur "Lade Infos vom Web..."</strong></h4></a>
+					<a href="faq.htm#timer-inhalte"><h4><strong>Die noch ausstehenden Timer in der SR Timer-Liste sind nicht alle im enigma2 Timer-Editor vorhanden.</strong></h4></a>
 				</ul>	
 				
 				<br><br><br><br><br>
@@ -73,7 +74,7 @@
 					<div class="alert alert-info" role="alert">Auch wenn es eine Backup-Funktion im SR gibt, die man auch ruhig nutzen sollte, denn damit werden alle wichtigen Dateien des SR (extern) gesichert, gibt es keine Funktion, dieses Backup automatisch in den SR wieder einzuladen. Daher muss das Sichern und Wiederherstellen manuell erledigt werden.</div>
 				<ol type="a">	
 					<li><u>Die Datenbank (DB)</u>.
-						<br>In der Datenbank sind die "wichtigsten" Daten des SR gespeichert, u.a. die SerienMarker, die schon getimerten Episoden und die Senderzuordnung.
+						<br>In der Datenbank sind die "wichtigsten" Daten des SR gespeichert, u.a. die Serien-Marker, die schon getimerten Episoden und die Senderzuordnung.
 						<br>Die DB, <strong>SerienRecorder.db</strong>, befindet sich idR im Verzeichnis <strong>"/etc/enigma2/"</strong> und kann einfach kopiert bzw. gesichert werden. Im neuen System wird sie einfach, nach der Installation des SR und am besten vor dem ersten Start des SR ins Standard-Verzeichnis <strong>"/etc/enigma2/"</strong> kopiert.
 					</li>
 					<li><u>Die Config des SR</u>
@@ -119,7 +120,7 @@
 				<ul>1. Der Timer für die Episode E07 würde (in der nächsten Woche) nicht mehr erstellt, weil er schon in der DB vorhanden ist.</ul>
 				<ul>2. Der Timer für E06 steht nicht in der DB und würde "irgendwann" mal, wenn die Serie/Episode wiederholt wird getimert, was dann keiner mehr weiß, warum der SR sowas tut.</ul></p>
 				<p><u><strong>Lösung:</strong></u>
-				<br>Man geht im SR mit <kbd class="blue">Blau</kbd> in die Timer-Liste und löscht dort den noch ausstehenden Timer der Episode E07. Damit wird sowohl der Eintrag in der DB gelöscht als auch der Timer im Timer-Editor der Box, was aber danach noch überprüft werden sollte. Dann macht man mit <kbd>lang EPG/Info</kbd> einen manuellen vollen Autocheck, um den Timer für E06 zu generieren.</p>
+				<br>Man geht im SR mit <kbd class="blue">Blau</kbd> in die Timer-Liste und löscht dort den noch ausstehenden Timer der Episode E07. Damit wird sowohl der Eintrag in der DB gelöscht als auch der Timer im Timer-Editor der Box, was aber danach noch überprüft werden sollte. Dann macht man mit <kbd>lang EPG/Info</kbd> einen manuellen vollen Auto-Check, um den Timer für E06 zu generieren.</p>
 				</ul>
 				<br>
 				<div class="center"><a href="faq.htm"><strong>[Seitenanfang]</strong></a>&nbsp; &nbsp; &nbsp; &nbsp;<a href="index.htm"><strong>[Startseite]</strong></a></div>
@@ -143,8 +144,22 @@
 				
 				<p><h5><strong>Nach dem Start des SR sieht man nur "Lade Infos vom Web..."</strong></h5></p>
 				<p>Das bedeutet, das der SR versucht, die Planer Daten aus dem Internet zu holen, was ihm aber anscheinend nicht gelingt.
-				<br>Entweder kann der SR keine Internetverbindung aufbauen oder aber der SerienServer ist nicht erreichbar. Wenn man getestet hat, das die Box ins Internet kommt, sollte man im <a href="https://www.vuplus-support.org/wbb4/index.php?thread/85765" target="_blank">VU+ Support Forum</a> nachsehen, ob es schon Beiträge in dieser Richtung gibt.
+				<br>Entweder kann der SR keine Internetverbindung aufbauen oder aber der SerienServer ist nicht erreichbar. Wenn man getestet hat, das die Box ins Internet kommt, sollte man im <a href="https://www.vuplus-support.org/wbb4/index.php?thread/85765" target="_blank">VU+ Support Forum</a> nachsehen, ob es schon Beiträge in dieser Richtung gibt, ansonsten dort Fragen.
 				</p>
+			<br>
+			<div class="center"><a href="faq.htm"><strong>[Seitenanfang]</strong></a>&nbsp; &nbsp; &nbsp; &nbsp;<a href="index.htm"><strong>[Startseite]</strong></a></div>	
+            <br>
+<!-- unterschiedliche Timer-Inhalte -->				
+				
+				<span id="timer-inhalte" class="anchor"></span>
+				
+				<p><h5><strong>Die noch ausstehenden Timer in der SR Timer-Liste sind nicht alle im enigma2 Timer-Editor vorhanden.</strong></h5></p>
+				<p><u>Das Problem:</u>
+				<br>Im Timer-Editor der Box fehlen augenscheinlich Timer für Episoden, die der SR eigentlich hätte anlegen sollen. Diese Episoden werden auch laut EPG ausgestrahlt. Ein Blick in die Timer-Liste des SerienRecorders und man sieht, das der SR diese Episoden wohl angelegt hat, denn sonst wären sie dort nicht eingetragen.
+				</p>
+			<br>
+			<div class="center"><a href="faq.htm"><strong>[Seitenanfang]</strong></a>&nbsp; &nbsp; &nbsp; &nbsp;<a href="index.htm"><strong>[Startseite]</strong></a></div>	
+            <br>
 			<br><br><br>
 			</div>
         </div>
