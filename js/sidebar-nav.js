@@ -43,7 +43,8 @@ var data =
 	{href: "serie-hinzufügen.htm", title: "Serie/Marker hinzufügen",},
 	{href: "suche.htm", title: "Die Suche",},
 	{href: "timer-liste.htm", title: "Timer-Liste",},
-	{href: "faq.htm", title: "FAQ / HGF / WTW",},	
+	{href: "faq.htm", title: "FAQ / HGF / WTW",},
+	{href: "changelog.htm", title: "Changelog / Updates",},	
 ]};
 var html = template(data);
 $('#sidebar-menu').html(html);
