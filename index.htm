@@ -50,16 +50,14 @@
 		<br>
 		<h1 class="page-header">Einleitung</h1>
         <div class="row">
-          <p class="lead"> Das SerienRecorder Plug-In erleichtert und automatisiert das Aufnehmen von Serien, indem für ausgewählte Serien automatisch Timer angelegt werden. Dabei überwacht das SerienRecorder Plug-In ob eine Folge bereits aufgenommen wurde oder nicht, sodass es zu keinen
-            Mehrfachaufnahmen kommt. </p>
+          <p class="lead"> Der SerienRecorder erleichtert und automatisiert das Aufnehmen von Serien, indem für ausgewählte Serien automatisch Timer angelegt werden. Er überwacht,  ob eine Folge bereits aufgenommen wurde oder nicht, sodass es zu keinen Mehrfachaufnahmen kommt. </p>
           <p>
-		  <p>Dafür bezieht das Plug-In Daten von der kommerziellen Webseite <a href="http://www.wunschliste.de" target="_blank">http://www.wunschliste.de</a>, sodass für die Benutzung zwingend eine Internetverbindung notwendig ist. Wunschliste bietet auf seiner Webseite für so gut wie alle Serien die Ausstrahlungstermine im deutschen Fernsehen an. Diese Informationen bereitet das SerienRecorder Plug-In auf und stellt
-            eine Oberfläche zur Verfügung um die Lieblingsserien zu verwalten.</p>
+		  <p>Dafür bezieht der SerienRecorder Daten von der kommerziellen Webseite <a href="http://www.wunschliste.de" target="_blank">http://www.wunschliste.de</a>, sodass für die Benutzung zwingend eine Internetverbindung notwendig ist. Wunschliste bietet auf seiner Webseite für so gut wie alle Serien die Ausstrahlungstermine im deutschen Fernsehen an. Diese Informationen bereitet der SerienRecorder auf und stellt eine Oberfläche zur Verfügung um die Lieblingsserien zu verwalten.</p>
 		  <p>Der Benutzer kann sog. <a href="serienmarker.htm">Serien-Marker</a> für die Serien anlegen, die vom SerienRecorder überwacht werden sollen. Für jeden Serien-Marker kann konfiguriert werden, welche Staffeln und Sender in die Überwachung einbezogen werden.
           Einmal am Tag, zu einer einstellbaren Uhrzeit, wird ein sog. <a href="index.htm#autocheck">Auto-Check</a> (Suchlauf) durchgeführt, der die Sendetermine bei Wunschliste abruft und anhand von bestimmten Vorgaben Timer für die Sendungen erstellt.
 		  Zusätzlich wird in der sog. <a href="timer-liste.htm">Timer-Liste</a> (der SerienRecorder Datenbank) ein entsprechender Datensatz eingefügt, der u.a. verhindert, dass für die Sendung ein weiterer Timer erstellt wird.
 		  Optional kann der SerienRecorder auch die sog. <a href="einstellungen.htm#tv-planer-mail">TV-Planer E-Mails</a> abrufen und auswerten, die von Wunschliste einmal am Tag verschickt werden. Die dort enthalten Informationen sorgen dafür, dass Serien die auf "Meine Wunschliste" gepflegt werden, mehr oder weniger automatisch vom SerienRecorder berücksichtigt werden.</p>
-		  <p>Neben dem Anlegen von Timern bietet der SerienRecorder dem Serien-Fan noch weitere interessante Funktionen, wie z.B. den sog. <a href="serienplaner.htm">Serien-Planer</a> der eine Übersicht der Serien des heutigen bzw. der kommenden Tage bietet. Außerdem kann das Plug-In neben Beschreibungen zur Serie bzw. einzelner Folgen auch das Cover anzeigen bzw. abrufen.</p>
+		  <p>Neben dem Anlegen von Timern bietet der SerienRecorder dem Serien-Fan noch weitere interessante Funktionen, wie z.B. den sog. <a href="serienplaner.htm">Serien-Planer</a> der eine Übersicht der Serien des heutigen bzw. der kommenden Tage bietet. Außerdem kann der SerienRecorder neben Beschreibungen zur Serie bzw. einzelner Folgen auch das Cover anzeigen bzw. abrufen.</p>
 		  <br>
           <div class="alert alert-info" role="alert"> Der SerienRecorder ist ein nicht-kommerzielles Hobby Projekt, dass in keiner Beziehung zu den Betreibern der kommerziellen Webseite
             <a href="http://www.wunschliste.de" target="_blank"><strong>www.wunschliste.de</strong></a> steht.<br/>
@@ -67,7 +65,7 @@
             also nicht ausgeschlossen, dass Wunschliste.de den Betrieb des SerienRecorders irgendwann unterbindet.
             <br> Im Moment darf der SerienRecorder mit freundlicher Genehmigung von Wunschliste.de die Daten über einen von uns betriebenen Proxy Server (<a href="http://www.serienserver.de" target="_blank"><strong>Serien-Server</strong></a>) abrufen um die Wunschliste Server so wenig wie möglich zu belasten. 
           Da die Wunschliste-Seite von angemeldeten Usern lebt, ist es nur fair, dass sich JEDER Nutzer des SerienRecorder einen Account bei Wunschliste anlegt, egal ob er später die TV-Planer E-Mail Funktion nutzt oder nicht.</p>
-		  <p>Das Plug-In ruft die Cover und Serien-Informationen von der freien Platform <a href="https://www.thetvdb.com/" target="_blank"><strong>TheTVDB</strong></a> ab. Hier kann jeder Cover bereitstellen oder Informationen eintragen.</p>
+		  <p>Der SerienRecorder ruft die Cover und Serien-Informationen von der freien Platform <a href="https://www.thetvdb.com/" target="_blank"><strong>TheTVDB</strong></a> ab. Hier kann jeder Cover bereitstellen oder Informationen eintragen.</p>
 		  </div>
 		  
 		  
@@ -90,7 +88,7 @@
             <a href="https://www.thetvdb.com/" target="_blank">The TVDB</a> abgerufen. Da TheTVDB nicht immer ALLES vorrätig hat, kann es bei manchen Serien auch schon mal zu "Fehlern" bzw. zu fehlenden Inhalten kommen. Dies dann bitte im <a href="https://www.vuplus-support.org/wbb4/index.php?thread/85765" target="_blank">Forum</a> melden, ob es behoben werden kann.
 			<br>Wunschliste hat auf seiner Webseite mittlerweile auch Filme im "Angebot", welche auch mit dem SerienRecorder getimert werden können. Filme lassen sich allerdings nur mit Hilfe der <a href="#">TV-Planer E-Mail Funktion</a> timern.</p>
 			<p>Der SerienRecorder aktualisiert (wenn eingeschaltet) die von ihm angelegten und noch ausstehenden Timer auf der Box mit den vorhandenen EPG-Daten, während des Auto-Checks (AC). Dabei werden die Zeiten der Timer abgeglichen und ggf. geändert. Dieses funktioniert idR ganz gut, aber halt nicht immer.</p>
-			<p>Wichtig ist auch, dass das Plug-in nur Timer erstellt. Sowohl für die Konflikterkennung wie auch für die Aufnahmen ist <strong>ausschließlich</strong> die Box verantwortlich. Wenn etwas nicht aufgenommen wurde, obwohl der SR einen Timer erstellt hat, ist in den allermeisten Fällen die Box dafür verantwortlich bzw. evtl. falsche Einstellungen auf der Box oder im SR bei der Senderzuordnung. In einem solchen Problemfall ist immer das dazugehörige Log des SR, wo diese Aufnahme getimert wurde mit anzuhängen. Die Log-Dateien befinden sich idR im Pluginverzeichnis.</p>
+			<p>Wichtig ist auch, dass der SerienRecorder nur Timer erstellt. Sowohl für die Konflikterkennung wie auch für die Aufnahmen ist <strong>ausschließlich</strong> die Box verantwortlich. Wenn etwas nicht aufgenommen wurde, obwohl der SR einen Timer erstellt hat, ist in den allermeisten Fällen die Box dafür verantwortlich bzw. evtl. falsche Einstellungen auf der Box oder im SR bei der Senderzuordnung. In einem solchen Problemfall ist immer das dazugehörige Log des SR, wo diese Aufnahme getimert wurde mit anzuhängen. Die Log-Dateien befinden sich idR im Pluginverzeichnis.</p>
 		</div>
 		
 <!-- Installation -->		
@@ -114,7 +112,7 @@
 		  <br>Unter folgender Adresse findet man für DreamBoxen ein How-To wie man ein IPKG manuell installiert:
           <a href="http://www.dream-multimedia-tv.de/download/HowTo-Plugins-installieren.pdf" target="_blank">http://www.dream-multimedia-tv.de/download/HowTo-Plugins-installieren.pdf</a>
 		  </p>
-          <p> Nach der Installation ist das SerienRecorder Plug-In als Eintrag unter "Erweiterungen" vorhanden.</p>
+          <p> Nach der Installation ist der SerienRecorder als Eintrag unter "Erweiterungen" vorhanden.</p>
 		  		  
 <!-- Installation von Beta-Versionen -->		  
 		  
@@ -125,7 +123,7 @@
             <img src="images/github-beta-download.png" alt="Bild für den Beta-Version Download" align="center">
             <p><small>Download der Beta-Version</small></p>
           </div>
-		  <br>Über FTP (z.B. mit <a href="https://www.vuplus-support.org/wbb4/filebase/index.php?entry/202-dcc-dreambox-control-center-e2-v1-50/" target="_blank">DCC</a>, Filezilla, Totalcommander etc.) können dann die entsprechenden Dateien aus dem "src"-Verzeichnis der Zip-Datei mit den Dateien im SR Plug-In Verzeichnis auf der Box ausgetauscht bzw. überschrieben werden.
+		  <br>Über FTP (z.B. mit <a href="https://www.vuplus-support.org/wbb4/filebase/index.php?entry/202-dcc-dreambox-control-center-e2-v1-50/" target="_blank">DCC</a>, Filezilla, Totalcommander etc.) können dann die entsprechenden Dateien aus dem "src"-Verzeichnis der Zip-Datei mit den Dateien im SerienRecorder Verzeichnis auf der Box ausgetauscht bzw. überschrieben werden.
 			Die Dateien des SR sind dann auf der Box in folgenden Verzeichnis zu finden:
 			<div class="well well-sm">/usr/lib/enigma2/python/Plugins/Extensions/serienrecorder/</div>
 			Auch die manchmal benötigten <strong>LOG-Dateien</strong> sind in diesem Verzeichnis.</p>
@@ -174,7 +172,7 @@
             <br> Beim nächsten Start bzw. nach dem Verlassen der Sender-Zuordnung wird der Serien-Planer angezeigt. </p>
           <div class="well well-sm"> Für den SerienRecorder sind inzwischen verschiedene Skins bzw. Skinparts verfügbar, über die sich das Aussehen ändern läßt.
             <br>Sollte der SR bei jemandem nicht (annähernd) bildschirmfüllend sein, sollte man sich informieren, ob dazu ein Skinpart erforderlich bzw. überhaupt verfügbar ist. <br>Auch die Einstellungen im SR bezüglich "Skin"-Optionen (z.B. Serienrecorder1, Serienrecorder2, Skinpart etc.) sollten durchgetestet werden. </div>
-          <p> Das SerienRecorder Plugin ist recht komplex und besteht aus zwei Ansichten, die Serien-Planer-Ansicht und die Serien-Marker-Ansicht. Diese werden im einzelnen in den nachfolgenden Kapiteln erklärt.
+          <p>Der SerienRecorder ist recht komplex und besteht aus zwei Ansichten, die Serien-Planer-Ansicht und die Serien-Marker-Ansicht. Diese werden im einzelnen in den nachfolgenden Kapiteln erklärt.
             <br>Jede Ansicht hat einen festen Bereich, in der die für diese Ansicht aktiven Tasten aufgelistet werden. Da es inzwischen sehr viele Funktionen pro Ansicht gibt, wechselt dieser Bereich (einstellbar) alle paar Sekunden. Bei manchen Skins werden auch ALLE Tasten angezeigt. Manchmal haben Tasten auch eine doppelte
             Funktion, kurz gedrückt oder lang gedrückt. Dies wird durch einen Schrägstrich dargestellt (kurz/lang): </p>
           <div class="thumbnail with-caption">
