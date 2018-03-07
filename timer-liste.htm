@@ -56,6 +56,8 @@
 				<br>Die <strong>Timer-Liste</strong> wird mit der <kbd class="blue">blauen Farbtaste</kbd> geöffnet und zeigt als erstes die noch ausstehenden Timer an, ähnlich dem Screenshot unten. Diese Ansicht kann, je nach benutztem Skin, etwas anders aussehen.
 				<br>Timer, die der SerienRecorder (SR) deaktiviert auf der Box angelegt hat, weil diese wegen Konflikten nicht aktiv angelegt werden konnten, werden hier in <span class="redfont">roter Schrift</span> dargestellt.
 				</p>
+				<br>
+				<div class="alert alert-info" role="alert"><strong>Wichtig:</strong> Der SerienRecorder (SR) übergibt nur die Daten zur Timererstellung an das System (Image), für die Konflikterkennung und dgl. ist das System verantwortlich, für die Aufnahmen sowieso. Sollte es aus irgendeinem Grund nicht möglich sein, einen Timer zu erstellen, wird dies dem SR mitgeteilt und der SR versucht einen "Ausweichtermin" zu erstellen. Gelingt dies dem SR nicht, wird der Timer vom SR <strong>deaktiviert</strong> angelegt, was bedeutet, das sich der User selbst darum kümmern muss, den Konfilkt oder was auch immer dazu geführt hat, zu beseitigen. Dieser deaktivierte Timer wird, wie alle anderen Timer auch, in die Datenbank eingetragen. Dies bedeutet, auch ein deaktivierter Timer für eine Episode, wird nicht nochmal getimert. Sollte der deaktivierte Timer vom User nicht aktiviert werden, und folglich würde die Episode nicht aufgenommen, fehlt dem jenigen eine Episode und wird auch nicht mehr vom SR getimert, denn sie steht ja bereits in der DB.</div>
 				<br><br>
 				<p><h4><strong>Beispiel Screenshot der Timer-Liste beim Öffnen</strong></h4></p>
                 <div class="thumbnail with-caption">
@@ -77,6 +79,13 @@
 					</p>
 					<li><strong>Timer löschen, damit diese nochmal erstellt werden.</strong>
                     <p>
+					</p>
+					<li><strong>Einträge der Datenbank hinzufügen, die erst gar nicht getimert werden müssen.</strong>
+                    <p>
+					</p>
+					<li><strong>Datenbank komplett leeren.</strong>
+                    <p>Mit der Taste <kbd>9</kbd> kann die gesamte Datenbank geleert werden. Damit werden sämtliche Einträge bezüglich getimerten Episoden aller Serien gelöscht.
+					<br>Einzig die Senderzuordnung, die auch in der Datenbank steht, bleibt erhalten.
 					</p>
 				</ul>	
             </div>
