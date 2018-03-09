@@ -49,15 +49,16 @@
             <h1 class="page-header">Die Timer-Liste &nbsp; &nbsp; &nbsp; &nbsp;(in Arbeit)</h1>
             <div class="row">
                 <p class="lead">
-					Die <kbd class="blue">Timer-Liste</kbd> spiegelt den Inhalt der Datenbank (DB) über alle je erstellten Timer aller Serien-Episoden wieder, die der SerienRecorder (SR) erstellt hat. Wenn man hier "Mist" baut und versehentlich alles löscht, dann hat man quasi das Gedächtnis des SR gelöscht, zumindest einen großen Teil davon.
+					Die <kbd class="blue">Timer-Liste</kbd> spiegelt den Inhalt der Datenbank (DB) wieder und beinhaltet alle erstellten Timer aller Serien-Episoden , die der SerienRecorder (SR) je erstellt hat. Wenn man hier "Mist" baut und versehentlich alles löscht, dann hat man quasi das Gedächtnis des SR gelöscht, zumindest einen großen Teil davon.
                 </p>
 			
 				<p>In der <strong>Timer-Liste</strong> kann man sowohl nachsehen, welche Episoden von den einzelnen Serien schon mal getimert wurden, als auch Einträge löschen oder hinzufügen. 
 				<br>Die <strong>Timer-Liste</strong> wird mit der <kbd class="blue">blauen Farbtaste</kbd> geöffnet und zeigt als erstes die noch ausstehenden Timer an, ähnlich dem Screenshot unten. Diese Ansicht kann, je nach benutztem Skin, etwas anders aussehen.
-				<br>Timer, die der SerienRecorder (SR) deaktiviert auf der Box angelegt hat, weil diese wegen Konflikten nicht aktiv angelegt werden konnten, werden hier in <span class="redfont">roter Schrift</span> dargestellt.
+				<br>Timer, die der SerienRecorder (SR) wegen Konflikten nicht aktiv anlegen konnte, werden deaktiviert auf der Box angelegt und sind hier in <span class="redfont">roter Schrift</span> dargestellt.
 				</p>
 				<br>
-				<div class="alert alert-info" role="alert"><strong>Wichtig:</strong> Der SerienRecorder (SR) übergibt nur die Daten zur Timererstellung an das System (Image), für die Konflikterkennung und dgl. ist das System verantwortlich, für die Aufnahmen sowieso. Sollte es aus irgendeinem Grund nicht möglich sein, einen Timer zu erstellen, wird dies dem SR mitgeteilt und der SR versucht einen "Ausweichtermin" zu erstellen. Gelingt dies dem SR nicht, wird der Timer vom SR <strong>deaktiviert</strong> angelegt, was bedeutet, das sich der User selbst darum kümmern muss, den Konfilkt oder was auch immer dazu geführt hat, zu beseitigen. Dieser deaktivierte Timer wird, wie alle anderen Timer auch, in die Datenbank eingetragen. Dies bedeutet, auch ein deaktivierter Timer für eine Episode, wird nicht nochmal getimert. Sollte der deaktivierte Timer vom User nicht aktiviert werden, und folglich würde die Episode nicht aufgenommen, fehlt dem jenigen eine Episode und wird auch nicht mehr vom SR getimert, denn sie steht ja bereits in der DB.</div>
+				<div class="alert alert-info" role="alert"><strong>Wichtig:</strong> Der SerienRecorder (SR) übergibt nur die Daten zur Timererstellung an das System (Image), für die Konflikterkennung und dgl. ist das System verantwortlich, für die Aufnahmen sowieso. Sollte es aus irgendeinem Grund nicht möglich sein, einen Timer zu erstellen, wird dies dem SR mitgeteilt und der SR versucht einen "Ausweichtermin" zu erstellen. Gelingt dies dem SR nicht, wird der Timer vom SR <strong>deaktiviert</strong> angelegt, was bedeutet, das sich der User selbst darum kümmern muss, den Konfilkt oder was auch immer dazu geführt hat, zu beseitigen. Dieser deaktivierte Timer wird, wie alle anderen Timer auch, in die Datenbank (DB) eingetragen. Dies bedeutet, auch ein deaktivierter Timer für eine Episode, wird nicht nochmal getimert. Sollte der deaktivierte Timer vom User nicht aktiviert werden, und folglich würde die Episode nicht aufgenommen, fehlt dem jenigen eine Episode und wird auch nicht mehr vom SR getimert, denn sie steht ja bereits in der DB.
+				<br>Existiert also ein EIntrag in der DB, dann hat der SR den Timer auch ans Image übergeben. Was danach passiert, da hat der SR keinen Einfluss drauf.</div>
 				<br><br>
 				<p><h4><strong>Beispiel Screenshot der Timer-Liste beim Öffnen</strong></h4></p>
                 <div class="thumbnail with-caption">
@@ -70,12 +71,19 @@
                 
 				<h4 class="sub-header">Wozu ist die Timer-Liste eigentlich da ?</h4>
             <div class="row">
-				<p>In der <strong>Timer-Liste</strong> stehen alle jemals vom SR getimerten Episoden, die dann auch vom SR nicht mehr getimert werden, sofern die Anzahl der gewünschten Timer pro Episode erreicht ist. In der Regel nimmt man jede Episode nur einmal auf, was bedeutet, das der SerienRecorder (SR) nur einmal einen Timer erstellt und dazu den Eintrag in die Datenbank (DB) schreibt.</p>
+				<p>In der <strong>Timer-Liste</strong> stehen alle jemals vom SerienRecorder (SR) getimerten Episoden, die dann auch vom SR nicht mehr getimert werden, sofern die Anzahl der gewünschten Timer pro Episode erreicht ist. In der Regel nimmt man jede Episode nur einmal auf, was bedeutet, das der SR nur einmal einen Timer erstellt und dazu den Eintrag in die Datenbank (DB) schreibt.</p>
 				<p>Wenn man die <kbd class="blue">Timer-Liste</kbd>  öffnet, sieht man als erstes die Liste der noch ausstehenden bzw. nicht abgeschlossenen Timer. Diese noch ausstehenden Timer sind bereits Inhalt der Datenbank (DB). Ab hier gibt es mehrere Möglichkeiten, etwas an den Einrägen der Timer-Liste bzw. Datenbank zu ändern oder auch nur nachzuschauen, ob eine Serien-Episode schon getimert wurde.
 				</p>
-                <ul>
+				
+				<div class="alert alert-danger">
+                    <strong>WICHTIG: </strong> BITTE Vorsicht im Umgang mit der <strong>Timer-Liste</strong>. Wenn hier jemand unbedacht irgendwo auf "LÖSCHEN" drückt, das kann fatale Folgen haben. Im schlimmsten Fall ist die gesamte Datenbank leer.
+				</div>
+				
+                <ul>				
                     <li><strong>Nur Nachschauen</strong>
-                    <p>
+                    <p>Gleich beim Öffnen der <strong>Timer-Liste</strong> sieht man die noch ausstehenden Timer. Hier stehen jetzt die Timer oben, welche als nächstes ausgeführt werden. Mit den <span class="label label-default">Steuerkreuz <span class="glyphicon glyphicon-arrow-up">&nbsp;<span class="glyphicon glyphicon-arrow-down"></span></span>&nbsp;&nbsp;<span class="glyphicon glyphicon-arrow-left">&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></span></span> Tasten Navigiert man in dieser Liste.
+					<br>Möchte man die Timer oben sehen, welche als letztes erstellt wurden, also auch als letztes ausgeführt werden, muss man <kbd class="green">Zeige neueste Timer zuerst</kbd> drücken.
+			
 					</p>
 					<li><strong>Timer löschen, damit diese nochmal erstellt werden.</strong>
                     <p>
