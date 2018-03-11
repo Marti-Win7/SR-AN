@@ -43,6 +43,7 @@ var data =
 	{href: "serie-hinzufügen.htm", title: "Serie/Marker hinzufügen",},
 	{href: "suche.htm", title: "Die Suche",},
 	{href: "timer-liste.htm", title: "Timer-Liste",},
+	{href: "sonstige.htm", title: "Sonstige Funktionen",},
 	{href: "faq.htm", title: "FAQ / HGF / WTW",},
 	{href: "changelog.htm", title: "Changelog / Updates",},	
 ]};
