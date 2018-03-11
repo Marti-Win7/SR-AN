@@ -78,21 +78,41 @@
 				<div class="alert alert-danger">
                     <strong>WICHTIG: </strong> BITTE Vorsicht im Umgang mit der <strong>Timer-Liste</strong>. Wenn hier jemand unbedacht irgendwo auf "LÖSCHEN" drückt, das kann fatale Folgen haben. Im schlimmsten Fall ist die gesamte Datenbank leer.
 				</div>
+				<p>Im folgenden gibt es meist 2 Reihenfolgen zur Ansicht, welche der SR sich merkt. Man sieht also die Reihenfolge beim nächsten öffnen wieder, mit der man die Liste zuvor verlassen hatte.
+				</p>
 				
                 <ul>				
                     <li><strong>Nur Nachschauen</strong>
                     <p>Gleich beim Öffnen der <strong>Timer-Liste</strong> sieht man die noch ausstehenden Timer. Hier stehen jetzt die Timer oben, welche als nächstes ausgeführt werden. Mit den <span class="label label-default">Steuerkreuz <span class="glyphicon glyphicon-arrow-up">&nbsp;<span class="glyphicon glyphicon-arrow-down"></span></span>&nbsp;&nbsp;<span class="glyphicon glyphicon-arrow-left">&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></span></span> Tasten Navigiert man in dieser Liste.
-					<br>Möchte man die Timer oben sehen, welche als letztes erstellt wurden, also auch als letztes ausgeführt werden, muss man <kbd class="green">Zeige neueste Timer zuerst</kbd> drücken.
-			
+					<br>Möchte man die Timer oben sehen, welche als letztes erstellt wurden, also auch als letztes ausgeführt werden, muss man <kbd class="green">Zeige neueste Timer zuerst</kbd> drücken.		
 					</p>
+					<p>Um alle jemals erstellten Timer zu sehen, muss man auf <kbd class="yellow">Zeige auch alte Timer</kbd> drücken. Die Reihenfolge kann mit <kbd class="green">GRÜN</kbd> gewechselt werden.
+					<br>Abgeschlossenen Timer erkennt man an dem grünen Haken.<img src="images/found.png">
+					<br>Mit der Taste <kbd class="yellow">Zeige nur neue Timer</kbd> gelangt man wieder zur Anzeige der noch ausstehenden Timer.
+					</p>
+					<br><br>
 					<li><strong>Timer löschen, damit diese nochmal erstellt werden.</strong>
-                    <p>
+                    <p>Wenn man die <strong>Timer-Liste</strong> mit druck auf <kbd class="blue">Timer-Liste</kbd> geöffnet hat, kann man durch betätigen der <span class="label label-default">OK</span> Taste die Liste bearbeiten. Die Liste bearbeiten geht natürlich auch, wenn man alle Timer (neue + alte) anzeigen lässt.
 					</p>
-					<li><strong>Einträge der Datenbank hinzufügen, die erst gar nicht getimert werden müssen.</strong>
-                    <p>
+					<p>Hier werden die Timer dann, je nach Sortierung, in 2 verschiedenen Reihenfolgen angezeigt.
+					<br>Entweder so, wie die Timer auch zeitlich erstellt wurden (unsortiert), oder aber in alphabetischer Reihenfolge (sortiert). Dies kann man dann mit <kbd class="yellow">GELB</kbd> umschalten.
 					</p>
+					<p>Sollte man alle noch ausstehenden Timer löschen wollen/müssen, geht dies mit <kbd class="blue">Entferne neue Timer</kbd>. Hierbei werden alle noch ausstehenden Timer, die der SR erstelt hat, aus der DB und auch von der Box entfernt.
+					</p>
+					<div class="alert alert-info" role="alert">Wenn man in der <strong>Timer-Liste</strong> noch ausstehende Timer löscht, werden diese auch, sofern noch vorhanden , im Timer-Editor der Box gelöscht. Andersherum natürlich nicht.-</div>
+					<p>Befindet man sich in der Liste, wo neue und alte Timer angezeigt werden, kann man jeden Timer nur einzeln löschen. Man kann also nicht z.B. die Timer einer ganzen Staffel auf einmal löschen.
+					<br>Nach dem löschen eines oder mehrerer Timer ist diese Episode wieder bereit, vom SR getimert zu werden.
+					</p>
+					<br><br>
+					<li><strong>Einträge der Datenbank hinzufügen, die erst gar nicht getimert werden sollen.</strong>
+                    <p><u>Wozu soll das gut sein?</u> könnte man sich fragen.</p>
+					<p>Nehmen wir an, man hat die Serie <strong>Tatort</strong> zum SR hinzugefügt und man möchte nun nicht ALLE Folgen timern lassen, sondern nur die NEUEN. Die nächste Tatort-Folge wäre beispielsweise die Nummer 1045. Da der <strong>Tatort</strong> keine Staffelunterteilung hat nutzt man die Staffelbezeichnung 00.
+					<br>In der <strong>Timer-Liste</strong> drückt man <span class="label label-default">OK</span>, um die Liste zu bearbeiten. Hier selektiert man dann die Serie,  welcher man manuell Einträge hinzufügen möchte. In unserem Beispiel also <strong>Tatort</strong>. Dann drückt man <span class="label label-default">OK</span> für "Neuer Eintrag". In den Folgenden Eingabemasken gibt man dann sowohl die Staffel als auch die Episodennummern ein. In unserem Beispiel <strong>Tatort</strong>, also "Staffel 00", "von Episode 0" und "bis Episode 1044". Damit werden von der Serie <strong>Tatort</strong> nur Folgen ab Nummer 1045 getimert.
+					<br>Dies lässt sich natürlich auch bei Serien mit Staffelunterteilung machen, aber da könnte man ja auch angeben, das die Serie erst ab z.B. Staffel 3 getimert werden soll.
+					</p>
+					<br><br>
 					<li><strong>Datenbank komplett leeren.</strong>
-                    <p>Mit der Taste <kbd>9</kbd> kann die gesamte Datenbank geleert werden. Damit werden sämtliche Einträge bezüglich getimerten Episoden aller Serien gelöscht.
+                    <p>Mit der Taste <span class="label label-default">9</span> kann die gesamte Datenbank geleert werden. Damit werden sämtliche Einträge bezüglich getimerten Episoden aller Serien gelöscht.
 					<br>Einzig die Senderzuordnung, die auch in der Datenbank steht, bleibt erhalten.
 					</p>
 				</ul>	
