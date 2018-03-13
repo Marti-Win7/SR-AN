@@ -52,6 +52,9 @@
                    Auf dieser Seite werden weitere Funktionen des SerienRecorder (SR) vorgestellt.
                 </p>
 				<br>
+				
+<!-- Cover -->	
+				<span id="cover" class="anchor"></span>	
 				<h3 class="sub-header"><strong>Cover laden und anzeigen.</strong></h3>
 				<br>	
                 <ul>
@@ -60,42 +63,77 @@
 				</ul>
 				
 				<br>
+				
+<!-- Picons -->				
+				<span id="picons" class="anchor"></span>
 				<h3 class="sub-header"><strong>Picons nutzen und anzeigen</strong></h3>
 				<br>
 				<ul>
                 <p>Picons von den jeweiligen Sendern dienen der "Verschönerung" der Ansicht im SerienRecorder (SR), die dann mit einem entsprechenden Skin angezeigt werden können. Diese zeigen dann das Sender-Logo, auf welchem die Serien-Episode ausgestrahlt wird.
+				<br>Es können dafür idR die Picons genutzt werden, die auch auf der Box Verwendung finden.
 				</p>
 				</ul>
 				
 				<br>
+<!-- Episoden-Liste -->
+				<span id="episodenliste" class="anchor"></span>
+				<h3 class="sub-header"><strong>Episoden-Liste</strong></h3>
+				<br>
+				<ul>
+                <p>Die Daten für die <strong>Episoden-Liste</strong> werden von <a href="https://www.thetvdb.com/" target="_blank">TheTVDB.com</a> geholt, da der SerienRecorder diese nicht mehr von Wunschliste.de (WL) beziehen darf. Der Nachteil dabei ist, das nicht alles gleich bezeichnet ist, wie auf WL. Auf TheTVDB werden z.B. Specials anders bezeichnet als auf WL, was evtl. zu Problemen führen kann. Sollte also jemandem auffallen, das es in dieser Hinsicht "Fehler" gibt, ist ein Feedback im <a href="https://www.vuplus-support.org/wbb4/index.php?thread/85765" target="_blank">VU+ Support Forum</a> erwünscht.
+				</p>
+				<p>Die Episoden mit einem grünen Haken sind bereits in der Datenbank (DB) vorhanden und werden nicht mehr getimert, wogegen die mit dem roten x nicht in der DB stehen und bei Ausstrahlung getimert werden, sofern von den Einstellungen her nichts dagegen spricht.
+				</p>
+				<p>In der Serien-Marker Ansicht wird die <strong>Episoden-Liste</strong> mit Taste <kbd>5</kbd> geöffnet. Hier kann dann auch der Status jeder einzelnen Episode mit <kbd class="green">GRÜN</kbd> geändert werden, also von "grünem Haken" nach "rotem x" und umgekehrt.
+				</p>
+				</ul>
+				
+				<br>
+								
+<!-- Konflikt-Liste -->				
+				<span id="konfliktliste" class="anchor"></span>
 				<h3 class="sub-header"><strong>Konflikt-Liste</strong></h3>
 				<br>
 				<ul>
-                <p>Hier werden die Timer angezeigt, welche wegen eines Konfikts nicht aktiv angelegt werden konnten.
+                <p>Die <strong>Konflikt-Liste</strong> wird mit Taste <kbd>6</kbd> geöffnet. Hier werden die Timer angezeigt, welche wegen eines Konflikts deaktiviert angelegt wurden. Es besteht also Handlungsbedarf seitens des Users, den/die Konflikt(e) zu beheben.
 				</p>
 				</ul>
 				
 				<br>
+				
+<!-- Merkzettel -->				
+				<span id="merkzettel" class="anchor"></span>
 				<h3 class="sub-header"><strong>Merkzettel</strong></h3>
 				<br>
 				<ul>	
-                <p>
+                <p>Mithilfe der Funktion Merkzettel können Serien-Episoden "vorgemerkt" werden, damit für diese dann vom SR ein Timer angelegt wird. Dabei werden sämtliche Einschränkungen, die für "normale" Timer gelten, außer Acht gelassen. Das bedeutet, das diese Timer immer angelegt werden, außer natürlich, es bestehen Konflikte.
+				</p>
+				<p>Der Merkzettel wird mit Taste <kbd>7</kbd> geöffnet. Dort lassen sich dann mit <kbd>OK</kbd> neue Eintäge anlegen. 
+				<br>Mit <kbd class="red">Eintrag löschen</kbd>, lässt sich der gerade selektierte Eintrag der Liste löschen und mit <kbd class="blue">Liste leeren</kbd> werden ALLE Einträge dieser Liste gelöscht.
+				<br>Hat man nun <kbd>OK</kbd> gedrückt, muss man noch  "Staffel", "von Episode" und "bis Episode" eingeben, wobei letztere beiden auch gleich sein können, wenn nur EINE Episode vorgemerkt werden soll. Hat man alles erledigt, werden mit <kbd class="green">Speichern</kbd> alle Änderungen übernommen.
 				</p>
 				</ul>
 				
 				<br>
+				
+<!-- Neue Serienstarts -->				
+				<span id="serienstarts" class="anchor"></span>
 				<h3 class="sub-header"><strong>Neue Serienstarts</strong></h3>
 				<br>	
                 <ul>
-				<p>Mit dieser Anzeige werden nur neue Serienstarts angezeigt, welche dann auch direkt mit der <kbd>OK</kbd> Taste dem SR hinzugefügt werden können.
+				<p>Mit dieser Anzeige werden Serien-/Staffelstarts angezeigt, welche dann auch direkt mit der <kbd>OK</kbd> Taste dem SR hinzugefügt werden können. Je nach Anzeige-Modus, der mit <kbd class="yellow">GELB</kbd> gewechselt werden kann, werden entweder alle Staffelstarts oder aber nur Serienstarts die mit Staffel01/Episode01 beginnen, der nächsten Tage angezeigt.
 				</p>
 				</ul>
 				
 				<br>
+				
+<!-- Serien Beschreibung -->				
+				<span id="serienbeschreibung" class="anchor"></span>
 				<h3 class="sub-header"><strong>Serien Beschreibung</strong></h3>
 				<br>	
                 <ul>
-				<p>Hierüber kann zu der selektierten Serie eine Beschreibung angezeigt werden, welche von <a href="https://www.thetvdb.com/" target="_blank">TheTVDB.com</a> herunter geladen wird.
+				<p>Hierüber kann zu der selektierten Serie eine Beschreibung angezeigt werden, welche von <a href="https://www.thetvdb.com/" target="_blank">TheTVDB.com</a> heruntergeladen wird. Es gibt dort nicht für jede Serie Einträge, weshalb man manchmal die Meldung bekommt "Keine Serieninformationen vorhanden".				
+				<br>Die Serienbeschreibungen von Wunschliste.de darf im SR nicht mehr verwendet werden, daher hat man sich für diese "Quelle" entschieden.
 				</p>
 				</ul>
 				
