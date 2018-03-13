@@ -43,7 +43,15 @@ var data =
 	{href: "serie-hinzufügen.htm", title: "Serie/Marker hinzufügen",},
 	{href: "suche.htm", title: "Die Suche",},
 	{href: "timer-liste.htm", title: "Timer-Liste",},
-	{href: "sonstige.htm", title: "Sonstige Funktionen",},
+	{href: "sonstige.htm", title: "Sonstige Funktionen", submenus: [
+	    { href: "sonstige.htm#cover", title: "Cover"},
+        { href: "sonstige.htm#picons", title: "Picons"},
+        { href: "sonstige.htm#episodenliste", title: "Episoden-Liste"},
+        { href: "sonstige.htm#konfliktliste", title: "Konflikt-Liste"},
+        { href: "sonstige.htm#merkzettel", title: "Merkzettel"},
+		{ href: "sonstige.htm#serienstarts", title: "Neue Serienstarts"},
+		{ href: "sonstige.htm#serienbeschreibung", title: "Serienbeschreibung"},
+    ]},
 	{href: "faq.htm", title: "FAQ / HGF / WTW",},
 	{href: "changelog.htm", title: "Changelog / Updates",},	
 ]};
