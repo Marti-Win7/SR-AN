@@ -335,6 +335,8 @@
 						</li>
 						<li><strong>IMAP Mailbox:</strong>
 						</li>
+						<li><strong>IMAP Einstellungen testen:</strong>
+						</li>
 						<li><strong>TV-Planer Subject:</strong>
 						</li>
 						<li><strong>maximales Alter der E-Mail (Tage):</strong>
@@ -550,25 +552,7 @@
                             </li>
                         </ol>
                     </li>
-					<li>
-                        <strong>Aufnahmezeiten automatisch an EPG Daten anpassen:</strong>
-                        <p>Diese Option ist nur auf VU+ Boxen mit VTI Image sichtbar und nutzbar.
-						<br>Dadurch kann global für jeden Timer den der SR anlegt diese Option Ein- oder Ausgeschaltet werden, egal wie es im VTI eingestellt ist.
-                        </p>
-                        <ol type="a">
-                            <li>
-                                <i><u>Ja</u></i>
-                                <p>Die Option wird global in jedem Timer aktiviert. Kann aber individuell im SerienMarker-Menü für jede Serie wieder deaktiviert werden.</p>
-                            </li>
-                            <li>
-                                <i><u>Nein</u></i>
-                                <p>Die Option wird global in jedem Timer deaktiviert. Kann aber individuell im SerienMarker-Menü für jede Serie wieder aktiviert werden.</p>
-                            </li>
-                            
-                        </ol>
-						<div class="bs-callout bs-callout-danger">Die Option <strong>"Aufnahmezeiten automatisch an EPG Daten anpassen:"</strong> Ist nur auf VU+ Receivern mit einem VTI Image sichtbar und nutzbar. Wenn man ein älteres VTI Image nutzt, welches diese Funktion noch nicht unterstützt, sieht man diese Option zwar und kann dort auch Einstellungen tätigen, aber diese sind dann "nutzlos", führen aber auch nicht zu Fehlverhalten auf der Box.</div>
-						
-                    </li>
+					
                     <li>
                         <strong>Timervorlauf (in Min.):</strong>
                         <p>
@@ -587,6 +571,22 @@
                         <p>
                             Es kann ausgewählt werden, wie der Timername gebildet werden soll, dieser Name bestimmt auch den Namen der Aufnahme. Die Beschreibung enthält immer die Staffel und Episoden Informationen.
                         </p>
+						<ol type="a">
+                            <li>
+                                <i>(Serienname) - SnnEmm - (Episodentitel) </i>
+                            </li>
+							<li>
+                                <i>(Serienname)</i>
+                            </li>
+							<li>
+                                <i>SnnEmm - (Episodentitel)</i>
+                            </li>
+							
+							<li>
+                                <i>(Serienname) - SnnEmm</i>
+                            </li> 
+														
+						</ol>
                         <div class="bs-callout bs-callout-info">Falls das Plugin 'SerienFilm' verwendet wird, sollte man die Einstellung '&lt;Serienname&gt;' wählen, damit die Episoden korrekt in virtuellen Ordnern zusammengefasst werden.</div>
                     </li>
                     <li>
@@ -951,7 +951,8 @@
                         <p>Standardmäßig stehen die Log-Dateien im SR-Plugin Ordner                          
                         </p>
                     </li>
-                    <li>
+<!--                  
+				   <li>
                         <strong>Log-Dateiname mit Datum und Uhrzeit:</strong>
                         <p>Steht dies auf <strong>Nein</strong>, wird die Log-Datei jeden Tag überschrieben. Dies hat den Nachteil, das man keine fortlaufenden Log-Dateien hat, für eine eventuelle Fehlersuche.
                         </p>Steht dies auf <strong>Ja</strong>, wird im Log-Dateinamen Datum und Uhrzeit mit eingebracht. So hat man dann jeden Tag eine eigene Log-Datei. Damit die Anzahl dieser nicht ins "unendliche" anwächst, kann man in folgender Einstellung festlegen, wie lange diese Log-Dateien vorgehalten werden sollen.
@@ -964,6 +965,8 @@
                         </p>
 						<br>
                     </li>
+					
+ -->					
                     <li>
                         <strong>DEBUG LOG aktivieren:</strong>
                         <p>Ist diese gesetzt, werden folgende <strong>DEBUG LOG</strong> Optionen, sofern diese dann auf JA gesetzt sind, im Log mit angegeben.
